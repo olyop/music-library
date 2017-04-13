@@ -1,13 +1,13 @@
 import React from 'react'
-import './albums.css'
-import albumsList from '../helpers/albums-helper'
+import renderAlbums from '../helpers/albums-helper'
 import artistsObj from '../../data/library/artists'
 import albumsObj from '../../data/library/albums'
+import './albums.css'
 
-const Albums = ({ s, c }) => {
+const Albums = () => {
 	return (
 		<div className="albums">
-			{albumsList(albumsObj, artistsObj)}
+			{renderAlbums(albumsObj, artistsObj)}
 		</div>
 	)
 }

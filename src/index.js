@@ -10,28 +10,51 @@ import './index.css'
 
 // Import Data
 import siteInfoObj from './data/site-info'
-import colorsObj from './data/colors'
 
 // Import Components
 import Nav from './components/nav/nav'
 import Library from './components/library'
 
-// Index
-const Index = ({ s, c }) => (
-	<div className="index">
+// Index Component
+class Index extends React.Component {
+	
+	constructor(props) {
+		super(props)
 		
-		<Nav s={s} c={c} />
+		this.state = { isNav: this.props.info.isNav }
 		
-		<Library s={s} c={c} />
-		
-	</div>
-)
+		this.toggleNav = this.toggleNav.bind(this)
+	}
+	
+	toggleNav() {
+    this.setState(prevState => ({
+      isNav: !prevState.isNav
+    }))
+  }
+	
+	render() {
+		let info = this.props.info
+		return (
+			<div className="index">
 
-// Render to DOM
+				<Nav
+					info={info}
+					toggleNav={this.toggleNav}
+					isNav={this.state.isNav} />
+
+				<Library
+					info={info}
+					isNav={this.state.isNav} />
+
+			</div>
+		)	
+	}
+}
+
+// Render whole site to the DOM
 ReactDOM.render(
   <Index
-		s={siteInfoObj}
-		c={colorsObj}	
+		info={siteInfoObj}
 	/>,
   document.getElementById('root')
 )

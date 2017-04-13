@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Artists = ({ s, c }) => {
+const Artists = () => {
 	return (
 		<h1>Artists</h1>
 	)

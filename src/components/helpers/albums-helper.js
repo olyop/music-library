@@ -1,6 +1,6 @@
 import React from 'react'
 
-const albumsList = (albums, artists) => {
+const renderAlbums = (albums, artists) => {
 	let length = albums.length
 	return albums.map((album, index) => {
 
@@ -30,4 +30,4 @@ const albumsList = (albums, artists) => {
 	})
 }
 
-export default albumsList
+export default renderAlbums

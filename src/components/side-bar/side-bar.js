@@ -3,9 +3,9 @@ import { NavLink } from 'react-router-dom'
 
 import './side-bar.css'
 
-const SideBar = ({ s }) => (
+const SideBar = ({ info }) => (
 	<div className="col-sm-2 nav-side-bar">
-		<p>{s.sideBar.heading}</p>
+		<p>{info.sideBar.heading}</p>
 		<ul>
 			<li>
 				<NavLink activeClassName="active" exact to="/">Home</NavLink>

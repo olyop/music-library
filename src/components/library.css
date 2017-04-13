@@ -1,3 +1,6 @@
 .library {
-	padding-top: 75px;
-}
+	padding-top: 75px; }
+
+.content {
+	padding: 10px;
+	min-height: 100vh; }

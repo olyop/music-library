@@ -3,16 +3,19 @@ import NavHamburger from './nav-hamburger'
 
 import './nav.css'
 
-const Nav = ({ s, c }) => {
-	const navStyle = { backgroundColor: c.p }
+const Nav = ({ info, toggleNav, isNav }) => {
+	const navStyle = { backgroundColor: info.colors.p }
 	return (
 		<div
 			className="nav"
 			style={navStyle} >
 
 			<div className="nav-section nav-left">
-				<NavHamburger />
-				<div className="nav-title">{s.navTitle}</div>
+				<NavHamburger
+					info={info}
+					toggleNav={toggleNav}
+					isNav={isNav} />
+				<div className="nav-title">{info.navTitle}</div>
 			</div>
 
 			<div className="nav-section nav-middle">

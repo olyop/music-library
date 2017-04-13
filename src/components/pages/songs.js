@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Songs = ({ s, c }) => {
+const Songs = () => {
 	return (
 		<h1>Songs</h1>
 	)
