@@ -1,0 +1,15 @@
+.albums {
+	display: flex;
+	align-content: flex-start;
+	flex-wrap: wrap;
+	align-items: stretch; }
+	.albums .album {
+		width: calc(100% / 5);
+		padding: 10px; }
+		.albums .album .album-inner {
+			height: 100%;
+			border: 1px solid #E0E0E0; }
+			.albums .album .album-inner img {
+				width: 100%;  }
+			.albums .album .album-inner .album-text {
+				padding: 10px; }

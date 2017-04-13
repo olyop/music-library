@@ -1,0 +1,29 @@
+.nav {
+	display: flex;
+	z-index: 2;
+	position: fixed;
+	width: 100vw;
+	width: 100%; }
+	.nav .nav-section {
+		color: #fff;
+		padding: 10px;
+		position: relative; }
+
+		.nav .nav-left {
+			min-width: 260px;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			flex: 1; }
+			.nav .nav-left .nav-hamburger {
+				padding-bottom: 10px; }
+			.nav .nav-left .nav-title {
+				padding: 0 10px;
+				color: #fff;
+				font-size: 25px; }
+
+		.nav .nav-middle {
+			flex: 2; }
+
+		.nav .nav-right {
+			flex: 1; }

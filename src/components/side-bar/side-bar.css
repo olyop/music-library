@@ -1,0 +1,21 @@
+.nav-side-bar {
+	padding: 15px;
+	min-height: 50vh;
+	border-bottom: 1px solid #E0E0E0;
+	border-right: 1px solid #E0E0E0; }
+	.nav-side-bar img {
+		margin-bottom: 20px;
+		width: 100%; }
+	.nav-side-bar p {
+		font-size: 20px;
+		padding-bottom: 5px;
+		border-bottom: 1px solid #E0E0E0; 
+		margin-bottom: 10px; }
+	.nav-side-bar ul {
+		padding: 0;
+		margin: 0; }
+		.nav-side-bar ul li {
+			list-style: none;
+			padding: 10px; }
+			.nav-side-bar ul li a {
+				font-size: 20px; }
