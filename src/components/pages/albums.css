@@ -5,7 +5,7 @@
 	align-items: stretch; }
 	.albums .album {
 		width: calc(100% / 5);
-		padding: 10px; }
+		padding: 5px; }
 		.albums .album .album-inner {
 			height: 100%;
 			border: 1px solid #E0E0E0; }
