@@ -24,8 +24,8 @@ const renderAlbums = (albums, artists) => {
 				<div className="album-inner">
 					<img src={album.cover} alt={album.cover} />
 					<div className="album-content">
-						<h1>{album.title}</h1>
-						<p>{artist.name}</p>
+						<h1><span>{album.title}</span></h1>
+						<p><span>{artist.name}</span></p>
 					</div>
 				</div>
 			</div>

@@ -15,7 +15,7 @@ const Library = ({ info, isNav }) => {
 				
 					{ isNav ? <SideBar info={info} /> : null }
 
-					<div className={isNav ? 'col-sm-10 content' : 'col-sm-12 content'}>
+					<div className={isNav ? 'col-md-10 content' : 'col-md-12 content'}>
 
 						<Route exact
 							path="/"

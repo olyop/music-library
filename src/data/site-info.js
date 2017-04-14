@@ -1,7 +1,10 @@
 const siteInfo = {
 	navTitle: 'Music Library',
 	sideBar: {
-		heading: 'Pages'
+		heading: {
+			pages: 'Pages',
+			playlists: 'Playlists'
+		}
 	},
 	colors: {
 		p: {

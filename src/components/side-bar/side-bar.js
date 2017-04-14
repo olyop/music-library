@@ -4,7 +4,7 @@ import './side-bar.css'
 
 const SideBar = ({ info }) => {
 	
-	let pStyle = {
+	let headingStyle = {
 		backgroundColor: info.colors.h.f,
 		color: '#fff'
 	}
@@ -14,7 +14,7 @@ const SideBar = ({ info }) => {
 			text: 'Home',
 			icon: 'home',
 			exact: true,
-			to: '/home'
+			to: '/'
 		},
 		{
 			text: 'Artists',
@@ -36,7 +36,7 @@ const SideBar = ({ info }) => {
 		}
 	];
 	
-	const renderList = config.map((item, index) => (
+	const renderNavList = config.map((item, index) => (
 		<li key={index}>
 			
 			<NavLink
@@ -51,11 +51,12 @@ const SideBar = ({ info }) => {
 	));
 	
 	return (
-		<div className="col-sm-2 nav-side-bar">
-			<p style={pStyle}>{info.sideBar.heading}</p>
+		<div className="col-md-2 nav-side-bar">
+			<h1 style={headingStyle}>{info.sideBar.heading.pages}</h1>
 			<ul>
-				{renderList}
+				{renderNavList}
 			</ul>
+			<h1 style={headingStyle}>{info.sideBar.heading.playlists}</h1>
 		</div>
 	)
 }
