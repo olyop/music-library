@@ -4,7 +4,7 @@ import NavHamburger from './nav-hamburger'
 import './nav.css'
 
 const Nav = ({ info, toggleNav, isNav }) => {
-	const navStyle = { backgroundColor: info.colors.p }
+	const navStyle = { backgroundColor: info.colors.p.f }
 	return (
 		<div
 			className="nav"
