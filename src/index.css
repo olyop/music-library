@@ -11,3 +11,7 @@ body {
 		text-decoration: none;
 		color: #333333;
 		margin: 0; }
+
+::selection {
+	color: #fff; 
+	background: #3F51B5; }

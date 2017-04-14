@@ -3,8 +3,8 @@ import artistsObj from '../../data/library/artists'
 import albumsObj from '../../data/library/albums'
 import './albums.css'
 
-const renderAlbums = (albums, artists) => {
-	let length = albums.length
+const renderAlbumsList = (albums, artists) => {
+	const length = albums.length
 	return albums.map((album, index) => {
 
 		let artist, i = 0
@@ -20,7 +20,7 @@ const renderAlbums = (albums, artists) => {
 		return (
 			<div
 				className="album"
-				key={index} >
+				key={index}>
 				<div className="album-inner">
 					<img src={album.cover} alt={album.cover} />
 					<div className="album-content">
@@ -36,7 +36,7 @@ const renderAlbums = (albums, artists) => {
 const Albums = () => {
 	return (
 		<div className="albums">
-			{renderAlbums(albumsObj, artistsObj)}
+			{renderAlbumsList(albumsObj, artistsObj)}
 		</div>
 	)
 }

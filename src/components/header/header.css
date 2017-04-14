@@ -1,29 +1,29 @@
-.nav {
+.header {
 	display: flex;
 	z-index: 2;
 	position: fixed;
 	width: 100vw;
 	width: 100%; }
-	.nav .nav-section {
+	.header .header-section {
 		color: #fff;
 		padding: 10px;
 		position: relative; }
 
-		.nav .nav-left {
+		.header .header-left {
 			min-width: 260px;
 			display: flex;
 			justify-content: flex-start;
 			align-items: center;
 			flex: 1; }
-			.nav .nav-left .nav-hamburger {
+			.header .header-left .header-hamburger {
 				padding-bottom: 10px; }
-			.nav .nav-left .nav-title {
+			.header .header-left .header-title {
 				padding: 0 10px;
 				color: #fff;
 				font-size: 25px; }
 
-		.nav .nav-middle {
+		.header .header-middle {
 			flex: 2; }
 
-		.nav .nav-right {
+		.header .header-right {
 			flex: 1; }

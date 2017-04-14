@@ -1,5 +1,7 @@
 const siteInfo = {
-	navTitle: 'Music Library',
+	header: {
+		title: 'Music Library'
+	},
 	sideBar: {
 		heading: {
 			pages: 'Pages',

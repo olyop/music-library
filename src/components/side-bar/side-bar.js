@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { changeDocTitle, navListConfig } from '../helpers/side-bar-helper'
 import './side-bar.css'
 
 const SideBar = ({ info }) => {
@@ -9,38 +10,12 @@ const SideBar = ({ info }) => {
 		color: '#fff'
 	}
 	
-	let config = [
-		{
-			text: 'Home',
-			icon: 'home',
-			exact: true,
-			to: '/'
-		},
-		{
-			text: 'Artists',
-			icon: 'person',
-			exact: true,
-			to: '/artists'
-		},
-		{
-			text: 'Albums',
-			icon: 'album',
-			exact: true,
-			to: '/albums'
-		},
-		{
-			text: 'Songs',
-			icon: 'audiotrack',
-			exact: true,
-			to: '/songs'
-		}
-	];
-	
-	const renderNavList = config.map((item, index) => (
+	const renderNavList = navListConfig.map((item, index) => (
 		<li key={index}>
 			
 			<NavLink
 				activeClassName="nav-side-bar-active"
+				isActive={changeDocTitle}
 				exact={item.exact}
 				to={item.to}>
 				<i className="material-icons">{item.icon}</i>

@@ -12,7 +12,7 @@ import './index.css'
 import siteInfoObj from './data/site-info'
 
 // Import Components
-import Nav from './components/nav/nav'
+import Header from './components/header/header'
 import Library from './components/library'
 
 // Index Component
@@ -37,7 +37,7 @@ class Index extends React.Component {
 		return (
 			<div className="index">
 
-				<Nav
+				<Header
 					info={info}
 					toggleNav={this.toggleNav}
 					isNav={this.state.isNav} />
