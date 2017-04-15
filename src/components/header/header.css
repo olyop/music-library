@@ -17,13 +17,40 @@
 			flex: 1; }
 			.header .header-left .header-hamburger {
 				padding-bottom: 10px; }
-			.header .header-left .header-title {
+			.header .header-left .header-title a {
 				padding: 0 10px;
 				color: #fff;
 				font-size: 25px; }
 
 		.header .header-middle {
+			position: relative;
+			min-width: 220px;
 			flex: 2; }
+			.header .header-middle .header-icon  {
+				-webkit-user-select: none;
+				transition: .2s all;
+				cursor: pointer;
+				padding: 10px;
+				border-radius: 100%;
+				position: absolute;
+				color: #fff;
+				z-index: 2; }
+				.header .header-middle i:hover {
+					background-color: rgba(238,238,238,.2); }
+
+			.header .header-middle input {
+				outline: none;
+				border: none;
+				width: 100%;
+				height: 100%;
+				padding: 10px 10px 10px 60px;
+				font-size: 20px;
+				border-radius: 5px;
+				color: #fff; }
+				.header .header-middle input::-webkit-input-placeholder {
+					opacity: 0.5;
+					color: #fff; }
 
 		.header .header-right {
 			flex: 1; }
+

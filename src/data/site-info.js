@@ -1,6 +1,7 @@
 const siteInfo = {
 	header: {
-		title: 'Music Library'
+		title: 'Music Library',
+		searchPlaceholder: 'Search...'
 	},
 	sideBar: {
 		heading: {
@@ -46,7 +47,7 @@ const siteInfo = {
 			j: '#880E4F'
 		}
 	},
-	isNav: true,
+	isNav: false,
 	hamburgerType: 'slider'
 }
 
