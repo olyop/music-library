@@ -72,7 +72,7 @@ const Search = props => {
 					heading={album.title}
 					img={album.cover}
 					span1={artist.title}
-					span2={songs.length + ' songs'} />
+					span2={songs.length === 1 ? String(songs.length) + ' song' : String(songs.length) + ' songs'} />
 			)
 		})
 	}
@@ -110,8 +110,8 @@ const Search = props => {
 				<SearchItem key={index}
 					heading={artist.title}
 					img={artist.logo}
-					span1={albums.length + ' albums'}
-					span2={songs.length + ' songs'} />
+					span1={albums.length === 1 ? String(albums.length) + ' album' : String(albums.length) + ' albums'}
+					span2={songs.length === 1 ? String(songs.length) + ' song' : String(songs.length) + ' songs'} />
 			)
 		})
 	}
