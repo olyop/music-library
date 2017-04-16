@@ -32,6 +32,10 @@ class Index extends React.Component {
     }))
   }
 	
+	changePageTitle() {
+		
+	}
+	
 	render() {
 		let info = this.props.info
 		return (

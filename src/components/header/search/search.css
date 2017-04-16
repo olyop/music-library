@@ -4,11 +4,7 @@
 
 .header .header-middle .header-search-close {
 	top: 16px;
-	right: 70px; }
-
-.header .header-middle .header-search-drop-down-arrow {
-	top: 16px;
-	right: 20px; }
+	right: 18px; }
 
 .header .header-middle .header-search-drop-down {
 	overflow: auto;
@@ -24,30 +20,34 @@
 
 .header .header-middle .header-search-drop-down h1 {
 	font-size: 20px;
+	margin-top: 20px;
 	padding: 10px;
-	border-bottom: 1px solid #EEEEEE;
-}
+	border-bottom: 2px solid #333; }
 
-.search-song {
+.header .header-middle .header-search-drop-down h4 {
+	padding: 10px;
+	font-size: 18px;
+	color: #9E9E9E; }
+
+.search-item {
+	padding: 10px;
 	transition: .2s all;
 	cursor: pointer;
-	display: flex;
 	border-bottom: 1px solid #EEEEEE;
-	padding: 10px; }
-	.search-song:hover {
+	display: flex; }
+	.search-item:hover {
 		background-color: #EEEEEE; }
-	.search-song img {
+	.search-item img {
 		margin-right: 10px;
 		height: 45px;
 		width: 45px; }
-	.search-song .search-song-inner {
+	.search-song .search-item-inner {
 		display: flex;
 		flex-direction: column; }
-		.search-song .search-song-inner p span {
+		.search-item .search-item-inner p span {
 			font-weight: 500;
 			font-size: 18px; }
-		.search-song .search-song-inner span {
+		.search-song .search-item-inner span {
 			font-size: 14px; }
-.search-song span:hover {
-	text-decoration: underline;
-}
+			.search-item span:hover {
+				text-decoration: underline; }

@@ -1,6 +1,20 @@
 import React from 'react'
 import includes from 'lodash/includes'
+import find from 'lodash/find'
+import SearchItem from './search-item'
 import './search.css'
+
+const findMatches = (array, arrayLength, input) => {
+	let filteredArray = []
+	for (var i = 0; i < arrayLength; i++) {
+		let item = array[i]
+		const condition = includes(item.title.toLowerCase(), input)
+		if (condition) {
+			filteredArray.push(item)
+		}
+	}
+	return filteredArray
+}
 
 const Search = props => {
 		
@@ -9,127 +23,110 @@ const Search = props => {
 
 	// Render Search Matches
 	const renderSearchMatchSongs = () => {
-
-		let matchArray = [],
-				a = 0
 		
-		// Find matching songs
-		for (a; a < props.songsLength; a++) {
-			let item = props.songsObj[a]
-
-			const condition = includes(item.title.toLowerCase(), input)
-
-			if (condition) { matchArray.push(item) }
+		const array = findMatches(props.songsObj, props.songsLength, input)
+		
+		if (array.length === 0) {
+			return <h4>No matches</h4>
 		}
-
-		let list = matchArray.map((song, index) => {
+		
+		return array.map((song, index) => {
 			
-			let artist, album,
-					b = 0,
-					c = 0
-			
-			// Find artist
-			for (b; b < props.artistsLength; b++) {
-				let item = props.artistsObj[b]
-				if (song.artistId === item.artistId) {
-					artist = item
-					break
-				}
-			}
-			
-			// Find album
-			for (c; c < props.albumsLength; c++) {
-				let item = props.albumsObj[c]
-				if (song.albumId === item.albumId) {
-					album = item
-					break
-				}
-			}
+			// Find
+			let artist = find(props.artistsObj, { artistId: song.artistId }),
+					album = find(props.albumsObj, { albumId: song.albumId })
 			
 			return (
-				<div key={index}
-					className="search-song">
-					<img src={album.cover} alt={album.title} />
-					<div className="search-song-inner">
-						<p><span>{song.title}</span></p>
-						<div>
-							<span>{artist.name}</span> &#8211; <span>{album.title}</span>
-						</div>
-					</div>
-				</div>
+				<SearchItem key={index}
+					heading={song.title}
+					img={album.cover}
+					span1={artist.title}
+					span2={album.title} />
 			)
 		})
-		
-		return (
-			<div>
-				<h1>Songs</h1>
-				{list}
-			</div>
-		)
 	}
 	
 	const renderSearchMatchAlbums = () => {
-
-		let matchArray = [],
-				a = 0
-
-		for (a; a < props.albumsLength; a++) {
-			let item = props.albumsObj[a]
-
-			const condition = includes(item.title.toLowerCase(), input)
-
-			if (condition) {
-				matchArray.push(item)
-			}
+		
+		const array = findMatches(props.albumsObj, props.albumsLength, input)
+		
+		if (array.length === 0) {
+			return <h4>No matches</h4>
 		}
 
-		let list = matchArray.map((match, index) => {
+		return array.map((album, index) => {
+			
+			// Find 
+			let artist = find(props.artistsObj, { artistId: album.artistId }),
+					songs = [];
+			
+			for (var i = 0; i < props.songsLength; i++) {
+				let item = props.songsObj[i]
+				if (item.albumId === album.albumId) {
+					songs.push(item)
+				}
+			}
+			
 			return (
-				<p key={index}>{match.title}</p>
+				<SearchItem key={index}
+					heading={album.title}
+					img={album.cover}
+					span1={artist.title}
+					span2={songs.length + ' songs'} />
 			)
 		})
-		return (
-			<div>
-				<h1>Albums</h1>
-				{list}
-			</div>
-		)
 	}
 	
 	const renderSearchMatchArtists = () => {
-
-		let matchArray = [],
-				a = 0
-
-		for (a; a < props.artistsLength; a++) {
-			let item = props.artistsObj[a]
-
-			const condition = includes(item.name.toLowerCase(), input)
-
-			if (condition) {
-				matchArray.push(item)
-			}
+		
+		const array = findMatches(props.artistsObj, props.artistsLength, input)
+		
+		if (array.length === 0) {
+			return <h4>No matches</h4>
 		}
-
-		let list = matchArray.map((match, index) => {
+		
+		return array.map((artist, index) => {
+			
+			let a = 0, b = 0
+			
+			let albums = [],
+					songs = []
+			
+			for (a; a < props.albumsLength; a++) {
+				let item = props.albumsObj[a]
+				if (item.artistId === artist.artistId) {
+					albums.push(item)
+				}
+			}
+			
+			for (b; b < props.songsLength; b++) {
+				let item = props.songsObj[b]
+				if (item.artistId === artist.artistId) {
+					songs.push(item)
+				}
+			}
+			
 			return (
-				<p key={index}>{match.name}</p>
+				<SearchItem key={index}
+					heading={artist.title}
+					img={artist.logo}
+					span1={albums.length + ' albums'}
+					span2={songs.length + ' songs'} />
 			)
 		})
-		return (
-			<div>
-				<h1>Artists</h1>
-				{list}
-			</div>
-		)
 	}
 	
 	return (
 		<div className="header-search-drop-down">
 			
-			{renderSearchMatchSongs()}
-			{renderSearchMatchAlbums()}
+			<h1 style={{ margin: '0' }}>Artists</h1>
 			{renderSearchMatchArtists()}
+			
+			<h1>Albums</h1>
+			{renderSearchMatchAlbums()}
+			
+			<h1>Songs</h1>
+			{renderSearchMatchSongs()}
 			
 		</div>
 	)

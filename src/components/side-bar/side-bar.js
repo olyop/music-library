@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { changeDocTitle, navListConfig } from '../helpers/side-bar-helper'
+import { navListConfig } from '../helpers/side-bar-helper'
 import './side-bar.css'
 
 const SideBar = ({ info }) => {
@@ -15,7 +15,6 @@ const SideBar = ({ info }) => {
 			
 			<NavLink
 				activeClassName="nav-side-bar-active"
-				isActive={changeDocTitle}
 				exact={item.exact}
 				to={item.to}>
 				<i className="material-icons">{item.icon}</i>

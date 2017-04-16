@@ -1,21 +1,14 @@
 import React from 'react'
 import artistsObj from '../../data/library/artists'
 import albumsObj from '../../data/library/albums'
+import find from 'lodash/find'
 import './albums.css'
 
-const renderAlbumsList = (albums, artists) => {
-	const length = albums.length
-	return albums.map((album, index) => {
+const Albums = () => {
+	
+	let renderedAlbumsList = albumsObj.map((album, index) => {
 
-		let artist, i = 0
-
-		for (i; i < length; i++) {
-			let item = artists[i]
-			if (item.artistId === album.artistId) {
-				artist = item
-				break
-			}
-		}
+		let artist = find(artistsObj, { artistId: album.artistId })
 
 		return (
 			<div
@@ -25,18 +18,16 @@ const renderAlbumsList = (albums, artists) => {
 					<img src={album.cover} alt={album.cover} />
 					<div className="album-content">
 						<h1><span>{album.title}</span></h1>
-						<p><span>{artist.name}</span></p>
+						<p><span>{artist.title}</span></p>
 					</div>
 				</div>
 			</div>
 		)
 	})
-}
-
-const Albums = () => {
+	
 	return (
 		<div className="albums">
-			{renderAlbumsList(albumsObj, artistsObj)}
+			{renderedAlbumsList}
 		</div>
 	)
 }

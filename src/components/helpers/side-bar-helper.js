@@ -1,12 +1,3 @@
-const jsUcFirst = str => str.charAt(0).toUpperCase() + str.slice(1)
-
-const changeDocTitle = (match, location) => {
-	let path = location.pathname
-	let temp = path === '/' ? 'Music Library' : jsUcFirst(path.slice(1,10)) + ' - Music Library'
-	document.title = temp
-	return match
-}
-
 let navListConfig = [
 	{
 		text: 'Home',
@@ -34,4 +25,4 @@ let navListConfig = [
 	}
 ];
 
-export { changeDocTitle, navListConfig }
+export { navListConfig }

@@ -88,8 +88,6 @@ class Header extends React.Component {
 						placeholder={props.info.header.searchPlaceholder} />
 					
 					{ close }
-
-					<i className="material-icons header-icon header-search-drop-down-arrow">arrow_drop_down</i>
 					
 					{ dropDown }
 
