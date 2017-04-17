@@ -29,6 +29,11 @@
 	font-size: 18px;
 	color: #9E9E9E; }
 
+.header .header-middle .header-search-drop-down h3 {
+	font-size: 18px;
+	padding: 10px;
+	font-weight: 400; }
+
 .search-item {
 	padding: 10px;
 	transition: .2s all;
