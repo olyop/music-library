@@ -19,7 +19,6 @@ const isInputDangerous = dangerousInput => {
 	else if (includes(normalInput, '<')) { return true }
 	else if (includes(normalInput, '>')) { return true }
 	else if (includes(normalInput, '`')) { return true }
-	else if (includes(normalInput, '/')) { return true }
 	else { return false }
 }
 
