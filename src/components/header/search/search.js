@@ -24,7 +24,7 @@ const Search = props => {
 	// Render Search Matches
 	const renderSearchMatchSongs = () => {
 		
-		const array = findMatches(props.songsObj, props.songsLength, input)
+		const array = findMatches(props.mainObj.songs, props.mainObj.length.songs, input)
 		
 		if (array.length === 0) {
 			return <h4>No matches</h4>
@@ -33,8 +33,8 @@ const Search = props => {
 		return array.map((song, index) => {
 			
 			// Find
-			let artist = find(props.artistsObj, { artistId: song.artistId }),
-					album = find(props.albumsObj, { albumId: song.albumId })
+			let artist = find(props.mainObj.artists, { artistId: song.artistId }),
+					album = find(props.mainObj.albums, { albumId: song.albumId })
 			
 			return (
 				<SearchItem key={index}
@@ -48,7 +48,7 @@ const Search = props => {
 	
 	const renderSearchMatchAlbums = () => {
 		
-		const array = findMatches(props.albumsObj, props.albumsLength, input)
+		const array = findMatches(props.mainObj.albums, props.mainObj.length.albums, input)
 		
 		if (array.length === 0) {
 			return <h4>No matches</h4>
@@ -57,61 +57,33 @@ const Search = props => {
 		return array.map((album, index) => {
 			
 			// Find 
-			let artist = find(props.artistsObj, { artistId: album.artistId }),
-					songs = [];
-			
-			for (var i = 0; i < props.songsLength; i++) {
-				let item = props.songsObj[i]
-				if (item.albumId === album.albumId) {
-					songs.push(item)
-				}
-			}
+			let artist = find(props.mainObj.artists, { artistId: album.artistId })
 			
 			return (
 				<SearchItem key={index}
 					heading={album.title}
 					img={album.cover}
 					span1={artist.title}
-					span2={songs.length === 1 ? String(songs.length) + ' song' : String(songs.length) + ' songs'} />
+					span2={album.numSongs === 1 ? String(album.numSongs) + ' song' : String(album.numSongs) + ' songs'} />
 			)
 		})
 	}
 	
 	const renderSearchMatchArtists = () => {
 		
-		const array = findMatches(props.artistsObj, props.artistsLength, input)
+		const array = findMatches(props.mainObj.artists, props.mainObj.length.artists, input)
 		
 		if (array.length === 0) {
 			return <h4>No matches</h4>
 		}
 		
 		return array.map((artist, index) => {
-			
-			let a = 0, b = 0
-			
-			let albums = [],
-					songs = []
-			
-			for (a; a < props.albumsLength; a++) {
-				let item = props.albumsObj[a]
-				if (item.artistId === artist.artistId) {
-					albums.push(item)
-				}
-			}
-			
-			for (b; b < props.songsLength; b++) {
-				let item = props.songsObj[b]
-				if (item.artistId === artist.artistId) {
-					songs.push(item)
-				}
-			}
-			
 			return (
 				<SearchItem key={index}
 					heading={artist.title}
 					img={artist.logo}
-					span1={albums.length === 1 ? String(albums.length) + ' album' : String(albums.length) + ' albums'}
-					span2={songs.length === 1 ? String(songs.length) + ' song' : String(songs.length) + ' songs'} />
+					span1={artist.numAlbums === 1 ? String(artist.numAlbums) + ' album' : String(artist.numAlbums) + ' albums'}
+					span2={artist.numSongs === 1 ? String(artist.numSongs) + ' song' : String(artist.numSongs) + ' songs'} />
 			)
 		})
 	}

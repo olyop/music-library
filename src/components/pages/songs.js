@@ -1,8 +1,11 @@
 import React from 'react'
 
-const Songs = () => {
+const Songs = props => {
 	return (
-		<h1>Songs</h1>
+		<div>
+			<h1>Songs</h1>
+			<div>{JSON.stringify(props.mainObj)}</div>
+		</div>
 	)
 }
 

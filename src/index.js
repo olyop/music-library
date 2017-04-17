@@ -9,11 +9,28 @@ import 'bootstrap/dist/css/bootstrap-theme.css'
 import './index.css'
 
 // Import Data
-import siteInfoObj from './data/site-info'
+import siteInfoData from './data/site-info'
+import songsData from './data/library/songs'
+import albumsData from './data/library/albums'
+import artistsData from './data/library/artists'
 
 // Import Components
 import Header from './components/header/header'
 import Library from './components/library'
+
+// Import Functions
+import { calcLibraryData } from './components/helpers/index-helper'
+
+const mainObj = {
+	songs: songsData,
+	albums: albumsData,
+	artists: artistsData,
+	length: {
+		songs: songsData.length,
+		albums: albumsData.length,
+		artists: artistsData.length
+	}
+}
 
 // Index Component
 class Index extends React.Component {
@@ -32,22 +49,20 @@ class Index extends React.Component {
     }))
   }
 	
-	changePageTitle() {
-		
-	}
-	
 	render() {
-		let info = this.props.info
+		let props = this.props
 		return (
 			<div className="index">
 
 				<Header
-					info={info}
+					info={props.info}
+					mainObj={props.mainObj}
 					toggleNav={this.toggleNav}
 					isNav={this.state.isNav} />
 
 				<Library
-					info={info}
+					info={props.info}
+					mainObj={props.mainObj}
 					isNav={this.state.isNav} />
 
 			</div>
@@ -55,10 +70,10 @@ class Index extends React.Component {
 	}
 }
 
-// Render whole site to the DOM
+// Render site to the DOM
 ReactDOM.render(
   <Index
-		info={siteInfoObj}
-	/>,
+		info={siteInfoData}
+		mainObj={calcLibraryData(mainObj)} />,
   document.getElementById('root')
 )

@@ -7,31 +7,55 @@ import Albums from './pages/albums'
 import Songs from './pages/songs'
 import './library.css'
 
-const Library = ({ info, isNav }) => {
+const Library = props => {
 	return (
 		<Router>
 			<div className="container-fluid library">
 				<div className="row">
 				
-					{ isNav ? <SideBar info={info} /> : null }
+					{ props.isNav ? <SideBar info={props.info} /> : null }
 
-					<div className={isNav ? 'col-md-10 content' : 'col-md-12 content'}>
+					<div className={props.isNav ? 'col-md-10 content' : 'col-md-12 content'}>
 
 						<Route exact
 							path="/"
-							render={ () => <Home info={info} /> } />
+							render={ () => (
+								
+								<Home
+									info={props.info}
+									mainObj={props.mainObj} />
+								
+							)}/>
 
 						<Route exact
 							path="/artists"
-							render={ () => <Artists info={info} /> } />
+							render={ () => (
+								
+								<Artists
+									info={props.info}
+									mainObj={props.mainObj} />
+								
+							)} />
 
 						<Route exact
 							path="/albums"
-							render={ () => <Albums info={info} /> } />
+							render={ () => (
+								
+								<Albums
+									info={props.info}
+									mainObj={props.mainObj} />
+								
+							)} />
 
 						<Route exact
 							path="/songs"
-							render={ () => <Songs info={info} /> } />
+							render={ () => (
+								
+								<Songs
+									info={props.info}
+									mainObj={props.mainObj} />
+								
+							)} />
 
 					</div>
 					

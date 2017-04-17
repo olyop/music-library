@@ -1,8 +1,11 @@
 import React from 'react'
 
-const Home = () => {
+const Home = props => {
 	return (
-		<h1>Home</h1>
+		<div>
+			<h1>Home</h1>
+			<div>{JSON.stringify(props.mainObj)}</div>
+		</div>
 	)
 }
 

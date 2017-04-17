@@ -1,8 +1,5 @@
 import React from 'react'
 import HeaderHamburger from './header-hamburger'
-import songsObj from '../../data/library/songs'
-import artistsObj from '../../data/library/artists'
-import albumsObj from '../../data/library/albums'
 import Search from './search/search'
 import './header.css'
 
@@ -30,10 +27,6 @@ class Header extends React.Component {
 					headerStyle = { backgroundColor: props.info.colors.p.f },
 					inputStyle = { backgroundColor: props.info.colors.p.e }
 		
-		let	songsLength = songsObj.length,
-				albumsLength = albumsObj.length,
-				artistsLength = artistsObj.length
-		
 		let isInputEmpty = this.state.inputVal === '',
 				close, dropDown
 		
@@ -52,12 +45,7 @@ class Header extends React.Component {
 			dropDown = (
 				<Search
 					inputVal={this.state.inputVal}
-					songsObj={songsObj}
-					albumsObj={albumsObj}
-					artistsObj={artistsObj}
-					songsLength={songsLength}
-					albumsLength={albumsLength}
-					artistsLength={artistsLength} />
+					mainObj={props.mainObj} />
 			)
 		}
 

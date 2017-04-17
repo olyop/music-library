@@ -1,15 +1,11 @@
 import React from 'react'
-import artistsObj from '../../data/library/artists'
-import albumsObj from '../../data/library/albums'
 import find from 'lodash/find'
 import './albums.css'
 
-const Albums = () => {
+const Albums = props => {
 	
-	let renderedAlbumsList = albumsObj.map((album, index) => {
-
-		let artist = find(artistsObj, { artistId: album.artistId })
-
+	let renderedAlbumsList = props.mainObj.albums.map((album, index) => {
+		let artist = find(props.mainObj.artists, { artistId: album.artistId })
 		return (
 			<div
 				className="album"
