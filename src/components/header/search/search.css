@@ -7,16 +7,20 @@
 	right: 18px; }
 
 .header .header-middle .header-search-drop-down {
-	overflow: auto;
-	position: absolute;
+	overflow-y: auto;
+	transition: .2s all;
+	overflow-x: hidden;
+	position: fixed;
 	box-shadow:
 		0 16px 24px 2px rgba(0, 0, 0, 0.14),
 		0 6px 30px 5px rgba(0, 0, 0, 0.12),
 		0 8px 10px -5px rgba(0, 0, 0, 0.4);
-	top: 70px;
+	top: 75px;
+	right: 0;
+	bottom: 0;
+	left: 0;
 	width: 100%;
-	background-color: #fff;
-	max-height: 600px; }
+	background-color: #fff; }
 
 .header .header-middle .header-search-drop-down h1 {
 	font-size: 20px;
@@ -35,24 +39,58 @@
 	font-weight: 400; }
 
 .search-item {
-	padding: 10px;
 	transition: .2s all;
+	background-color: #fff;
 	cursor: pointer;
-	border-bottom: 1px solid #EEEEEE;
+	border-bottom: 1px solid #E0E0E0;
 	display: flex; }
 	.search-item:hover {
 		background-color: #EEEEEE; }
+
+	.search-item .search-item-icon {
+		display: flex;
+		transition: .2s all;
+		border-right: 1px solid #E0E0E0;
+		width: 65px;
+		height: 65px;
+		min-width: 65px;
+		align-items: center;
+		align-content: center;
+		justify-content: center; }
+		.search-item .search-item-icon i {
+			font-size: 28px; }
+		.search-item .search-item-icon .search-item-play {
+			font-size: 40px;
+			display: none; }
+		.search-item:hover .search-item-icon .search-item-icon-type {
+			display: none; }
+		.search-item:hover .search-item-icon .search-item-play {
+			display: flex; }
+
 	.search-item img {
-		margin-right: 10px;
+		margin: 10px;
+		border-radius: 100%;
+		box-shadow:
+			0 16px 24px 2px rgba(0, 0, 0, 0.14),
+			0 6px 30px 5px rgba(0, 0, 0, 0.12),
+			0 8px 10px -5px rgba(0, 0, 0, 0.4);
 		height: 45px;
 		width: 45px; }
-	.search-song .search-item-inner {
+	.search-item .search-item-inner {
+		margin: 10px 10px 10px 0;
 		display: flex;
 		flex-direction: column; }
-		.search-item .search-item-inner p span {
-			font-weight: 500;
-			font-size: 18px; }
-		.search-song .search-item-inner span {
-			font-size: 14px; }
-			.search-item span:hover {
-				text-decoration: underline; }
+		.search-item .search-item-span-main {
+			font-weight: 700; }
+		.search-item .search-item-inner p {
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			position: relative; }
+			.search-item .search-item-inner p span {
+				font-weight: 500;
+				font-size: 18px; }
+			.search-song .search-item-inner span {
+				font-size: 14px; }
+				.search-item span:hover {
+					text-decoration: underline; }

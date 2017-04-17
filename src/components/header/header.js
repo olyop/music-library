@@ -15,6 +15,8 @@ class Header extends React.Component {
 	
 	handleInputChange(event) {
     this.setState({ inputVal: event.target.value })
+		this.props.closeNav()
+		console.log('input changed')
   }
 	
 	clearInput() {
@@ -44,6 +46,7 @@ class Header extends React.Component {
 		} else {
 			dropDown = (
 				<Search
+					info={props.info}
 					inputVal={this.state.inputVal}
 					mainObj={props.mainObj} />
 			)

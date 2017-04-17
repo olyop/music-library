@@ -1,68 +1,69 @@
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import SideBar from './side-bar/side-bar.js'
+import './library.css'
+
+
+// Import Pages
 import Home from './pages/home'
 import Artists from './pages/artists'
 import Albums from './pages/albums'
 import Songs from './pages/songs'
-import './library.css'
 
-const Library = props => {
-	return (
-		<Router>
-			<div className="container-fluid library">
-				<div className="row">
-				
-					{ props.isNav ? <SideBar info={props.info} /> : null }
+const Library = props => (
+	<Router>
+		<div className="container-fluid library">
+			<div className="row">
 
-					<div className={props.isNav ? 'col-md-10 content' : 'col-md-12 content'}>
+				{ props.isNav ? <SideBar info={props.info} /> : null }
 
-						<Route exact
-							path="/"
-							render={ () => (
-								
-								<Home
-									info={props.info}
-									mainObj={props.mainObj} />
-								
-							)}/>
+				<div className={props.isNav ? 'col-md-10 content' : 'col-md-12 content'}>
 
-						<Route exact
-							path="/artists"
-							render={ () => (
-								
-								<Artists
-									info={props.info}
-									mainObj={props.mainObj} />
-								
-							)} />
+					<Route exact
+						path="/"
+						render={ () => (
 
-						<Route exact
-							path="/albums"
-							render={ () => (
-								
-								<Albums
-									info={props.info}
-									mainObj={props.mainObj} />
-								
-							)} />
+							<Home
+								info={props.info}
+								mainObj={props.mainObj} />
 
-						<Route exact
-							path="/songs"
-							render={ () => (
-								
-								<Songs
-									info={props.info}
-									mainObj={props.mainObj} />
-								
-							)} />
+						)}/>
 
-					</div>
-					
+					<Route exact
+						path="/artists"
+						render={ () => (
+
+							<Artists
+								info={props.info}
+								mainObj={props.mainObj} />
+
+						)} />
+
+					<Route exact
+						path="/albums"
+						render={ () => (
+
+							<Albums
+								info={props.info}
+								mainObj={props.mainObj} />
+
+						)} />
+
+					<Route exact
+						path="/songs"
+						render={ () => (
+
+							<Songs
+								info={props.info}
+								mainObj={props.mainObj} />
+
+						)} />
+
 				</div>
+
 			</div>
-		</Router>
-	)
-}
+		</div>
+	</Router>
+)
 
 export default Library

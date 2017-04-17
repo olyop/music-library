@@ -41,6 +41,7 @@ class Index extends React.Component {
 		this.state = { isNav: this.props.info.isNav }
 		
 		this.toggleNav = this.toggleNav.bind(this)
+		this.closeNav = this.closeNav.bind(this)
 	}
 	
 	toggleNav() {
@@ -48,6 +49,10 @@ class Index extends React.Component {
       isNav: !prevState.isNav
     }))
   }
+	
+	closeNav() {
+		this.setState({ isNav: false })
+	}
 	
 	render() {
 		let props = this.props
@@ -58,6 +63,7 @@ class Index extends React.Component {
 					info={props.info}
 					mainObj={props.mainObj}
 					toggleNav={this.toggleNav}
+					closeNav={this.closeNav}
 					isNav={this.state.isNav} />
 
 				<Library

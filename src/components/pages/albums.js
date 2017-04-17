@@ -4,7 +4,7 @@ import './albums.css'
 
 const Albums = props => {
 	
-	let renderedAlbumsList = props.mainObj.albums.map((album, index) => {
+	let albumsList = props.mainObj.albums.map((album, index) => {
 		let artist = find(props.mainObj.artists, { artistId: album.artistId })
 		return (
 			<div
@@ -23,7 +23,7 @@ const Albums = props => {
 	
 	return (
 		<div className="albums">
-			{renderedAlbumsList}
+			{albumsList}
 		</div>
 	)
 }

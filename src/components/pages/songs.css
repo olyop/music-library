@@ -1,0 +1,7 @@
+.songs {
+	padding: 40px; }
+	.songs table {
+		width: 100%; }
+		.songs table td, tr {
+			padding: 10px;
+			border: 1px solid #eeeeee; }

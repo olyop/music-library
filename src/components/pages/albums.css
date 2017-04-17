@@ -15,8 +15,6 @@
 .albums .album .album-inner .album-content {
 	padding: 10px;
 	background-color: #fff;
-	text-overflow: ellipsis;
-	white-space: nowrap;
 	border-radius: 0 0 5px 5px;
 	cursor: pointer; }
 	.albums .album .album-inner .album-content h1, .albums .album .album-inner .album-content p {
