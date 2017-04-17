@@ -8,6 +8,7 @@
 
 .header .header-middle .header-search-drop-down {
 	overflow-y: auto;
+	padding: 60px;
 	transition: .2s all;
 	overflow-x: hidden;
 	position: fixed;
@@ -21,12 +22,21 @@
 	left: 0;
 	width: 100%;
 	background-color: #fff; }
+.header-search-drop-down-inner {
+	border: 2px solid #BDBDBD;
+}
 
 .header .header-middle .header-search-drop-down h1 {
 	font-size: 20px;
-	margin-top: 20px;
+	margin-top: 40px;
 	padding: 10px;
-	border-bottom: 2px solid #333; }
+	border-top: 2px solid #BDBDBD; 
+	border-bottom: 2px solid #BDBDBD; }
+
+.header .header-middle .header-search-drop-down h2 {
+	padding-bottom: 20px;
+	font-weight: 400;
+	font-size: 30px; }
 
 .header .header-middle .header-search-drop-down h4 {
 	padding: 10px;
@@ -51,8 +61,8 @@
 		display: flex;
 		transition: .2s all;
 		border-right: 1px solid #E0E0E0;
-		width: 65px;
-		height: 65px;
+		width: 72px;
+		height: 72px;
 		min-width: 65px;
 		align-items: center;
 		align-content: center;
@@ -67,17 +77,20 @@
 		.search-item:hover .search-item-icon .search-item-play {
 			display: flex; }
 
-	.search-item img {
-		margin: 10px;
-		border-radius: 100%;
-		box-shadow:
-			0 16px 24px 2px rgba(0, 0, 0, 0.14),
-			0 6px 30px 5px rgba(0, 0, 0, 0.12),
-			0 8px 10px -5px rgba(0, 0, 0, 0.4);
-		height: 45px;
-		width: 45px; }
+		.search-item .search-img {
+			border-right: 1px solid #E0E0E0; }
+			.search-item .search-img img {
+				margin: 10px;
+				border-radius: 100%;
+				box-shadow:
+					0 16px 24px 2px rgba(0, 0, 0, 0.14),
+					0 6px 30px 5px rgba(0, 0, 0, 0.12),
+					0 8px 10px -5px rgba(0, 0, 0, 0.4);
+				height: 52px;
+				width: 52px; }
+
 	.search-item .search-item-inner {
-		margin: 10px 10px 10px 0;
+		padding: 10px;
 		display: flex;
 		flex-direction: column; }
 		.search-item .search-item-span-main {
@@ -89,8 +102,8 @@
 			position: relative; }
 			.search-item .search-item-inner p span {
 				font-weight: 500;
-				font-size: 18px; }
-			.search-song .search-item-inner span {
+				font-size: 22px; }
+			.search-item .search-item-inner div span {
 				font-size: 14px; }
 				.search-item span:hover {
 					text-decoration: underline; }

@@ -85,18 +85,19 @@ const Search = props => {
 	
 	return (
 		<div className="header-search-drop-down">
+			<h2>Showing search results for <b>{input}</b></h2>
+			<div className="header-search-drop-down-inner">
+				
+				<h1 style={{ margin: '0', borderTop: '0' }}>Artists</h1>
+				{renderSearchMatchArtists()}
+
+				<h1>Albums</h1>
+				{renderSearchMatchAlbums()}
+
+				<h1>Songs</h1>
+				{renderSearchMatchSongs()}
 			
-			
-			
-			<h1 style={{ margin: '0' }}>Artists</h1>
-			{renderSearchMatchArtists()}
-			
-			<h1>Albums</h1>
-			{renderSearchMatchAlbums()}
-			
-			<h1>Songs</h1>
-			{renderSearchMatchSongs()}
-			
+			</div>
 		</div>
 	)
 }
