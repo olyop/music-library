@@ -83,7 +83,7 @@ const Search = props => {
 	return (
 		<div className="header-search-drop-down">
 			
-			<h2>Showing <strong style={style}>{numOfMatches}</strong> search results for <b style={style}>{input}</b></h2>
+			<h2>Showing <b style={style}>{numOfMatches}</b> search results for <b style={style}>{input}</b></h2>
 			
 			<div className="header-search-drop-down-inner">
 				

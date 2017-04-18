@@ -1,5 +1,11 @@
 .library {
-	padding-top: 75px; }
+	padding-top: 169px; }
 	.content {
 		padding: 5px;
 		min-height: 100vh; }
+
+@media (min-width: 650px) {
+	.library {
+		padding-top: 75px;
+	}
+}

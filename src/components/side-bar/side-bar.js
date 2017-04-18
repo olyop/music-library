@@ -30,7 +30,6 @@ const SideBar = ({ info }) => {
 			<ul>
 				{renderNavList}
 			</ul>
-			<h1 style={headingStyle}>{info.sideBar.heading.playlists}</h1>
 		</div>
 	)
 }

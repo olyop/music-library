@@ -56,7 +56,6 @@ class Header extends React.Component {
 			<div
 				className="header"
 				style={headerStyle}>
-
 				<div className="header-section header-left">
 
 					<HeaderHamburger
@@ -67,7 +66,6 @@ class Header extends React.Component {
 					<div className="header-title"><a href='/'>{props.info.header.title}</a></div>
 
 				</div>
-
 				<div className="header-section header-middle">
 
 					<i className="material-icons header-icon header-search-icon">search</i>
@@ -78,9 +76,9 @@ class Header extends React.Component {
 						style={inputStyle}
 						placeholder={props.info.header.searchPlaceholder} />
 					
-					{ close }
+					{close}
 					
-					{ dropDown }
+					{dropDown}
 
 				</div>
 

@@ -1,5 +1,5 @@
 .header {
-	display: flex;
+	display: block;
 	z-index: 2;
 	position: fixed;
 	box-shadow:
@@ -12,9 +12,8 @@
 		color: #fff;
 		padding: 10px;
 		position: relative; }
-
 		.header .header-left {
-			min-width: 260px;
+			min-width: 230px;
 			display: flex;
 			justify-content: flex-start;
 			align-items: center;
@@ -24,11 +23,12 @@
 			.header .header-left .header-title a {
 				padding: 0 10px;
 				color: #fff;
-				font-size: 25px; }
+				font-size: 20px; }
 
 		.header .header-middle {
 			position: relative;
 			min-width: 220px;
+			padding: 0 10px 10px 10px !important;
 			flex: 2; }
 			.header .header-middle .header-icon  {
 				-webkit-user-select: none;
@@ -54,7 +54,16 @@
 				.header .header-middle input::-webkit-input-placeholder {
 					opacity: 0.5;
 					color: #fff; }
-
 		.header .header-right {
 			flex: 1; }
 
+@media (min-width: 650px) {
+	.header .header-middle {
+		padding: 10px !important; }
+	.header {
+		display: flex; }
+	.header .header-left {
+		min-width: 260px; }
+	.header .header-left .header-title a {
+		font-size: 25px; }
+}

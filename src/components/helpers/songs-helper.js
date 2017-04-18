@@ -1,17 +1,23 @@
 import React from 'react'
 
-const tableHeader = () => (
+const TableHeader = props => {
+	const style = {
+		backgroundColor: props.info.colors.p.f,
+		border: '1px solid ' + props.info.colors.p.f
+	}
+	return (
+		<tr>
+			<th style={style}>Title</th>
+			<th style={style}>Artist</th>
+			<th style={style}>Album</th>
+		</tr>
+	)
+}
+
+const TableFooter = props => (
 	<tr>
-		<th>Title</th>
-		<th>Artist</th>
-		<th>Album</th>
+		<td colSpan="3">{props.text}</td>
 	</tr>
 )
 
-const tableFooter = () => (
-	<tr>
-		<td colSpan="3">Footer</td>
-	</tr>
-)
-
-export { tableHeader, tableFooter }
+export { TableHeader, TableFooter }
