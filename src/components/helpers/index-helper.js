@@ -27,13 +27,9 @@ const calcLibraryData = obj => {
 				obj.albums[d].numSongs++
 			}
 		}
-	}
-	
-	// Find artist name for each album
-	for (let f = 0; f < obj.length.albums; f++) {
 		for (let g = 0; g < obj.length.artists; g++) {
-			if (obj.artists[g].artistId === obj.albums[f].artistId) {
-				obj.albums[f].artistName = obj.artists[g].title
+			if (obj.artists[g].artistId === obj.albums[d].artistId) {
+				obj.albums[d].artistName = obj.artists[g].title
 				break
 			}
 		}
