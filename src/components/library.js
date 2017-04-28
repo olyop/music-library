@@ -3,11 +3,10 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import SideBar from './side-bar/side-bar.js'
 import './library.css'
 
-
 // Import Pages
 import Home from './pages/home'
 import Artists from './pages/artists'
-import Albums from './pages/albums'
+import Albums from './pages/albums/albums'
 import Songs from './pages/songs'
 
 const Library = props => (
@@ -27,7 +26,7 @@ const Library = props => (
 								info={props.info}
 								mainObj={props.mainObj} />
 
-						)}/>
+						)} />
 
 					<Route exact
 						path="/artists"

@@ -1,11 +1,10 @@
 import React from 'react'
-import find from 'lodash/find'
 import './albums.css'
+import './albums-responsive.css'
 
 const Albums = props => {
 	
 	let albumsList = props.mainObj.albums.map((album, index) => {
-		let artist = find(props.mainObj.artists, { artistId: album.artistId })
 		return (
 			<div
 				className="album"
@@ -13,8 +12,14 @@ const Albums = props => {
 				<div className="album-inner">
 					<img src={album.cover} alt={album.cover} />
 					<div className="album-content">
+						<div className="album-more">
+							<i className="material-icons">more_vert</i>
+						</div>
+						<div className="album-more-menu">
+							<p>More</p>
+						</div>
 						<h1><span>{album.title}</span></h1>
-						<p><span>{artist.title}</span></p>
+						<p><span>{album.artistName}</span></p>
 					</div>
 				</div>
 			</div>

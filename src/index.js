@@ -21,6 +21,7 @@ import Library from './components/library'
 // Import Functions
 import { calcLibraryData } from './components/helpers/index-helper'
 
+// Define Main Data Object
 const mainObj = {
 	songs: songsData,
 	albums: albumsData,
