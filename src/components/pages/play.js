@@ -41,7 +41,13 @@ class Play extends React.Component {
 					<i className="material-icons">shuffle</i>
 				</div>
 				
-				<div className="play-section play-right"></div>
+				<div className="play-section play-right">
+					
+					<i className="material-icons">volume_mute</i>
+					<input type="range" min="0" max="1" value="1" />
+					<i className="material-icons">volume_up</i>
+						
+				</div>
 				
 			</div>
 		)

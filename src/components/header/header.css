@@ -1,6 +1,6 @@
 .header {
 	display: block;
-	z-index: 2;
+	z-index: 6;
 	position: fixed;
 	box-shadow:
 		0 4px 5px 0 rgba(0, 0, 0, 0.14),
