@@ -1,4 +1,5 @@
 import React from 'react'
+import InputRange from 'react-input-range';
 import './play.css'
 
 class Play extends React.Component {
@@ -44,7 +45,14 @@ class Play extends React.Component {
 				<div className="play-section play-right">
 					
 					<i className="material-icons">volume_mute</i>
-					<input type="range" min="0" max="1" value="1" />
+					
+					<InputRange
+        		maxValue={20}
+        		minValue={0}
+						step="1"
+						value={this.state.value}
+						onChange={value => this.setState({ value })} />
+					
 					<i className="material-icons">volume_up</i>
 						
 				</div>

@@ -54,12 +54,14 @@
 
 .play-right {
 	flex: 1;
-	justify-content: center;
+	justify-content: flex-end;
 	align-items: center;
+	padding-right: 27px;
 	display: flex; }
 	.play-right input {
 		margin: 0 10px;
 		width: 60%; }
+
 .play-right input[type=range] {
   -webkit-appearance: none;
 }
