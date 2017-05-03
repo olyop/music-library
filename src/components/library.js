@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import SideBar from './side-bar/side-bar.js'
+import SideBar from './side-bar/side-bar'
 import './library.css'
 
 // Import Pages
@@ -10,66 +10,83 @@ import Albums from './pages/albums/albums'
 import Songs from './pages/songs'
 import Play from './pages/play'
 
-const Library = props => (
-	<Router>
-		<div>
+class Library extends React.Component {
+	
+	constructor(props) {
+		super(props)
 		
-			<Play />
-			
-			<div className="container-fluid library">
-				<div className="row">
+		this.state = {
+			currentSong: props.mainObj.songs[Math.floor(Math.random() * props.mainObj.length.songs)]
+		}
+		
+		this.changeSong = this.changeSong.bind(this)
+	}
+	
+	changeSong(value) {
+		this.setState({ currentSong: value })
+	}
+	
+	render() {
+		const props = this.props
+		return (
+			<Router>
+				<div>
 
-					{ props.isNav ? <SideBar info={props.info} /> : null }
+					<Play currentSong={this.state.currentSong} />
 
-					<div className={props.isNav ? 'col-md-10 content' : 'col-md-12 content'}>
+					<div className="container-fluid library">
+						<div className="row">
 
-						<Route exact
-							path="/"
-							render={ () => (
+							{ props.isNav ? <SideBar info={props.info} /> : null }
 
-								<Home
-									info={props.info}
-									mainObj={props.mainObj} />
+							<div className={props.isNav ? 'col-md-10 content' : 'col-md-12 content'}>
 
-							)} />
+								<Route exact
+									path="/"
+									render={ () => (
+										<Home
+											info={props.info}
+											mainObj={props.mainObj}
+											currentSong={this.state.currentSong} />
+									)} />
 
-						<Route exact
-							path="/artists"
-							render={ () => (
+								<Route exact
+									path="/artists"
+									render={ () => (
+										<Artists
+											info={props.info}
+											mainObj={props.mainObj}
+											currentSong={this.state.currentSong} />
+									)} />
 
-								<Artists
-									info={props.info}
-									mainObj={props.mainObj} />
+								<Route exact
+									path="/albums"
+									render={ () => (
+										<Albums
+											info={props.info}
+											mainObj={props.mainObj}
+											currentSong={this.state.currentSong} />
+									)} />
 
-							)} />
+								<Route exact
+									path="/songs"
+									render={ () => (
+										<Songs
+											info={props.info}
+											mainObj={props.mainObj}
+											changeSong={this.changeSong}
+											currentSong={this.state.currentSong} />
+									)} />
 
-						<Route exact
-							path="/albums"
-							render={ () => (
+							</div>
 
-								<Albums
-									info={props.info}
-									mainObj={props.mainObj} />
-
-							)} />
-
-						<Route exact
-							path="/songs"
-							render={ () => (
-
-								<Songs
-									info={props.info}
-									mainObj={props.mainObj} />
-
-							)} />
-
+						</div>
 					</div>
 
 				</div>
-			</div>
-		
-		</div>
-	</Router>
-)
+			</Router>
+		)
+	}
+}
 
 export default Library

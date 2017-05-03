@@ -2,10 +2,31 @@
 	padding: 40px; }
 	.songs table {
 		width: 100%; }
-		.songs table td, tr, th {
+		.songs table td, th {
+			cursor: pointer;
 			font-size: 18px;
 			border: 1px solid #eeeeee;
 			padding: 10px; }
+		.songs table tr:hover {
+			background-color: #eeeeee; }
+		.songs table th {
+			color: #fff; }
 
-.songs table th {
-	color: #fff; }
+.songs table .song-cover {
+	padding: 10px; }
+	.songs table .song-cover img {
+		width: 58px;
+		height: auto; }
+
+.songs .song-active {
+	background-color: #FF5722; }
+	.songs table .song-active:hover {
+		background-color: #FF5722; }
+	.songs .song-active td {
+		color: #fff;
+		border: none !important; }
+	.songs table .song-active .song-cover {
+		padding: 0; }
+.songs table .song-active .song-cover img {
+	width: 79px;
+	height: auto; }

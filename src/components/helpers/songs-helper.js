@@ -7,6 +7,7 @@ const TableHeader = props => {
 	}
 	return (
 		<tr>
+			<th style={style}>Cover</th>
 			<th style={style}>Title</th>
 			<th style={style}>Artist</th>
 			<th style={style}>Album</th>

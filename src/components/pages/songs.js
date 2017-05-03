@@ -2,27 +2,45 @@ import React from 'react'
 import { TableHeader, TableFooter } from '../helpers/songs-helper'
 import './songs.css'
 
-const Songs = props => {
+class Song extends React.Component {
 	
-	const songsList = props.mainObj.songs.map((song, index) => {	
+	constructor(props) {
+		super(props)
+		
+		this.state = { song: this.props.song }
+	}
+	
+	render() {
+		
 		return (
-			<tr key={index}
-				className="song">
-				<td>{song.title}</td>
-				<td>{song.artistName}</td>
-				<td>{song.albumName}</td>
+			<tr className={this.props.currentSong.songId === this.state.song.songId ? 'song song-active' : 'song'}
+				onClick={ value => this.props.changeSong(this.state.song) }>
+				<td className="song-cover">
+					<img src={this.state.song.albumCover}
+							alt={this.state.song.albumName} />
+				</td>
+				<td>{this.state.song.title}</td>
+				<td>{this.state.song.artistName}</td>
+				<td>{this.state.song.albumName}</td>
 			</tr>
 		)
-	})
-	
+	}
+}
+
+const Songs = props => {
 	return (
 		<div className="songs">
 			<table>
 				<thead>
-					<TableHeader info={props.info}/>
+					<TableHeader info={props.info} />
 				</thead>
 				<tbody>
-					{songsList}
+					{props.mainObj.songs.map((song, index) => (
+						<Song key={index}
+							changeSong={props.changeSong}
+							currentSong={props.currentSong}
+							song={song} />
+					))}
 				</tbody>
 				<tfoot>
 					<TableFooter text={props.mainObj.length.songs}/>
