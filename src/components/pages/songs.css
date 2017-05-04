@@ -1,10 +1,11 @@
 .songs {
-	padding: 40px; }
+	padding: 10px; }
 	.songs table {
 		width: 100%; }
 		.songs table td, th {
+			transition: .2s background;
 			cursor: pointer;
-			font-size: 18px;
+			font-size: 14px;
 			border: 1px solid #eeeeee;
 			padding: 10px; }
 		.songs table tr:hover {
@@ -13,20 +14,42 @@
 			color: #fff; }
 
 .songs table .song-cover {
-	padding: 10px; }
+	width: 59px;
+	max-width: 59px;
+	padding: 5px; }
 	.songs table .song-cover img {
-		width: 58px;
+		width: 48px;
 		height: auto; }
 
+.songs table .song-length {
+	width: 61px;
+	color: #757575;
+	max-width: 61px; }
+	.songs table .song-length .song-length-inner {
+		display: flex;
+		justify-content: center;
+		align-content: center; }
+	.songs table .song-length i {
+		font-size: 22px;
+		color: #fff; }
+
 .songs .song-active {
-	background-color: #FF5722; }
+	background-color: #3F51B5; }
 	.songs table .song-active:hover {
-		background-color: #FF5722; }
+		background-color: #3F51B5; }
 	.songs .song-active td {
 		color: #fff;
-		border: none !important; }
-	.songs table .song-active .song-cover {
-		padding: 0; }
-.songs table .song-active .song-cover img {
-	width: 79px;
-	height: auto; }
+		border-color: #3F51B5; }
+
+@media (min-width: 900px) {
+	.songs {
+		padding: 20px; }
+	.songs table td, th {
+		font-size: 16px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.songs {
+		padding: 40px; }
+}

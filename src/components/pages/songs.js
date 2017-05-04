@@ -20,6 +20,7 @@ class Song extends React.Component {
 							alt={this.state.song.albumName} />
 				</td>
 				<td>{this.state.song.title}</td>
+				<td className="song-length">{this.state.song.length}</td>
 				<td>{this.state.song.artistName}</td>
 				<td>{this.state.song.albumName}</td>
 			</tr>
