@@ -13,6 +13,14 @@
 		.songs table th {
 			color: #fff; }
 
+.songs table thead .song-icon {
+	align-content: center;
+	display: flex; 
+	justify-content: center; }
+	.songs table thead .song-icon i {
+		font-size: 22px;
+		color: #fff; }
+
 .songs table .song-cover {
 	width: 59px;
 	max-width: 59px;
@@ -25,13 +33,6 @@
 	width: 61px;
 	color: #757575;
 	max-width: 61px; }
-	.songs table .song-length .song-length-inner {
-		display: flex;
-		justify-content: center;
-		align-content: center; }
-	.songs table .song-length i {
-		font-size: 22px;
-		color: #fff; }
 
 .songs .song-active {
 	background-color: #3F51B5; }

@@ -8,11 +8,13 @@ const TableHeader = props => {
 	return (
 		<tr>
 			<th style={style}
-				className="song-cover">Cover</th>
+				className="song-cover">
+				<div className="song-icon"><i className="material-icons">image</i></div>
+			</th>
 			<th style={style}>Title</th>
 			<th style={style}
 				className="song-length">
-				<div className="song-length-inner"><i className="material-icons">access_time</i></div>
+				<div className="song-icon"><i className="material-icons">access_time</i></div>
 			</th>
 			<th style={style}>Artist</th>
 			<th style={style}>Album</th>

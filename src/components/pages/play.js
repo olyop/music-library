@@ -74,8 +74,7 @@ class Play extends React.Component {
 				</div>
 				
 				<ReactAudioPlayer
-					src="./song-files/song.mp3"
-					autoPlay />
+					src="./song-files/song.mp3" />
 				
 			</div>
 		)
