@@ -1,5 +1,6 @@
 import React from 'react'
 import InputRange from 'react-input-range'
+import ReactAudioPlayer from './react-audio-player'
 import 'react-input-range/lib/css/index.css'
 import './play.css'
 
@@ -71,6 +72,10 @@ class Play extends React.Component {
 						volume_up</i>
 						
 				</div>
+				
+				<ReactAudioPlayer
+					src="./song-files/song.mp3"
+					autoPlay />
 				
 			</div>
 		)
