@@ -1,6 +1,11 @@
 .nav-side-bar {
 	padding: 0;
 	border-right: 0;
+	position: fixed;
+	width: 100%;
+	box-shadow: 0 0 8px rgba(0,0,0,.4);
+	background-color: #fff;
+	z-index: 3;
 	border-bottom: 2px solid #000; }
 	.nav-side-bar img {
 		margin-bottom: 20px;
@@ -55,6 +60,9 @@
 
 @media (min-width: 992px) {
 	.nav-side-bar {
+		position: relative;
+		box-shadow: none;
+		width: 16.66666667%;
 		border-right: 2px solid #000; }
 		.nav-side-bar ul {
 			display: block; }

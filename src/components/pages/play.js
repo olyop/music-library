@@ -1,6 +1,7 @@
 import React from 'react'
 import InputRange from 'react-input-range'
-import ReactAudioPlayer from './react-audio-player'
+import Sound from 'react-sound'
+import LoadingSvg from '../../common/rolling.svg'
 import 'react-input-range/lib/css/index.css'
 import './play.css'
 
@@ -11,12 +12,23 @@ class Play extends React.Component {
 		
 		this.state = {
 			isPlay: false,
-			volume: 0
+			isLoading: false,
+			volume: 50
 		}
 		
+		this.handleSongLoading = this.handleSongLoading.bind(this)
+		this.handleSongPlaying = this.handleSongPlaying.bind(this)
 		this.onPlayClick = this.onPlayClick.bind(this)
 		this.volumeMute = this.volumeMute.bind(this)
 		this.volumeFull = this.volumeFull.bind(this)
+	}
+	
+	handleSongLoading() {
+		this.setState({ isLoading: true })
+	}
+	
+	handleSongPlaying() {
+		this.setState({ isLoading: false })
 	}
 	
 	onPlayClick() {
@@ -26,10 +38,23 @@ class Play extends React.Component {
 	}
 	
 	volumeMute() { this.setState({ volume: 0 }) }
-	volumeFull() { this.setState({ volume: 20 }) }
+	volumeFull() { this.setState({ volume: 100 }) }
 	
 	render() {
+		
 		const props = this.props
+		
+		let playJSX = (
+			<i className="material-icons play-play-button"
+				onClick={this.onPlayClick}>{this.state.isPlay ? 'pause_circle_filled' : 'play_circle_filled'}</i>
+		)
+		
+		if (this.state.isLoading) {
+			playJSX = (
+				<img src={LoadingSvg} alt="Loading" />
+			)
+		}
+		
 		return (
 			<div className="play">
 				
@@ -46,10 +71,11 @@ class Play extends React.Component {
 				<div className="play-section play-middle">
 					<i className="material-icons">repeat</i>
 					<i className="material-icons">skip_previous</i>
-					<i className="material-icons play-play-button"
-						onClick={this.onPlayClick}>
-						{this.state.isPlay ? 'pause_circle_filled' : 'play_circle_filled'}
-					</i>
+					
+					<div className="play-middle-play">
+						{playJSX}
+					</div>
+					
 					<i className="material-icons">skip_next</i>
 					<i className="material-icons">shuffle</i>
 				</div>
@@ -57,24 +83,26 @@ class Play extends React.Component {
 				<div className="play-section play-right">
 					
 					<i className="material-icons play-right-icon"
-						onClick={this.volumeMute} >
-						volume_mute</i>
+						onClick={this.volumeMute}>volume_mute</i>
 					
 					<InputRange
-        		maxValue={20}
+        		maxValue={100}
         		minValue={0}
 						step={1}
 						value={Number(this.state.volume)}
 						onChange={volume => this.setState({ volume })} />
 					
 					<i className="material-icons play-right-icon"
-						onClick={this.volumeFull} >
-						volume_up</i>
+						onClick={this.volumeFull}>volume_up</i>
 						
 				</div>
 				
-				<ReactAudioPlayer
-					src="./song-files/song.mp3" />
+				<Sound
+					url="./song-files/song.mp3"
+					volume={this.state.volume}
+					onLoading={this.handleSongLoading} 
+					onPlaying={this.handleSongPlaying}
+					playStatus={this.state.isPlay ? Sound.status.PLAYING : Sound.status.PAUSE} />
 				
 			</div>
 		)

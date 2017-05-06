@@ -9,6 +9,9 @@
 	box-shadow: 0 0 8px rgba(0,0,0,.4);
 	width: 100%; }
 
+.play audio {
+	display: none; }
+
 .play-section {
 	padding: 10px; }
 
@@ -28,7 +31,6 @@
 					font-size: 24px; }
 				.play-left .play-content p {
 					font-size: 16px; }
-   
 
 .play-middle {
 	padding: 10px;
@@ -49,6 +51,14 @@
 		.play-middle .play-play-button {
 			color: #3F51B5;
 			font-size: 60px; }
+
+	.play-middle .play-middle-play img {
+		width: 80px;
+		margin: 0 5px;
+		padding: 10px;
+		height: auto; }
+	.play-middle .play-load {
+		font-size: 60px; }
 
 .play-right {
 	flex: 1;

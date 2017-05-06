@@ -39,7 +39,8 @@ class Library extends React.Component {
 
 							{ props.isNav ? <SideBar info={props.info} /> : null }
 
-							<div className={props.isNav ? 'col-md-10 content' : 'col-md-12 content'}>
+							<div className={props.isNav ? 'col-md-10 content' : 'col-md-12 content'}
+								style={props.isNav ? { marginTop: '114px' } : { margin: '0' }}>
 
 								<Route exact
 									path="/"
