@@ -1,0 +1,26 @@
+@media (min-width: 992px) {
+	
+	.play-section {
+		padding: 10px; }
+	
+	.play-left img {
+		width: 100px;
+		height: 100px; }
+	
+	.play-left .play-content h1 {
+		font-size: 22px; }
+	.play-left .play-content p {
+		font-size: 16px; }
+	
+	.play-middle i {
+		margin: 0 5px;
+		font-size: 33px; }
+	.play-middle .play-play-button {
+		font-size: 60px; }
+	.play-middle .play-middle-play img {
+		margin: 0 5px;
+		width: 70px; }
+	
+	.play-right {
+		padding-right: 20px; }
+}

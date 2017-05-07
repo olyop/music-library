@@ -8,7 +8,8 @@ import Home from './pages/home'
 import Artists from './pages/artists'
 import Albums from './pages/albums/albums'
 import Songs from './pages/songs'
-import Play from './pages/play'
+
+import Play from './play/play'
 
 class Library extends React.Component {
 	

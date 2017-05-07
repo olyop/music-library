@@ -4,6 +4,7 @@ import Sound from 'react-sound'
 import LoadingSvg from '../../common/rolling.svg'
 import 'react-input-range/lib/css/index.css'
 import './play.css'
+import './play-responsive.css'
 
 class Play extends React.Component {
 	
