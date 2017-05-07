@@ -50,9 +50,7 @@ class Play extends React.Component {
 		)
 		
 		if (this.state.isLoading) {
-			playJSX = (
-				<img src={LoadingSvg} alt="Loading" />
-			)
+			playJSX = <img src={LoadingSvg} alt="Loading" onClick={this.onPlayClick} />
 		}
 		
 		return (

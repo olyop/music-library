@@ -2931,7 +2931,7 @@ const songsObj = [
 	},
 	{
 		songId: 286,
-		title: 'City of Delusion',
+		title: 'City of Delusyion',
 		artistId: 3,
 		albumId: 29,
 		trackNum: '9',
@@ -3161,7 +3161,7 @@ const songsObj = [
 	},
 	{
 		songId: 307,
-		title: 'Yound Lust',
+		title: 'Young Lust',
 		artistId: 15,
 		albumId: 31,
 		trackNum: '9',
