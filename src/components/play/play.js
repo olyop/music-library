@@ -70,11 +70,7 @@ class Play extends React.Component {
 				<div className="play-section play-middle">
 					<i className="material-icons">repeat</i>
 					<i className="material-icons">skip_previous</i>
-					
-					<div className="play-middle-play">
-						{playJSX}
-					</div>
-					
+					<div className="play-middle-play">{playJSX}</div>
 					<i className="material-icons">skip_next</i>
 					<i className="material-icons">shuffle</i>
 				</div>
@@ -97,7 +93,7 @@ class Play extends React.Component {
 				</div>
 				
 				<Sound
-					url="./song-files/song.mp3"
+					url={'./song-files/song.mp3'}
 					volume={this.state.volume}
 					onLoading={this.handleSongLoading} 
 					onPlaying={this.handleSongPlaying}
