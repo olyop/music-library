@@ -47,18 +47,15 @@
 		font-size: 26px; }
 		.play-middle i:hover {
 			background-color: #E0E0E0; }
-		.play-middle .play-play-button {
-			color: #3F51B5;
-			font-size: 50px; }
-
+  .play-middle .play-middle-play .play-play-button {
+    color: #3F51B5;
+    font-size: 60px; }
 	.play-middle .play-middle-play img {
 		width: 70px;
-		margin: 0;
+    height: 70px;
+		margin: 0 10px;
 		cursor: pointer;
-		padding: 10px;
-		height: auto; }
-	.play-middle .play-load {
-		font-size: 60px; }
+		padding: 10px; }
 
 .play-right {
 	flex: 1;
@@ -77,3 +74,20 @@
 			display: none; }
 		.play-right .input-range__label--value {
 			top: -30px; }
+
+@media (min-width: 992px) {
+	.play-section {
+		padding: 10px; }
+	.play-left img {
+		width: 100px;
+		height: 100px; }
+	.play-left .play-content h1 {
+		font-size: 22px; }
+	.play-left .play-content p {
+		font-size: 16px; }
+	.play-middle i {
+		margin: 0 5px;
+		font-size: 33px; }
+	.play-right {
+		padding-right: 20px; }
+}

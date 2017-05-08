@@ -4,7 +4,7 @@ const Artists = props => {
 	return (
 		<div>
 			<h1>Artists</h1>
-			<div>{JSON.stringify(props.mainObj)}</div>
+			<div>{props.mainObj.artists.map((artist, index) => <div index={index}>{artist.title}</div>)}</div>
 		</div>
 	)
 }

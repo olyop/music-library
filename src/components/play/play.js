@@ -4,7 +4,6 @@ import Sound from 'react-sound'
 import LoadingSvg from '../../common/rolling.svg'
 import 'react-input-range/lib/css/index.css'
 import './play.css'
-import './play-responsive.css'
 
 class Play extends React.Component {
 	
@@ -25,7 +24,9 @@ class Play extends React.Component {
 	}
 	
 	handleSongLoading() {
-		this.setState({ isLoading: true })
+		this.setState(prevState => ({
+			isLoading: !prevState.isLoading
+		}))
 	}
 	
 	handleSongPlaying() {
@@ -85,7 +86,7 @@ class Play extends React.Component {
         		minValue={0}
 						step={1}
 						value={Number(this.state.volume)}
-						onChange={volume => this.setState({ volume })} />
+						onChange={ volume => this.setState({ volume }) } />
 					
 					<i className="material-icons play-right-icon"
 						onClick={this.volumeFull}>volume_up</i>
@@ -93,7 +94,7 @@ class Play extends React.Component {
 				</div>
 				
 				<Sound
-					url={'./song-files/song.mp3'}
+					url={'https://drive.google.com/uc?id=0B9afhT4dVINseWlER3pPN0pLOVk'} //'./song-files/song.mp3'
 					volume={this.state.volume}
 					onLoading={this.handleSongLoading} 
 					onPlaying={this.handleSongPlaying}
