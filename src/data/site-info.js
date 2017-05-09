@@ -48,7 +48,10 @@ const siteInfo = {
 		}
 	},
 	isNav: false,
-	hamburgerType: 'slider'
+	hamburgerType: 'slider',
+	play: {
+		startingVolume: 50
+	}
 }
 
 export default siteInfo

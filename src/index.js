@@ -8,8 +8,10 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/css/bootstrap-theme.css'
 import './index.css'
 
-// Import Data
+// Import Info
 import siteInfoData from './data/site-info'
+
+// Import Library Database
 import songsData from './data/library/songs'
 import albumsData from './data/library/albums'
 import artistsData from './data/library/artists'
@@ -21,7 +23,7 @@ import Library from './components/library'
 // Import Functions
 import { calcLibraryData } from './components/helpers/index-helper'
 
-// Define Main Data Object
+// Define Main Database Object
 const mainObj = {
 	songs: songsData,
 	albums: albumsData,

@@ -54,15 +54,6 @@ const artistsObj = [
 		numAlbums: 0
 	},
 	{
-		artistId: 7,
-		title: 'Foo Fighters',
-		yearFormed: '1994',
-		groupPhoto: './img/artists/foo-fighters/group.jpg',
-		logo: './img/artists/foo-fighters/logo.jpg',
-		numSongs: 0,
-		numAlbums: 0
-	},
-	{
 		artistId: 8,
 		title: 'MGMT',
 		yearFormed: '2002',
@@ -90,24 +81,6 @@ const artistsObj = [
 		numAlbums: 0
 	},
 	{
-		artistId: 11,
-		title: 'Red Hot Chilli Peppers',
-		yearFormed: '1983',
-		groupPhoto: './img/artists/red-hot-chilli-peppers/group.jpg',
-		logo: './img/artists/red-hot-chilli-peppers/logo.png',
-		numSongs: 0,
-		numAlbums: 0
-	},
-	{
-		artistId: 12,
-		title: 'Guns N\' Roses',
-		yearFormed: '1983',
-		groupPhoto: './img/artists/guns-n-roses/group.jpg',
-		logo: './img/artists/guns-n-roses/logo.jpeg',
-		numSongs: 0,
-		numAlbums: 0
-	},
-	{
 		artistId: 13,
 		title: 'Michael Jackson',
 		yearFormed: '1971',
@@ -131,15 +104,6 @@ const artistsObj = [
 		yearFormed: '1965',
 		groupPhoto: './img/artists/pink-floyd/group.jpg',
 		logo: './img/artists/pink-floyd/logo.jpg',
-		numSongs: 0,
-		numAlbums: 0
-	},
-	{
-		artistId: 16,
-		title: 'AC/DC',
-		yearFormed: '1973',
-		groupPhoto: './img/artists/ac-dc/group.jpg',
-		logo: './img/artists/ac-dc/logo.jpg',
 		numSongs: 0,
 		numAlbums: 0
 	}

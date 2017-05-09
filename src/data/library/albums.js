@@ -16,14 +16,6 @@ const albumsObj = [
 		numSongs: 0
 	},
 	{
-		albumId: 3,
-		title: 'International Superhits!',
-		artistId: 6,
-		cover: './img/album-covers/international-superhits.png',
-		year: '2001',
-		numSongs: 0
-	},
-	{
 		albumId: 4,
 		title: 'Is This It',
 		artistId: 1,
@@ -120,14 +112,6 @@ const albumsObj = [
 		numSongs: 0
 	},
 	{
-		albumId: 16,
-		title: 'The Getaway',
-		artistId: 11,
-		cover: './img/album-covers/the-getaway.png',
-		year: '2016',
-		numSongs: 0
-	},
-	{
 		albumId: 17,
 		title: 'Safe And Sound',
 		artistId: 10,
@@ -152,14 +136,6 @@ const albumsObj = [
 		numSongs: 0
 	},
 	{
-		albumId: 20,
-		title: 'Appetite For Destruction',
-		artistId: 12,
-		cover: './img/album-covers/appetite-for-destruction.jpg',
-		year: '1987',
-		numSongs: 0
-	},
-	{
 		albumId: 21,
 		title: 'Oracular Spectacular',
 		artistId: 8,
@@ -181,22 +157,6 @@ const albumsObj = [
 		artistId: 1,
 		cover: './img/album-covers/future-present-past.jpg',
 		year: '2016',
-		numSongs: 0
-	},
-	{
-		albumId: 26,
-		title: 'Californication',
-		artistId: 11,
-		cover: './img/album-covers/californication.jpg',
-		year: '1999',
-		numSongs: 0
-	},
-	{
-		albumId: 27,
-		title: 'Echoes, Silence, Patience & Grace',
-		artistId: 7,
-		cover: './img/album-covers/echoes-silence-patience-and-grace.jpg',
-		year: '2007',
 		numSongs: 0
 	},
 	{
@@ -245,22 +205,6 @@ const albumsObj = [
 		artistId: 14,
 		cover: './img/album-covers/a-rush-of-blood-to-the-head.jpg',
 		year: '2002',
-		numSongs: 0
-	},
-	{
-		albumId: 34,
-		title: 'Black Ice',
-		artistId: 16,
-		cover: './img/album-covers/black-ice.jpg',
-		year: '2008',
-		numSongs: 0
-	},
-	{
-		albumId: 35,
-		title: 'Back in Black',
-		artistId: 16,
-		cover: './img/album-covers/back-in-black.jpg',
-		year: '1980',
 		numSongs: 0
 	}
 ];

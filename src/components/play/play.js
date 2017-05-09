@@ -13,7 +13,7 @@ class Play extends React.Component {
 		this.state = {
 			isPlay: false,
 			isLoading: false,
-			volume: 50
+			volume: props.info.play.startingVolume
 		}
 		
 		this.handleSongLoading = this.handleSongLoading.bind(this)
@@ -39,20 +39,28 @@ class Play extends React.Component {
 		}))
 	}
 	
-	volumeMute() { this.setState({ volume: 0 }) }
-	volumeFull() { this.setState({ volume: 100 }) }
+	volumeMute() {
+		this.setState({ volume: 0 })
+	}
+	volumeFull() {
+		this.setState({ volume: 100 })
+	}
 	
 	render() {
 		
 		const props = this.props
 		
-		let playJSX = (
-			<i className="material-icons play-play-button"
-				onClick={this.onPlayClick}>{this.state.isPlay ? 'pause_circle_filled' : 'play_circle_filled'}</i>
-		)
+		let playJSX
 		
 		if (this.state.isLoading) {
-			playJSX = <img src={LoadingSvg} alt="Loading" onClick={this.onPlayClick} />
+			playJSX =(
+				 <img src={LoadingSvg} alt="Loading" onClick={this.onPlayClick} />
+			)
+		} else {
+			playJSX = (
+				<i className="material-icons play-play-button"
+					onClick={this.onPlayClick}>{this.state.isPlay ? 'pause_circle_filled' : 'play_circle_filled'}</i>
+			)
 		}
 		
 		return (
@@ -94,7 +102,7 @@ class Play extends React.Component {
 				</div>
 				
 				<Sound
-					url={'https://s3-ap-southeast-2.amazonaws.com/dt-2017/song-files/Sticky+Fingers+-+Australia+Street.mp3'}
+					url={'./song-files/song.mp3'}
 					volume={this.state.volume}
 					onLoading={this.handleSongLoading}
 					onPlaying={this.handleSongPlaying}

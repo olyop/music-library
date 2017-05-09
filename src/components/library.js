@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import SideBar from './side-bar/side-bar'
+import find from 'lodash/find'
 import './library.css'
 
 // Import Pages
@@ -17,14 +18,14 @@ class Library extends React.Component {
 		super(props)
 		
 		this.state = {
-			currentSong: props.mainObj.songs[Math.floor(Math.random() * props.mainObj.length.songs)]
+			currentSong: find(props.mainObj.songs, { songId: 107 })
 		}
 		
 		this.changeSong = this.changeSong.bind(this)
 	}
 	
-	changeSong(value) {
-		this.setState({ currentSong: value })
+	changeSong(currentSong) {
+		this.setState({ currentSong })
 	}
 	
 	render() {
@@ -33,7 +34,9 @@ class Library extends React.Component {
 			<Router>
 				<div>
 
-					<Play currentSong={this.state.currentSong} />
+					<Play
+						info={props.info}
+						currentSong={this.state.currentSong} />
 
 					<div className="container-fluid library">
 						<div className="row">
