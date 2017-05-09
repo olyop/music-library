@@ -94,9 +94,9 @@ class Play extends React.Component {
 				</div>
 				
 				<Sound
-					url={'https://drive.google.com/uc?id=0B9afhT4dVINseWlER3pPN0pLOVk'} //'./song-files/song.mp3'
+					url={'https://s3-ap-southeast-2.amazonaws.com/dt-2017/song-files/Sticky+Fingers+-+Australia+Street.mp3'}
 					volume={this.state.volume}
-					onLoading={this.handleSongLoading} 
+					onLoading={this.handleSongLoading}
 					onPlaying={this.handleSongPlaying}
 					playStatus={this.state.isPlay ? Sound.status.PLAYING : Sound.status.PAUSE} />
 				
