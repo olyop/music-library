@@ -6,26 +6,30 @@ const TableHeader = props => {
 		border: '1px solid ' + props.info.colors.p.f
 	}
 	return (
-		<tr>
-			<th style={style}
-				className="song-cover">
-				<div className="song-icon"><i className="material-icons">image</i></div>
-			</th>
-			<th style={style}>Title</th>
-			<th style={style}
-				className="song-length">
-				<div className="song-icon"><i className="material-icons">access_time</i></div>
-			</th>
-			<th style={style}>Artist</th>
-			<th style={style}>Album</th>
-		</tr>
+		<thead>
+			<tr>
+				<th style={style}
+					className="song-cover">
+					<div className="song-icon"><i className="material-icons">image</i></div>
+				</th>
+				<th style={style}>Title</th>
+				<th style={style}
+					className="song-length">
+					<div className="song-icon"><i className="material-icons">access_time</i></div>
+				</th>
+				<th style={style}>Artist</th>
+				<th style={style}>Album</th>
+			</tr>
+		</thead>
 	)
 }
 
 const TableFooter = props => (
-	<tr>
-		<td colSpan="5"><b>{props.text}</b> songs.</td>
-	</tr>
+	<tfoot>
+		<tr>
+			<td colSpan="5"><b>{props.text}</b> songs.</td>
+		</tr>
+	</tfoot>
 )
 
 export { TableHeader, TableFooter }

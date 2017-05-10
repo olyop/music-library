@@ -1,8 +1,16 @@
+// Import React
 import React from 'react'
+
+// Import components
 import SearchItem from './search-item'
+
+// Import helper functions
 import { findMatches, isInputDangerous } from '../../helpers/search-helper'
+
+// Import CSS
 import './search.css'
 
+// Component
 const Search = props => { 
 	
 	// Verify search input
@@ -14,7 +22,7 @@ const Search = props => {
 		)
 	}
 	
-	// Normalize Input
+	// Normalize input
 	const input = String(props.inputVal.toUpperCase().toLowerCase())
 	
 	// Declare

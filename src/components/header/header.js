@@ -1,8 +1,14 @@
+// Import React
 import React from 'react'
-import HeaderHamburger from './header-hamburger'
+
+// Import Components
+import HeaderHamburger from './hamburger/header-hamburger'
 import Search from './search/search'
+
+// Import CSS
 import './header.css'
 
+// Component
 class Header extends React.Component {
 	
 	constructor(props) {
@@ -32,6 +38,7 @@ class Header extends React.Component {
 		let isInputEmpty = this.state.inputVal === '',
 				close, dropDown
 		
+		// Check whether to show search icon
 		if (isInputEmpty) {
 			close = null
 		} else {
@@ -41,6 +48,7 @@ class Header extends React.Component {
 			)
 		}
 		
+		// Check whether to show search results
 		if (isInputEmpty) {
 			dropDown = null
 		} else {

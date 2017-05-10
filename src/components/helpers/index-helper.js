@@ -1,6 +1,6 @@
 const calcLibraryData = obj => {
 	
-	// Find num of songs and albums for each artist has
+	// Find the numb of songs and albums each artist has
 	for (let a = 0; a < obj.length.artists; a++) {
 		
 		const artist = obj.artists[a]

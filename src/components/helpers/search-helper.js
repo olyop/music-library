@@ -1,5 +1,7 @@
+// Import functions
 import includes from 'lodash/includes'
 
+// Find matches fr input in an array
 const findMatches = (array, arrayLength, input) => {
 	let filteredArray = []
 	for (var i = 0; i < arrayLength; i++) {
@@ -12,13 +14,14 @@ const findMatches = (array, arrayLength, input) => {
 	return filteredArray
 }
 
+// Check if the user input is dangerous
 const isInputDangerous = dangerousInput => {
-	const normalInput = String(dangerousInput.toLowerCase())
-	if (includes(normalInput, '{')) { return true }
-	else if (includes(normalInput, '}')) { return true }
-	else if (includes(normalInput, '<')) { return true }
-	else if (includes(normalInput, '>')) { return true }
-	else if (includes(normalInput, '`')) { return true }
+	String(dangerousInput.toLowerCase())
+	if (includes(dangerousInput, '{')) { return true }
+	else if (includes(dangerousInput, '}')) { return true }
+	else if (includes(dangerousInput, '<')) { return true }
+	else if (includes(dangerousInput, '>')) { return true }
+	else if (includes(dangerousInput, '`')) { return true }
 	else { return false }
 }
 

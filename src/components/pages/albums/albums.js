@@ -4,6 +4,13 @@ import './albums-responsive.css'
 
 const Albums = props => {
 	
+	// Sort Albums
+	props.mainObj.albums.sort((a, b) => {
+    if (a.title < b.title) return - 1
+    if (a.title > b.title) return 1
+    return 0
+	})
+	
 	let albumsList = props.mainObj.albums.map((album, index) => {
 		return (
 			<div

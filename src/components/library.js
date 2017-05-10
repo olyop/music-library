@@ -1,17 +1,24 @@
+// Import React
 import React from 'react'
+
+// Import Components
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import SideBar from './side-bar/side-bar'
 import find from 'lodash/find'
+
+// Import CSS
 import './library.css'
 
 // Import Pages
 import Home from './pages/home'
 import Artists from './pages/artists'
 import Albums from './pages/albums/albums'
-import Songs from './pages/songs'
+import Songs from './pages/songs/songs'
 
+// Import Play
 import Play from './play/play'
 
+// Component
 class Library extends React.Component {
 	
 	constructor(props) {
@@ -33,7 +40,8 @@ class Library extends React.Component {
 		return (
 			<Router>
 				<div>
-
+					
+					{/* Play Bar */}
 					<Play
 						info={props.info}
 						currentSong={this.state.currentSong} />
@@ -46,6 +54,7 @@ class Library extends React.Component {
 							<div className={props.isNav ? 'col-md-10 content' : 'col-md-12 content'}
 								style={props.isNav ? { marginTop: '114px' } : { margin: '0' }}>
 
+								{/* Home Page */}
 								<Route exact
 									path="/"
 									render={ () => (
@@ -54,7 +63,8 @@ class Library extends React.Component {
 											mainObj={props.mainObj}
 											currentSong={this.state.currentSong} />
 									)} />
-
+								
+								{/* Artists Page */}
 								<Route exact
 									path="/artists"
 									render={ () => (
@@ -63,7 +73,8 @@ class Library extends React.Component {
 											mainObj={props.mainObj}
 											currentSong={this.state.currentSong} />
 									)} />
-
+								
+								{/* Albums Page */}
 								<Route exact
 									path="/albums"
 									render={ () => (
@@ -72,7 +83,8 @@ class Library extends React.Component {
 											mainObj={props.mainObj}
 											currentSong={this.state.currentSong} />
 									)} />
-
+								
+								{/* Songs Page */}
 								<Route exact
 									path="/songs"
 									render={ () => (
