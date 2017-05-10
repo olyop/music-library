@@ -11,14 +11,13 @@ import './library.css'
 
 // Import Pages
 import Home from './pages/home'
-import Artists from './pages/artists'
+import Artists from './pages/artists/artists'
 import Albums from './pages/albums/albums'
 import Songs from './pages/songs/songs'
 
 // Import Play
 import Play from './play/play'
 
-// Component
 class Library extends React.Component {
 	
 	constructor(props) {

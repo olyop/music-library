@@ -1,7 +1,14 @@
+// Import React
 import React from 'react'
+
+// Import components
 import InputRange from 'react-input-range'
 import Sound from 'react-sound'
+
+// Import loading SVG
 import LoadingSvg from '../../common/rolling.svg'
+
+// Import CSS
 import 'react-input-range/lib/css/index.css'
 import './play.css'
 
@@ -42,6 +49,7 @@ class Play extends React.Component {
 	volumeMute() {
 		this.setState({ volume: 0 })
 	}
+	
 	volumeFull() {
 		this.setState({ volume: 100 })
 	}
