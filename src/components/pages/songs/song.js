@@ -19,7 +19,7 @@ class Song extends React.Component {
 		
 		return (
 			<tr className={props.currentSong.songId === state.song.songId ? 'song song-active' : 'song'}
-				onClick={ changeSong => props.changeSong(state.song)}>
+				onClick={ song => props.playSong(state.song) }>
 				<td className="song-cover">
 					<img src={state.song.albumCover}
 							alt={state.song.albumName}/>

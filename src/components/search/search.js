@@ -23,68 +23,63 @@ const Search = props => {
 	
 	// Normalize input
 	const input = String(props.inputVal.toUpperCase().toLowerCase())
-	
-	// Declare
-	let numOfMatches = 0,
-			songsResults,
-			albumsResults,
-			artistsResults
 		
 	// Find matches
 	const matchesSongs = findMatches(props.mainObj.songs, props.mainObj.length.songs, input)
 	const matchesAlbums = findMatches(props.mainObj.albums, props.mainObj.length.albums, input)
 	const matchesArtists = findMatches(props.mainObj.artists, props.mainObj.length.artists, input)
+  
+  // Find number of matches
+  const numOfMatches = matchesSongs.length + matchesAlbums.length + matchesArtists.length
 	
 	// Map results
-	songsResults = matchesSongs.map((song, index) => {
-		numOfMatches++
-		return (
-			<SearchItem key={index}
-        currentSong={props.currentSong}
-        changeSong={props.changeSong}
+	const songsResults = matches => {
+    if (matches.length === 0) {
+      return <h4>No matches</h4>
+    }
+    return matches.map((song, index) => (
+      <SearchItem key={index}
+        onClick={props.playSong}
         obj={song}
-				iconText={'audiotrack'}
-				heading={song.title}
-				img={song.albumCover}
-				span1={song.artistName}
-				span2={song.albumName} />
-		)
-	})
-	albumsResults = matchesAlbums.map((album, index) => {
-		numOfMatches++
-		return (
-			<SearchItem key={index}
-        obj={album}
-				iconText={'album'}
-				heading={album.title}
-				img={album.cover}
-				span1={album.artistName}
-				span2={album.numSongs === 1 ? String(album.numSongs) + ' song' : String(album.numSongs) + ' songs'} />
-		)
-	})
-	artistsResults = matchesArtists.map((artist, index) => {
-		numOfMatches++
-		return (
-			<SearchItem key={index}
-        obj={artist}
-				iconText={'person'}
-				heading={artist.title}
-				img={artist.logo}
-				span1={artist.numAlbums === 1 ? String(artist.numAlbums) + ' album' : String(artist.numAlbums) + ' albums'}
-				span2={artist.numSongs === 1 ? String(artist.numSongs) + ' song' : String(artist.numSongs) + ' songs'} />
-		)
-	})
+        iconText={'audiotrack'}
+        heading={song.title}
+        img={song.albumCover}
+        span1={song.artistName}
+        span2={song.albumName} />
+    ))
+  }
   
-  // Check if no matches
-	if (matchesSongs.length === 0) {
-		songsResults = <h4>No matches</h4>
-	}
-	if (matchesAlbums.length === 0) {
-		albumsResults = <h4>No matches</h4>
-	}
-	if (matchesArtists.length === 0) {
-		artistsResults = <h4>No matches</h4>
-	}
+	const albumsResults = matches => {
+    if (matches.length === 0) {
+      return <h4>No matches</h4>
+    }
+    return matches.map((album, index) => (
+      <SearchItem key={index}
+        onClick={props.playAlbum}
+        obj={album}
+        iconText={'album'}
+        heading={album.title}
+        img={album.cover}
+        span1={album.artistName}
+        span2={album.numSongs === 1 ? String(album.numSongs) + ' song' : String(album.numSongs) + ' songs'} />
+    ))
+  }
+  
+	const artistsResults = matches => {
+    if (matches.length === 0) {
+      return <h4>No matches</h4>
+    }
+    return matches.map((artist, index) => (
+      <SearchItem key={index}
+        onClick={props.playArtist}
+        obj={artist}
+        iconText={'person'}
+        heading={artist.title}
+        img={artist.logo}
+        span1={artist.numAlbums === 1 ? String(artist.numAlbums) + ' album' : String(artist.numAlbums) + ' albums'}
+        span2={artist.numSongs === 1 ? String(artist.numSongs) + ' song' : String(artist.numSongs) + ' songs'} />
+    ))
+  }
 	
 	// Heading style
 	let style = { color: props.mainObj.info.colors.p.f }
@@ -97,13 +92,13 @@ const Search = props => {
 			<div className="search-drop-down-inner">
 				
 				<h1 style={{ margin: '0', borderTop: '0' }}>Artists</h1>
-				{artistsResults}
+				{artistsResults(matchesArtists)}
 
 				<h1>Albums</h1>
-				{albumsResults}
+				{albumsResults(matchesAlbums)}
 
 				<h1>Songs</h1>
-				{songsResults}
+				{songsResults(matchesSongs)}
 			
 			</div>
 		</div>

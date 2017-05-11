@@ -21,7 +21,7 @@ const Songs = props => {
 				<tbody>
 					{props.mainObj.songs.map((song, index) => (
 						<Song key={index}
-							changeSong={props.changeSong}
+							playSong={props.playSong}
 							currentSong={props.currentSong}
 							song={song} />
 					))}

@@ -12,7 +12,7 @@ class SearchItem extends React.Component {
     let props = this.props
     return (
       <div className="search-item"
-        onClick={ song => props.changeSong(this.state.obj) }>
+        onClick={ obj => props.onClick(this.state.obj) }>
         <div className="search-item-icon">
           <i className="material-icons search-item-icon-type">{props.iconText}</i>
           <i className="material-icons search-item-play">play_circle_filled</i>
@@ -23,9 +23,7 @@ class SearchItem extends React.Component {
             alt={props.heading} />
         </div>
         <div className="search-item-inner">
-          <p>
-            <span title={props.heading}>{props.heading}</span>
-          </p>
+          <p><span title={props.heading}>{props.heading}</span></p>
           <div>
             <span title={props.span1}
               className="search-item-span-main">

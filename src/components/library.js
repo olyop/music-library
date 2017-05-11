@@ -75,7 +75,7 @@ class Library extends React.Component {
 										<Songs
 											info={props.info}
 											mainObj={props.mainObj}
-											changeSong={props.changeSong}
+											playSong={props.playSong}
 											currentSong={props.currentSong} />
 									)} />
 

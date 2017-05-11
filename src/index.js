@@ -56,11 +56,11 @@ class Index extends React.Component {
     this.handleInputChange = this.handleInputChange.bind(this)
 		this.clearInput = this.clearInput.bind(this)
     
-    this.changeSong = this.changeSong.bind(this)
+    this.playSong = this.playSong.bind(this)
+    this.playAlbum = this.playAlbum.bind(this)
+    this.playArtist = this.playArtist.bind(this)
 	}
   
-  
-	
 	toggleNav() {
     this.setState(prevState => ({
       isNav: !prevState.isNav
@@ -80,16 +80,44 @@ class Index extends React.Component {
 		this.setState({ inputVal: '' })
 	}
   
-  changeSong(currentSong) {
-		this.setState({ currentSong })
+  playSong(song) {
+		this.setState({ currentSong: song })
 	}
+  
+  playAlbum(album) {
+    
+    let albumSongs = []
+    
+    // Find songs in album
+    for (var i = 0; i < this.props.mainObj.length.songs; i++) {
+      const item = this.props.mainObj.songs[i]
+      if (item.albumId === album.albumId) {
+        albumSongs.push(item)
+      }
+    }
+    
+    this.setState({ currentSong: albumSongs[Math.floor(Math.random() * albumSongs.length)] })
+  }
+  
+  playArtist(artist) {
+    
+    let artistSongs = []
+    
+    // Find songs for artist
+    for (var i = 0; i < this.props.mainObj.length.songs; i++) {
+      const item = this.props.mainObj.songs[i]
+      if (item.artistId === artist.artistId) {
+        artistSongs.push(item)
+      }
+    }
+    
+    this.setState({ currentSong: artistSongs[Math.floor(Math.random() * artistSongs.length)] })
+  }
 	
 	render() {
     
 		let props = this.props,
         isInputEmpty = this.state.inputVal === ''
-    
-    console.log(this.state.currentSong)
     
 		return (
 			<div className="index">
@@ -108,13 +136,21 @@ class Index extends React.Component {
 					mainObj={props.mainObj}
 					isNav={this.state.isNav}
           currentSong={this.state.currentSong}
-          changeSong={this.changeSong} />
+          playSong={this.playSong}
+          playAlbum={this.playAlbum}
+          playArtist={this.playArtist} />
         
-        {isInputEmpty ? null : <Search
-                                 mainObj={props.mainObj}
-                                 inputVal={this.state.inputVal}
-                                 currentSong={this.state.currentSong}
-                                 changeSong={this.changeSong} /> }
+        {isInputEmpty ? null : (
+          
+        <Search
+          mainObj={props.mainObj}
+          inputVal={this.state.inputVal}
+          currentSong={this.state.currentSong}
+          playSong={this.playSong}
+          playAlbum={this.playAlbum}
+          playArtist={this.playArtist} />
+          
+        )}
 
 			</div>
 		)	
