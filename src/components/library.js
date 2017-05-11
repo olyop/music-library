@@ -46,7 +46,8 @@ class Library extends React.Component {
 						currentSong={this.state.currentSong} />
 
 					<div className="container-fluid library">
-						<div className="row">
+						<div className="row"
+							style={{ backgroundColor: '#F5F5F5' }}>
 
 							{ props.isNav ? <SideBar info={props.info} /> : null }
 

@@ -1,6 +1,7 @@
 .songs {
 	padding: 10px; }
 	.songs table {
+		background-color: #fff;
 		width: 100%; }
 		.songs table td, th {
 			transition: .2s background;
@@ -31,14 +32,16 @@
 
 .songs table .song-length {
 	width: 61px;
-	color: #757575;
 	max-width: 61px; }
+	.songs table .song-length div {
+		color: #757575;
+		display: flex; }
 
 .songs .song-active {
 	background-color: #3F51B5; }
 	.songs table .song-active:hover {
 		background-color: #3F51B5; }
-	.songs .song-active td {
+	.songs .song-active td, .songs .song-active td div {
 		color: #fff;
 		border-color: #3F51B5; }
 
