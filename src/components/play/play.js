@@ -20,9 +20,9 @@ class Play extends React.Component {
 		this.state = {
 			isPlay: false,
 			isLoading: false,
-			volume: props.info.play.startingVolume
+			volume: props.mainObj.info.play.startingVolume
 		}
-		
+    
 		this.handleSongLoading = this.handleSongLoading.bind(this)
 		this.handleSongPlaying = this.handleSongPlaying.bind(this)
 		this.onPlayClick = this.onPlayClick.bind(this)

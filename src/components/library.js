@@ -1,39 +1,23 @@
 // Import React
 import React from 'react'
 
-// Import Components
+// Import components
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import SideBar from './side-bar/side-bar'
-import find from 'lodash/find'
 
 // Import CSS
 import './library.css'
 
-// Import Pages
+// Import pages
 import Home from './pages/home'
 import Artists from './pages/artists/artists'
 import Albums from './pages/albums/albums'
 import Songs from './pages/songs/songs'
 
-// Import Play
+// Import play bar
 import Play from './play/play'
 
 class Library extends React.Component {
-	
-	constructor(props) {
-		super(props)
-		
-		this.state = {
-			currentSong: find(props.mainObj.songs, { songId: 107 })
-		}
-		
-		this.changeSong = this.changeSong.bind(this)
-	}
-	
-	changeSong(currentSong) {
-		this.setState({ currentSong })
-	}
-	
 	render() {
 		const props = this.props
 		return (
@@ -42,14 +26,14 @@ class Library extends React.Component {
 					
 					{/* Play Bar */}
 					<Play
-						info={props.info}
-						currentSong={this.state.currentSong} />
+						mainObj={props.mainObj}
+						currentSong={props.currentSong} />
 
 					<div className="container-fluid library">
 						<div className="row"
 							style={{ backgroundColor: '#F5F5F5' }}>
 
-							{ props.isNav ? <SideBar info={props.info} /> : null }
+							{ props.isNav ? <SideBar mainObj={props.mainObj} /> : null }
 
 							<div className={props.isNav ? 'col-md-10 content' : 'col-md-12 content'}
 								style={props.isNav ? { marginTop: '114px' } : { margin: '0' }}>
@@ -61,7 +45,7 @@ class Library extends React.Component {
 										<Home
 											info={props.info}
 											mainObj={props.mainObj}
-											currentSong={this.state.currentSong} />
+											currentSong={props.currentSong} />
 									)} />
 								
 								{/* Artists Page */}
@@ -71,7 +55,7 @@ class Library extends React.Component {
 										<Artists
 											info={props.info}
 											mainObj={props.mainObj}
-											currentSong={this.state.currentSong} />
+											currentSong={props.currentSong} />
 									)} />
 								
 								{/* Albums Page */}
@@ -81,7 +65,7 @@ class Library extends React.Component {
 										<Albums
 											info={props.info}
 											mainObj={props.mainObj}
-											currentSong={this.state.currentSong} />
+											currentSong={props.currentSong} />
 									)} />
 								
 								{/* Songs Page */}
@@ -91,8 +75,8 @@ class Library extends React.Component {
 										<Songs
 											info={props.info}
 											mainObj={props.mainObj}
-											changeSong={this.changeSong}
-											currentSong={this.state.currentSong} />
+											changeSong={props.changeSong}
+											currentSong={props.currentSong} />
 									)} />
 
 							</div>

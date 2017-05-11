@@ -3,101 +3,62 @@ import React from 'react'
 
 // Import Components
 import HeaderHamburger from './hamburger/header-hamburger'
-import Search from './search/search'
 
 // Import CSS
 import './header.css'
 
 // Component
-class Header extends React.Component {
-	
-	constructor(props) {
-		super(props)
-		
-		this.state = { inputVal: '' }
-		this.handleInputChange = this.handleInputChange.bind(this)
-		this.clearInput = this.clearInput.bind(this)
-	}
-	
-	handleInputChange(event) {
-    this.setState({ inputVal: event.target.value })
-		this.props.closeNav()
+const Header = props => {
+
+  // Declare
+  let headerStyle = { backgroundColor: props.mainObj.info.colors.p.f },
+      inputStyle = { backgroundColor: props.mainObj.info.colors.p.e },
+      close
+
+  // Check whether to show search icon
+  if (props.isInputEmpty) {
+    close = null
+  } else {
+    close = (
+      <i className="material-icons header-icon header-search-close"
+        onClick={props.clearInput}>close</i>
+    )
   }
-	
-	clearInput() {
-		this.setState({ inputVal: '' })
-	}
-	
-	render() {
-		
-		// Declare
-		const props = this.props,
-					headerStyle = { backgroundColor: props.info.colors.p.f },
-					inputStyle = { backgroundColor: props.info.colors.p.e }
-		
-		let isInputEmpty = this.state.inputVal === '',
-				close, dropDown
-		
-		// Check whether to show search icon
-		if (isInputEmpty) {
-			close = null
-		} else {
-			close = (
-				<i className="material-icons header-icon header-search-close"
-					onClick={this.clearInput}>close</i>
-			)
-		}
-		
-		// Check whether to show search results
-		if (isInputEmpty) {
-			dropDown = null
-		} else {
-			dropDown = (
-				<Search
-					info={props.info}
-					inputVal={this.state.inputVal}
-					mainObj={props.mainObj} />
-			)
-		}
 
-		return (
-			<div
-				className="header"
-				style={headerStyle}>
-				<div className="header-section header-left">
+  return (
+    <div
+      className="header"
+      style={headerStyle}>
+      <div className="header-section header-left">
 
-					<HeaderHamburger
-						info={props.info}
-						toggleNav={props.toggleNav}
-						isNav={props.isNav} />
+        <HeaderHamburger
+          mainObj={props.mainObj}
+          toggleNav={props.toggleNav}
+          isNav={props.isNav} />
 
-					<div className="header-title"><a href='/'>{props.info.header.title}</a></div>
+        <div className="header-title"><a href='/'>{props.mainObj.info.header.title}</a></div>
 
-				</div>
-				<div className="header-section header-middle">
+      </div>
+      <div className="header-section header-middle">
 
-					<i className="material-icons header-icon header-search-icon">search</i>
+        <i className="material-icons header-icon header-search-icon">search</i>
 
-					<input
-						onChange={this.handleInputChange}
-						value={this.state.inputVal}
-						style={inputStyle}
-						placeholder={props.info.header.searchPlaceholder} />
-					
-					{close}
-					
-					{dropDown}
+        <input
+          onChange={ event => props.handleInputChange(event) }
+          value={props.inputVal}
+          style={inputStyle}
+          placeholder={props.mainObj.info.header.searchPlaceholder} />
 
-				</div>
+        {close}
 
-				<div className="header-section header-right">
-					Right
-				</div>
+      </div>
 
-			</div>
-		)
-	}
-	
+      <div className="header-section header-right">
+        Right
+      </div>
+
+    </div>
+  )
 }
 
 

@@ -16,7 +16,7 @@ const Songs = props => {
 		<div className="songs">
 			<table>
 				
-				<TableHeader info={props.info} />
+				<TableHeader mainObj={props.mainObj} />
 				
 				<tbody>
 					{props.mainObj.songs.map((song, index) => (

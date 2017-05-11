@@ -2,8 +2,8 @@ import React from 'react'
 
 const TableHeader = props => {
 	const style = {
-		backgroundColor: props.info.colors.p.f,
-		border: '1px solid ' + props.info.colors.p.f
+		backgroundColor: props.mainObj.info.colors.p.f,
+		border: '1px solid ' + props.mainObj.info.colors.p.f
 	}
 	return (
 		<thead>

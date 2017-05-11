@@ -22,7 +22,7 @@ class Song extends React.Component {
 				onClick={ changeSong => props.changeSong(state.song)}>
 				<td className="song-cover">
 					<img src={state.song.albumCover}
-							alt={state.song.albumName} />
+							alt={state.song.albumName}/>
 				</td>
 				<td>{state.song.title}</td>
 				<td className="song-length">

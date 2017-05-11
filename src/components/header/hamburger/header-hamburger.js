@@ -4,11 +4,13 @@ import './header-hamburger.css'
 
 class HeaderHamburger extends React.Component {
 	render() {
-		const props = this.props
-		let string = props.isNav ? ' is-active' : ''
+    
+		let props = this.props,
+        string = props.isNav ? ' is-active' : ''
+    
 		return (
 			<div
-				className={'hamburger hamburger--' + props.info.hamburgerType + ' js-hamburger header-hamburger' + string}
+				className={'hamburger hamburger--' + props.mainObj.info.hamburgerType + ' js-hamburger header-hamburger' + string}
 				onClick={props.toggleNav}
 			>
         <div className="hamburger-box">

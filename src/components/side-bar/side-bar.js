@@ -3,10 +3,10 @@ import { NavLink } from 'react-router-dom'
 import { navListConfig } from '../helpers/side-bar-helper'
 import './side-bar.css'
 
-const SideBar = ({ info }) => {
+const SideBar = props => {
 	
 	let headingStyle = {
-		backgroundColor: info.colors.h.f,
+		backgroundColor: props.mainObj.info.colors.h.f,
 		color: '#fff'
 	}
 	
@@ -26,10 +26,8 @@ const SideBar = ({ info }) => {
 	
 	return (
 		<div className="col-md-2 nav-side-bar">
-			<h1 style={headingStyle}>{info.sideBar.heading.pages}</h1>
-			<ul>
-				{renderNavList}
-			</ul>
+			<h1 style={headingStyle}>{props.mainObj.info.sideBar.heading.pages}</h1>
+			<ul>{renderNavList}</ul>
 		</div>
 	)
 }
