@@ -12,7 +12,7 @@ class SearchItem extends React.Component {
     let props = this.props
     return (
       <div className="search-item"
-        onClick={ obj => props.onClick(this.state.obj) }>
+        onClick={ obj => props.event(this.state.obj) }>
         <div className="search-item-icon">
           <i className="material-icons search-item-icon-type">{props.iconText}</i>
           <i className="material-icons search-item-play">play_circle_filled</i>
