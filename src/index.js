@@ -8,24 +8,24 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/css/bootstrap-theme.css'
 import './index.css'
 
-// Import Info
-import siteInfoData from './data/site-info'
+// Import info
+import siteInfoData from './database/site-info'
 
-// Import Library Database
-import songsData from './data/library/songs'
-import albumsData from './data/library/albums'
-import artistsData from './data/library/artists'
+// Import library database
+import songsData from './database/library/songs-database'
+import albumsData from './database/library/albums-database'
+import artistsData from './database/library/artists-database'
 
-// Import Components
+// Import components
 import Header from './components/header/header'
 import Library from './components/library'
 import Search from './components/search/search'
 
-// Import Functions
+// Import functions
 import { calcLibraryData } from './components/helpers/index-helper'
 import find from 'lodash/find'
 
-// Define Main Database Object
+// Define database object
 const mainObj = {
   info: siteInfoData,
 	songs: songsData,
@@ -45,9 +45,9 @@ class Index extends React.Component {
 		super(props)
 		
 		this.state = {
-      isNav: this.props.info.isNav,
+      isNav: this.props.mainObj.info.isNav,
       inputVal: '',
-      currentSong: find(props.mainObj.songs, { songId: 107 })
+      currentSong: find(props.mainObj.songs, { songId: 'uSlkWsLCnH' })
     }
     
 		this.toggleNav = this.toggleNav.bind(this)
@@ -71,14 +71,14 @@ class Index extends React.Component {
 		this.setState({ isNav: false })
 	}
   
+  clearInput() {
+    this.setState({ inputVal: '' })
+  }
+  
   handleInputChange(event) {
     this.setState({ inputVal: event.target.value })
 		this.closeNav()
   }
-  
-  clearInput() {
-		this.setState({ inputVal: '' })
-	}
   
   playSong(song) {
 		this.setState({ currentSong: song })
@@ -122,8 +122,7 @@ class Index extends React.Component {
 		return (
 			<div className="index">
 
-				<Header
-					mainObj={props.mainObj}
+				<Header mainObj={props.mainObj}
           isInputEmpty={isInputEmpty}
           inputVal={this.state.inputVal}
           handleInputChange={this.handleInputChange}
@@ -132,8 +131,7 @@ class Index extends React.Component {
 					closeNav={this.closeNav}
 					isNav={this.state.isNav} />
 
-				<Library
-					mainObj={props.mainObj}
+				<Library mainObj={props.mainObj}
 					isNav={this.state.isNav}
           currentSong={this.state.currentSong}
           playSong={this.playSong}
@@ -142,8 +140,7 @@ class Index extends React.Component {
         
         {isInputEmpty ? null : (
           
-        <Search
-          mainObj={props.mainObj}
+        <Search mainObj={props.mainObj}
           inputVal={this.state.inputVal}
           currentSong={this.state.currentSong}
           playSong={this.playSong}
@@ -159,8 +156,6 @@ class Index extends React.Component {
 
 // Render site to the DOM
 ReactDOM.render(
-  <Index
-		info={siteInfoData}
-		mainObj={calcLibraryData(mainObj)} />,
+  <Index mainObj={calcLibraryData(mainObj)} />,
   document.getElementById('root')
 )

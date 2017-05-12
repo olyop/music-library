@@ -1,208 +1,208 @@
 const albumsObj = [
 	{
-		albumId: 1,
+		albumId: 'odmcBazMPq',
 		title: 'Thriller',
-		artistId: 13,
+		artistId: 'XdrLEXDjcg',
 		cover: './img/album-covers/thriller.png',
 		year: '1982',
 		numSongs: 0
 	},
 	{
-		albumId: 2,
+		albumId: 'NjYszVkmaJ',
 		title: 'Discovery',
-		artistId: 5,
+		artistId: 'SOZjaEUpRd',
 		cover: './img/album-covers/discovery.jpg',
 		year: '2005',
 		numSongs: 0
 	},
 	{
-		albumId: 4,
+		albumId: 'etJPmFmiKA',
 		title: 'Is This It',
-		artistId: 1,
+		artistId: 'pNTLYUjNZF',
 		cover: './img/album-covers/is-this-it.png',
 		year: '2001',
 		numSongs: 0
 	},
 	{
-		albumId: 5,
+		albumId: 'FKdZgQFVxW',
 		title: 'Viva La Vida or Death and All His Friends',
-		artistId: 14,
+		artistId: 'vXVrojTDxG',
 		cover: './img/album-covers/viva-la-vida-or-death-and-all-his-friends.jpg',
 		year: '2008',
 		numSongs: 0
 	},
 	{
-		albumId: 6,
+		albumId: 'ZMQgTooNsv',
 		title: 'Land Of Pleasure',
-		artistId: 4,
+		artistId: 'FzXuUrKixn',
 		cover: './img/album-covers/land-of-pleasure.jpg',
 		year: '2014',
 		numSongs: 0
 	},
 	{
-		albumId: 7,
+		albumId: 'hbrjTgUNIF',
 		title: 'Westway (The Glitter & The Slums)',
-		artistId: 4,
+		artistId: 'FzXuUrKixn',
 		cover: './img/album-covers/westway.png',
 		year: '2016',
 		numSongs: 0
 	},
 	{
-		albumId: 8,
+		albumId: 'bYKlDtYZcZ',
 		title: 'Angles',
-		artistId: 1,
+		artistId: 'pNTLYUjNZF',
 		cover: './img/album-covers/angles.png',
 		year: '2011',
 		numSongs: 0
 	},
 	{
-		albumId: 9,
+		albumId: 'ejbbffyLdl',
 		title: 'Caress Your Soul',
-		artistId: 4,
+		artistId: 'FzXuUrKixn',
 		cover: './img/album-covers/caress-your-soul.png',
 		year: '2013',
 		numSongs: 0
 	},
 	{
-		albumId: 10,
+		albumId: 'RvhvYovLBd',
 		title: 'First Impressions Of Earth',
-		artistId: 1,
+		artistId: 'pNTLYUjNZF',
 		cover: './img/album-covers/first-impressions-of-earth.png',
 		year: '2006',
 		numSongs: 0
 	},
 	{
-		albumId: 11,
+		albumId: 'zCIYLZXkzV',
 		title: 'Currents',
-		artistId: 2,
+		artistId: 'wWFxPUmbGR',
 		cover: './img/album-covers/currents.png',
 		year: '2015',
 		numSongs: 0
 	},
 	{
-		albumId: 12,
+		albumId: 'kGfjAZnfBZ',
 		title: 'Room On Fire',
-		artistId: 1,
+		artistId: 'pNTLYUjNZF',
 		cover: './img/album-covers/room-on-fire.png',
 		year: '2003',
 		numSongs: 0
 	},
 	{
-		albumId: 13,
+		albumId: 'WQySnJSygA',
 		title: 'The 2nd law',
-		artistId: 3,
+		artistId: 'dabbJRfVRz',
 		cover: './img/album-covers/the-2nd-law.png',
 		year: '2012',
 		numSongs: 0
 	},
 	{
-		albumId: 14,
+		albumId: 'MOMFuSILLj',
 		title: 'Origin Of Symmetry',
-		artistId: 3,
+		artistId: 'dabbJRfVRz',
 		cover: './img/album-covers/origin-of-symmetry.jpg',
 		year: '2001',
 		numSongs: 0
 	},
 	{
-		albumId: 15,
+		albumId: 'GWcSYkKrDr',
 		title: 'Drones',
-		artistId: 3,
+		artistId: 'dabbJRfVRz',
 		cover: './img/album-covers/drones.png',
 		year: '2015',
 		numSongs: 0
 	},
 	{
-		albumId: 17,
+		albumId: 'ujYuGCHrQo',
 		title: 'Safe And Sound',
-		artistId: 10,
+		artistId: 'QwdQloRayC',
 		cover: './img/album-covers/safe-and-sound.jpg',
 		year: '2011',
 		numSongs: 0
 	},
 	{
-		albumId: 18,
+		albumId: 'AFqhgiksll',
 		title: 'Get Lucky',
-		artistId: 5,
+		artistId: 'SOZjaEUpRd',
 		cover: './img/album-covers/get-lucky.jpg',
 		year: '2013',
 		numSongs: 0
 	},
 	{
-		albumId: 19,
+		albumId: 'AtXEgAepiX',
 		title: 'American Idiot',
-		artistId: 6,
+		artistId: 'hWsdgNnVnP',
 		cover: './img/album-covers/american-idiot.jpg',
 		year: '2004',
 		numSongs: 0
 	},
 	{
-		albumId: 21,
+		albumId: 'ijGKzQdxFy',
 		title: 'Oracular Spectacular',
-		artistId: 8,
+		artistId: 'ynIPFMoDAv',
 		cover: './img/album-covers/oracular-spectacular.jpg',
 		year: '2007',
 		numSongs: 0
 	},
 	{
-		albumId: 23,
+		albumId: 'fyaEwIQyxc',
 		title: 'The Black Parade',
-		artistId: 9,
+		artistId: 'WZgUeiVzyg',
 		cover: './img/album-covers/the-black-parade.jpg',
 		year: '2006',
 		numSongs: 0
 	},
 	{
-		albumId: 25,
+		albumId: 'zSEtOQIPDD',
 		title: 'Future Present Past',
-		artistId: 1,
+		artistId: 'pNTLYUjNZF',
 		cover: './img/album-covers/future-present-past.jpg',
 		year: '2016',
 		numSongs: 0
 	},
 	{
-		albumId: 28,
+		albumId: 'MXnthPzSmU',
 		title: 'The Resistance',
-		artistId: 3,
+		artistId: 'dabbJRfVRz',
 		cover: './img/album-covers/the-resistance.jpg',
 		year: '2009',
 		numSongs: 0
 	},
 	{
-		albumId: 29,
+		albumId: 'aMGXyQrulD',
 		title: 'Black Holes and Revelations',
-		artistId: 3,
+		artistId: 'dabbJRfVRz',
 		cover: './img/album-covers/black-holes-and-revelations.jpg',
 		year: '2006',
 		numSongs: 0
 	},
 	{
-		albumId: 30,
+		albumId: 'kLXQGwIfSU',
 		title: 'Lonerism',
-		artistId: 2,
+		artistId: 'wWFxPUmbGR',
 		cover: './img/album-covers/lonerism.jpeg',
 		year: '2012',
 		numSongs: 0
 	},
 	{
-		albumId: 31,
+		albumId: 'YrOrVGqhbO',
 		title: 'The Wall',
-		artistId: 15,
+		artistId: 'iMOIvXTGmX',
 		cover: './img/album-covers/the-wall.jpg',
 		year: '1979',
 		numSongs: 0
 	},
 	{
-		albumId: 32,
+		albumId: 'HmcKPRNjcZ',
 		title: 'The Dark Side of the Moon',
-		artistId: 15,
+		artistId: 'iMOIvXTGmX',
 		cover: './img/album-covers/the-dark-side-of-the-moon.jpg',
 		year: '1973',
 		numSongs: 0
 	},
 	{
-		albumId: 33,
+		albumId: 'UFioAfFHTD',
 		title: 'A Rush Of Blood To The Head',
-		artistId: 14,
+		artistId: 'vXVrojTDxG',
 		cover: './img/album-covers/a-rush-of-blood-to-the-head.jpg',
 		year: '2002',
 		numSongs: 0

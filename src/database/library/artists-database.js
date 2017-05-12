@@ -1,6 +1,6 @@
 const artistsObj = [
 	{
-		artistId: 1,
+		artistId: 'pNTLYUjNZF',
 		title: 'The Strokes',
 		yearFormed: '1998',
 		groupPhoto: './img/artists/the-strokes/group.jpg',
@@ -9,7 +9,7 @@ const artistsObj = [
 		numAlbums: 0
 	},
 	{
-		artistId: 2,
+		artistId: 'wWFxPUmbGR',
 		title: 'Tame Impala',
 		yearFormed: '2005',
 		groupPhoto: './img/artists/tame-impala/group.jpg',
@@ -18,7 +18,7 @@ const artistsObj = [
 		numAlbums: 0
 	},
 	{
-		artistId: 3,
+		artistId: 'dabbJRfVRz',
 		title: 'Muse',
 		yearFormed: '1994',
 		groupPhoto: './img/artists/muse/group.jpeg',
@@ -27,7 +27,7 @@ const artistsObj = [
 		numAlbums: 0
 	},
 	{
-		artistId: 4,
+		artistId: 'FzXuUrKixn',
 		title: 'Sticky Fingers',
 		yearFormed: '2008',
 		groupPhoto: './img/artists/sticky-fingers/group.jpg',
@@ -36,7 +36,7 @@ const artistsObj = [
 		numAlbums: 0
 	},
 	{
-		artistId: 5,
+		artistId: 'SOZjaEUpRd',
 		title: 'Daft Punk',
 		yearFormed: '1993',
 		groupPhoto: './img/artists/daft-punk/group.jpg',
@@ -45,7 +45,7 @@ const artistsObj = [
 		numAlbums: 0
 	},
 	{
-		artistId: 6,
+		artistId: 'hWsdgNnVnP',
 		title: 'Green Day',
 		yearFormed: '1986',
 		groupPhoto: './img/artists/green-day/group.jpg',
@@ -54,7 +54,7 @@ const artistsObj = [
 		numAlbums: 0
 	},
 	{
-		artistId: 8,
+		artistId: 'ynIPFMoDAv',
 		title: 'MGMT',
 		yearFormed: '2002',
 		groupPhoto: './img/artists/mgmt/group.jpg',
@@ -63,7 +63,7 @@ const artistsObj = [
 		numAlbums: 0
 	},
 	{
-		artistId: 9,
+		artistId: 'WZgUeiVzyg',
 		title: 'My Chemical Romance',
 		yearFormed: '2001',
 		groupPhoto: './img/artists/my-chemical-romance/group.jpg',
@@ -72,7 +72,7 @@ const artistsObj = [
 		numAlbums: 0
 	},
 	{
-		artistId: 10,
+		artistId: 'QwdQloRayC',
 		title: 'Capital Cities',
 		yearFormed: '2010',
 		groupPhoto: './img/artists/capital-cities/group.jpg',
@@ -81,7 +81,7 @@ const artistsObj = [
 		numAlbums: 0
 	},
 	{
-		artistId: 13,
+		artistId: 'XdrLEXDjcg',
 		title: 'Michael Jackson',
 		yearFormed: '1971',
 		groupPhoto: './img/artists/michael-jackson/group.jpg',
@@ -90,7 +90,7 @@ const artistsObj = [
 		numAlbums: 0
 	},
 	{
-		artistId: 14,
+		artistId: 'vXVrojTDxG',
 		title: 'Coldplay',
 		yearFormed: '1996',
 		groupPhoto: './img/artists/coldplay/group.jpg',
@@ -99,7 +99,7 @@ const artistsObj = [
 		numAlbums: 0
 	},
 	{
-		artistId: 15,
+		artistId: 'iMOIvXTGmX',
 		title: 'Pink Floyd',
 		yearFormed: '1965',
 		groupPhoto: './img/artists/pink-floyd/group.jpg',

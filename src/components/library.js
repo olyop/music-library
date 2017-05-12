@@ -23,8 +23,7 @@ class Library extends React.Component {
 		return (
 			<Router>
 				<div>
-					
-					{/* Play Bar */}
+				  
 					<Play
 						mainObj={props.mainObj}
 						currentSong={props.currentSong} />
@@ -37,8 +36,7 @@ class Library extends React.Component {
 
 							<div className={props.isNav ? 'col-md-10 content' : 'col-md-12 content'}
 								style={props.isNav ? { marginTop: '114px' } : { margin: '0' }}>
-
-								{/* Home Page */}
+                
 								<Route exact
 									path="/"
 									render={ () => (
@@ -48,7 +46,6 @@ class Library extends React.Component {
 											currentSong={props.currentSong} />
 									)} />
 								
-								{/* Artists Page */}
 								<Route exact
 									path="/artists"
 									render={ () => (
@@ -58,7 +55,6 @@ class Library extends React.Component {
 											currentSong={props.currentSong} />
 									)} />
 								
-								{/* Albums Page */}
 								<Route exact
 									path="/albums"
 									render={ () => (
@@ -68,7 +64,6 @@ class Library extends React.Component {
 											currentSong={props.currentSong} />
 									)} />
 								
-								{/* Songs Page */}
 								<Route exact
 									path="/songs"
 									render={ () => (

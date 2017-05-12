@@ -17,6 +17,7 @@
 
 .search-drop-down {
 	overflow-y: auto;
+  margin-bottom: 100px;
 	padding: 10px;
 	transition: .2s all;
 	overflow-x: hidden;
