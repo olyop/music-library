@@ -1,4 +1,5 @@
 import React from 'react'
+import Highlighter from 'react-highlight-words'
 
 class SearchItem extends React.Component {
   
@@ -23,7 +24,16 @@ class SearchItem extends React.Component {
             alt={props.heading} />
         </div>
         <div className="search-item-inner">
-          <p><span title={props.heading}>{props.heading}</span></p>
+          <p>
+            <span title={props.heading}>
+            
+              <Highlighter
+                highlightClassName='search-item-highlighted'
+                searchWords={[ props.input ]}
+                textToHighlight={props.heading} />
+              
+            </span>
+          </p>
           <div>
             <span title={props.span1}
               className="search-item-span-main">

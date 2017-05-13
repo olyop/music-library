@@ -5,10 +5,10 @@ import './songs.css'
 
 const Songs = props => {
 	
-	// Sort Songs Alphabetically
+	// Sort songs by album
 	props.mainObj.songs.sort(function(a, b){
-    if (a.title < b.title) return -1
-    if (a.title > b.title) return 1
+    if (a.albumName < b.albumName) return - 1
+    if (a.albumName > b.albumName) return 1
     return 0
 	})
 	

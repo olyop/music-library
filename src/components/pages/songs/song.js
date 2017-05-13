@@ -13,9 +13,11 @@ class Song extends React.Component {
 		const props = this.props,
 					state = this.state
 		
-		if (state.song.length.slice(0,1) === '0') {
-			state.song.length = state.song.length.slice(1,6)
-		}
+		if (state.song.length.length === 5) {
+      if (state.song.length.slice(0,1) === '0') {
+        state.song.length = state.song.length.slice(1,6)
+      }
+    }
 		
 		return (
 			<tr className={props.currentSong.songId === state.song.songId ? 'song song-active' : 'song'}

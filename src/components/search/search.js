@@ -49,6 +49,7 @@ class Search extends React.Component {
             <SearchItem key={artist.artistId}
               event={this.props.playArtist}
               obj={artist}
+              input={input}
               iconText={'person'}
               heading={artist.title}
               img={artist.logo}
@@ -62,6 +63,7 @@ class Search extends React.Component {
             <SearchItem key={album.albumId}
               event={this.props.playAlbum}
               obj={album}
+              input={input}
               iconText={'album'}
               heading={album.title}
               img={album.cover}
@@ -75,6 +77,7 @@ class Search extends React.Component {
             <SearchItem key={song.songId}
               event={this.props.playSong}
               obj={song}
+              input={input}
               iconText={'audiotrack'}
               heading={song.title}
               img={song.albumCover}

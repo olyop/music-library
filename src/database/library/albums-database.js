@@ -89,7 +89,7 @@ const albumsObj = [
 	},
 	{
 		albumId: 'WQySnJSygA',
-		title: 'The 2nd law',
+		title: 'The 2nd Law',
 		artistId: 'dabbJRfVRz',
 		cover: './img/album-covers/the-2nd-law.png',
 		year: '2012',
@@ -197,6 +197,14 @@ const albumsObj = [
 		artistId: 'iMOIvXTGmX',
 		cover: './img/album-covers/the-dark-side-of-the-moon.jpg',
 		year: '1973',
+		numSongs: 0
+	},
+  {
+		albumId: 'IOJdoPSjDy',
+		title: 'Animals',
+		artistId: 'iMOIvXTGmX',
+		cover: './img/album-covers/animals.jpg',
+		year: '1977',
 		numSongs: 0
 	},
 	{

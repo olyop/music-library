@@ -70,6 +70,8 @@
 	display: flex; }
 	.search-item:hover {
 		background-color: #EEEEEE; }
+  .search-item:hover, .search-item .search-item-inner .search-item-highlighted {
+    background-color: #fff; }
 
 	.search-item .search-item-icon {
 		display: flex;
@@ -84,7 +86,6 @@
 		.search-item .search-item-icon i {
 			font-size: 28px; }
 		.search-item .search-item-icon .search-item-play {
-			font-size: 40px;
 			display: none; }
 		.search-item:hover .search-item-icon .search-item-icon-type {
 			display: none; }
@@ -123,6 +124,11 @@
 				font-size: 14px; }
 				.search-item span:hover {
 					text-decoration: underline; }
+
+.search-item .search-item-inner .search-item-highlighted {
+  padding: 0;
+  color: #fff;
+  background-color: #3F51B5; }
 
 @media (min-width: 500px) {
 	.search-drop-down {

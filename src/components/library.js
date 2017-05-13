@@ -40,39 +40,35 @@ class Library extends React.Component {
 								<Route exact
 									path="/"
 									render={ () => (
-										<Home
-											info={props.info}
+                    
+										<Home info={props.info}
 											mainObj={props.mainObj}
-											currentSong={props.currentSong} />
-									)} />
+											currentSong={props.currentSong} /> )} />
 								
 								<Route exact
 									path="/artists"
 									render={ () => (
-										<Artists
-											info={props.info}
+                    
+										<Artists info={props.info}
 											mainObj={props.mainObj}
-											currentSong={props.currentSong} />
-									)} />
+											currentSong={props.currentSong} /> )} />
 								
 								<Route exact
 									path="/albums"
 									render={ () => (
-										<Albums
-											info={props.info}
+                    
+										<Albums info={props.info}
 											mainObj={props.mainObj}
-											currentSong={props.currentSong} />
-									)} />
+											currentSong={props.currentSong} /> )} />
 								
 								<Route exact
 									path="/songs"
 									render={ () => (
-										<Songs
-											info={props.info}
+                    
+										<Songs info={props.info}
 											mainObj={props.mainObj}
 											playSong={props.playSong}
-											currentSong={props.currentSong} />
-									)} />
+											currentSong={props.currentSong} /> )} />
 
 							</div>
 

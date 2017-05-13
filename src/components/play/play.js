@@ -58,18 +58,12 @@ class Play extends React.Component {
 		
 		const props = this.props
 		
-		let playJSX
-		
-		if (this.state.isLoading) {
-			playJSX =(
-				 <img src={LoadingSvg} alt="Loading" onClick={this.onPlayClick} />
-			)
-		} else {
-			playJSX = (
-				<i className="material-icons play-play-button"
-					onClick={this.onPlayClick}>{this.state.isPlay ? 'pause_circle_filled' : 'play_circle_filled'}</i>
-			)
-		}
+		let playJSX = this.state.isLoading ? (
+      <img src={LoadingSvg} alt="Loading" onClick={this.onPlayClick} />
+    ) : (
+      <i className="material-icons play-play-button"
+        onClick={this.onPlayClick}>{this.state.isPlay ? 'pause_circle_filled' : 'play_circle_filled'}</i>
+    )
 		
 		return (
 			<div className="play">
@@ -97,8 +91,7 @@ class Play extends React.Component {
 					<i className="material-icons play-right-icon"
 						onClick={this.volumeMute}>volume_mute</i>
 					
-					<InputRange
-        		maxValue={100}
+					<InputRange maxValue={100}
         		minValue={0}
 						step={1}
 						value={Number(this.state.volume)}
@@ -109,12 +102,12 @@ class Play extends React.Component {
 						
 				</div>
 				
-				<Sound
-					url={'./song-files/song.mp3'}
-					volume={this.state.volume}
+				<Sound url={'./song-files/song.mp3'}
+          playStatus={this.state.isPlay ? Sound.status.PLAYING : Sound.status.PAUSE}
+          onFinishedPlaying={this.onPlayClick}
 					onLoading={this.handleSongLoading}
 					onPlaying={this.handleSongPlaying}
-					playStatus={this.state.isPlay ? Sound.status.PLAYING : Sound.status.PAUSE} />
+					volume={this.state.volume} />
 				
 			</div>
 		)
