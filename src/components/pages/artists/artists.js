@@ -10,27 +10,28 @@ class Artist extends React.Component {
     const props = this.props
     
     // Declare
-    let artistAlbums = []
+    let artistAlbums = [],
+        a= 0, b = 0, c = 0
 
     // Find artist albums
-    for (var i = 0; i < props.mainObj.length.albums; i++) {
-      let item = props.mainObj.albums[i]
+    for (a; a < props.mainObj.length.albums; a++) {
+      let item = props.mainObj.albums[a]
       if (props.artist.artistId === item.artistId) {
         artistAlbums.push(item)
       }
     }
 
     // Find songs for each album
-    for (var i = 0; i < artistAlbums.length; i++) {
-      let album = artistAlbums[i]
+    for (b; b < artistAlbums.length; b++) {
+      let album = artistAlbums[b]
       let albumSongs = []
-      for (var x = 0; x < props.mainObj.length.songs; x++) {
-        let song = props.mainObj.songs[x]
+      for (c; c < props.mainObj.length.songs; c++) {
+        let song = props.mainObj.songs[c]
         if (album.albumId === song.albumId) {
           albumSongs.push(song)
         }
       }
-      artistAlbums[i].albumSongs = albumSongs
+      artistAlbums[b].albumSongs = albumSongs
     }
 
     let list = artistAlbums.map((album) => {
@@ -40,8 +41,8 @@ class Artist extends React.Component {
       ))
 
       return (
-        <div>
-          <div key={album.albumId} style={{ marginBottom: '10px' }}>
+        <div key={album.albumId}>
+          <div style={{ marginBottom: '10px' }}>
             <h4>{album.title}</h4>
             <p>{album.albumId}</p>
           </div>

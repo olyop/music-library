@@ -7,8 +7,8 @@ const Songs = props => {
 	
 	// Sort songs by album
 	props.mainObj.songs.sort(function(a, b){
-    if (a.albumName < b.albumName) return - 1
-    if (a.albumName > b.albumName) return 1
+    if (a.title < b.title) return - 1
+    if (a.title > b.title) return 1
     return 0
 	})
 	
@@ -21,6 +21,7 @@ const Songs = props => {
 				<tbody>
 					{props.mainObj.songs.map((song, index) => (
 						<Song key={index}
+              mainObj={props.mainObj}
 							playSong={props.playSong}
 							currentSong={props.currentSong}
 							song={song} />

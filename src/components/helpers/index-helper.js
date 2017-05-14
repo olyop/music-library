@@ -39,6 +39,9 @@ const calcLibraryData = obj => {
 	for (let h = 0; h < obj.length.songs; h++) {
 		
 		const song = obj.songs[h]
+    
+    // Change trackNum from string to number
+    song.trackNum = Number(song.trackNum)
 		
 		// Find song album
 		for (let i = 0; i < obj.length.albums; i++) {
@@ -61,4 +64,19 @@ const calcLibraryData = obj => {
 	return obj
 }
 
-export { calcLibraryData }
+const findSongsAlbum = (song, obj) => {
+  
+  let albumSongs = []
+
+  // Find songs in the current song's album
+  for (var i = 0; i < obj.length.songs; i++) {
+    let item = obj.songs[i]
+    if (song.albumId === item.albumId) {
+      albumSongs.push(item)
+    }
+  }
+  
+  return albumSongs
+}
+
+export { calcLibraryData, findSongsAlbum }

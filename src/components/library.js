@@ -24,8 +24,10 @@ class Library extends React.Component {
 			<Router>
 				<div>
 				  
-					<Play
-						mainObj={props.mainObj}
+					<Play mainObj={props.mainObj}
+            prevSong={props.prevSong}
+            nextSong={props.nextSong}
+            shuffle={props.shuffle}
 						currentSong={props.currentSong} />
 
 					<div className="container-fluid library">

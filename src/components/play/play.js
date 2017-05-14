@@ -69,7 +69,7 @@ class Play extends React.Component {
 			<div className="play">
 				
 				<div className="play-section play-left">
-					<img src={props.currentSong.albumCover} alt="Album" />
+					<img src={props.mainObj.info.webStorageLink + props.currentSong.artistId + '/' + props.currentSong.albumId + '/cover.jpg'} alt="Album" />
 					<div className="play-content">
 						<div>
 							<h1>{props.currentSong.title}</h1>
@@ -79,11 +79,19 @@ class Play extends React.Component {
 				</div>
 				
 				<div className="play-section play-middle">
+          
 					<i className="material-icons">repeat</i>
-					<i className="material-icons">skip_previous</i>
+          
+					<i className="material-icons"
+            onClick={props.prevSong}>skip_previous</i>
 					<div className="play-middle-play">{playJSX}</div>
-					<i className="material-icons">skip_next</i>
-					<i className="material-icons">shuffle</i>
+          
+					<i className="material-icons"
+            onClick={props.nextSong}>skip_next</i>
+          
+					<i className="material-icons"
+            onClick={props.shuffle}>shuffle</i>
+          
 				</div>
 				
 				<div className="play-section play-right">
@@ -102,7 +110,7 @@ class Play extends React.Component {
 						
 				</div>
 				
-				<Sound url={'./song-files/song.mp3'}
+				<Sound url={props.mainObj.info.webStorageLink + props.currentSong.artistId + '/' + props.currentSong.albumId + '/' + props.currentSong.songId + '.mp3'}
           playStatus={this.state.isPlay ? Sound.status.PLAYING : Sound.status.PAUSE}
           onFinishedPlaying={this.onPlayClick}
 					onLoading={this.handleSongLoading}

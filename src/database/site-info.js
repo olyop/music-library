@@ -47,11 +47,12 @@ const siteInfo = {
 			j: '#880E4F'
 		}
 	},
-	isNav: false,
+	isNav: true,
 	hamburgerType: 'slider',
 	play: {
 		startingVolume: 50
-	}
+	},
+  webStorageLink: 'https://s3-ap-southeast-2.amazonaws.com/music-library-dt/'
 }
 
 export default siteInfo

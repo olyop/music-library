@@ -22,8 +22,9 @@ import Library from './components/library'
 import Search from './components/search/search'
 
 // Import functions
-import { calcLibraryData } from './components/helpers/index-helper'
+import { calcLibraryData, findSongsAlbum } from './components/helpers/index-helper'
 import find from 'lodash/find'
+import sortBy from 'lodash/sortBy'
 
 // Define database object
 const mainObj = {
@@ -59,6 +60,9 @@ class Index extends React.Component {
     this.playSong = this.playSong.bind(this)
     this.playAlbum = this.playAlbum.bind(this)
     this.playArtist = this.playArtist.bind(this)
+    this.prevSong = this.prevSong.bind(this)
+    this.nextSong = this.nextSong.bind(this)
+    this.shuffle = this.shuffle.bind(this)
 	}
   
 	toggleNav() {
@@ -113,6 +117,40 @@ class Index extends React.Component {
     
     this.setState({ currentSong: artistSongs[Math.floor(Math.random() * artistSongs.length)] })
   }
+  
+  prevSong() {
+    
+    const currentSong = this.state.currentSong
+    
+    // Find songs in album
+    let currentSongAlbumSongs = sortBy(findSongsAlbum(currentSong, this.props.mainObj), [ a => a.trackNum ])
+    
+    // Find next track in album
+    if (currentSong.trackNum === 1) {
+      this.setState({ currentSong: this.props.mainObj.songs[Math.floor(Math.random() * this.props.mainObj.length.songs)] })
+    } else {
+      this.setState({ currentSong: currentSongAlbumSongs[currentSong.trackNum - 2] })
+    }
+  }
+  
+  nextSong() {
+    
+    const currentSong = this.state.currentSong
+    
+    // Find songs in album  
+    let currentSongAlbumSongs = sortBy(findSongsAlbum(currentSong, this.props.mainObj), [ a => a.trackNum ])
+    
+    // Find next track in album
+    if (currentSongAlbumSongs[currentSong.trackNum + 1] === undefined) {
+      this.setState({ currentSong: this.props.mainObj.songs[Math.floor(Math.random() * this.props.mainObj.length.songs)] })
+    } else {
+      this.setState({ currentSong: find(currentSongAlbumSongs, { trackNum: currentSong.trackNum + 1 }) })
+    }
+  }
+  
+  shuffle() {
+    this.setState({ currentSong: this.props.mainObj.songs[Math.floor(Math.random() * this.props.mainObj.length.songs)] })
+  }
 	
 	render() {
     
@@ -136,7 +174,10 @@ class Index extends React.Component {
           currentSong={this.state.currentSong}
           playSong={this.playSong}
           playAlbum={this.playAlbum}
-          playArtist={this.playArtist} />
+          playArtist={this.playArtist}
+          prevSong={this.prevSong}
+          nextSong={this.nextSong}
+          shuffle={this.shuffle} />
         
         {isInputEmpty ? null : (
           
