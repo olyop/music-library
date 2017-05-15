@@ -80,7 +80,9 @@ class Play extends React.Component {
 				
 				<div className="play-section play-middle">
           
-					<i className="material-icons">repeat</i>
+					<i className="material-icons"
+            onClick={props.toggleRepeat}
+						style={props.repeat ? { color: '#3F51B5' } : null}>repeat</i>
           
 					<i className="material-icons"
             onClick={props.prevSong}>skip_previous</i>
@@ -90,7 +92,8 @@ class Play extends React.Component {
             onClick={props.nextSong}>skip_next</i>
           
 					<i className="material-icons"
-            onClick={props.shuffle}>shuffle</i>
+            onClick={props.toggleShuffle}
+						style={props.shuffle ? { color: '#3F51B5' } : null}>shuffle</i>
           
 				</div>
 				
@@ -112,7 +115,7 @@ class Play extends React.Component {
 				
 				<Sound url={props.mainObj.info.webStorageLink + props.currentSong.artistId + '/' + props.currentSong.albumId + '/' + props.currentSong.songId + '.mp3'}
           playStatus={this.state.isPlay ? Sound.status.PLAYING : Sound.status.PAUSE}
-          onFinishedPlaying={this.onPlayClick}
+          onFinishedPlaying={props.nextSong}
 					onLoading={this.handleSongLoading}
 					onPlaying={this.handleSongPlaying}
 					volume={this.state.volume} />

@@ -79,4 +79,6 @@ const findSongsAlbum = (song, obj) => {
   return albumSongs
 }
 
-export { calcLibraryData, findSongsAlbum }
+const randomItemFromArray = (array, arrayLength) => array[Math.floor(Math.random() * arrayLength)]
+
+export { calcLibraryData, findSongsAlbum, randomItemFromArray }

@@ -13,11 +13,13 @@ import './search.css'
 class Search extends React.Component {
 	render() {
 		
+		const props = this.props
+		
     // Declare
-		let style = { color: this.props.mainObj.info.colors.p.f }
+		let style = { color: props.mainObj.info.colors.p.f }
 		
 		// Verify search input
-		if (isInputDangerous(this.props.inputVal)) {
+		if (isInputDangerous(props.inputVal)) {
 			return (
 				<div className="header-search-drop-down">
 					<h3 style={{ color: 'red' }}>Bad input</h3>
@@ -29,9 +31,9 @@ class Search extends React.Component {
 		const input = String(this.props.inputVal.toUpperCase().toLowerCase())
 
 		// Find matches
-		const matchesSongs = findMatches(this.props.mainObj.songs, this.props.mainObj.length.songs, input)
-		const matchesAlbums = findMatches(this.props.mainObj.albums, this.props.mainObj.length.albums, input)
-		const matchesArtists = findMatches(this.props.mainObj.artists, this.props.mainObj.length.artists, input)
+		const matchesSongs = findMatches(props.mainObj.songs, props.mainObj.length.songs, input)
+		const matchesAlbums = findMatches(props.mainObj.albums, props.mainObj.length.albums, input)
+		const matchesArtists = findMatches(props.mainObj.artists, props.mainObj.length.artists, input)
 
 		// Find number of matches
 		const numOfMatches = matchesSongs.length + matchesAlbums.length + matchesArtists.length
@@ -66,7 +68,7 @@ class Search extends React.Component {
               input={input}
               iconText={'album'}
               heading={album.title}
-              img={album.cover}
+              img={props.mainObj.info.webStorageLink + album.artistId + '/' + album.albumId + '/cover.jpg'}
               span1={album.artistName}
               span2={album.numSongs === 1 ? String(album.numSongs) + ' song' : String(album.numSongs) + ' songs'} />
           ))}
@@ -80,7 +82,7 @@ class Search extends React.Component {
               input={input}
               iconText={'audiotrack'}
               heading={song.title}
-              img={song.albumCover}
+              img={props.mainObj.info.webStorageLink + song.artistId + '/' + song.albumId + '/cover.jpg'}
               span1={song.artistName}
               span2={song.albumName} />
           ))}
