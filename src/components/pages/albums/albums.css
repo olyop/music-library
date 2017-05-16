@@ -1,5 +1,6 @@
 .albums {
 	display: flex;
+	margin-bottom: 100px;
 	align-content: flex-start;
 	flex-wrap: wrap;
 	align-items: stretch; }
