@@ -62,18 +62,22 @@ class Play extends React.Component {
       <img src={LoadingSvg} alt="Loading" onClick={this.onPlayClick} />
     ) : (
       <i className="material-icons play-play-button"
-        onClick={this.onPlayClick}>{this.state.isPlay ? 'pause_circle_filled' : 'play_circle_filled'}</i>
+        onClick={props.currentSong === 0 ? props.playFirstSong : this.onPlayClick}>{this.state.isPlay ? 'pause_circle_filled' : 'play_circle_filled'}</i>
     )
 		
 		return (
 			<div className="play">
 				
 				<div className="play-section play-left">
-					<img src={props.mainObj.info.webStorageLink + props.currentSong.artistId + '/' + props.currentSong.albumId + '/cover.jpg'} alt="Album" />
+					
+					{props.currentSong === 0 ? null : (
+						<img src={props.mainObj.info.webStorageLink + props.currentSong.artistId + '/' + props.currentSong.albumId + '/cover.jpg'} alt="Album" />
+					)}
+					
 					<div className="play-content">
 						<div>
-							<h1>{props.currentSong.title}</h1>
-							<p>{props.currentSong.artistName}</p>
+							<h1>{props.currentSong === 0 ? '' : props.currentSong.title}</h1>
+							<p>{props.currentSong === 0 ? '' : props.currentSong.artistName}</p>
 						</div>
 					</div>
 				</div>
@@ -99,26 +103,34 @@ class Play extends React.Component {
 				
 				<div className="play-section play-right">
 					
-					<i className="material-icons play-right-icon"
-						onClick={this.volumeMute}>volume_mute</i>
+					{props.currentSong === 0 ? null : (
+						<i className="material-icons play-right-icon"
+							onClick={this.volumeMute}>volume_mute</i>
+					)}
 					
-					<InputRange maxValue={100}
-        		minValue={0}
-						step={1}
-						value={Number(this.state.volume)}
-						onChange={ volume => this.setState({ volume }) } />
+					{props.currentSong === 0 ? null : (
+						<InputRange maxValue={100}
+							minValue={0}
+							step={1}
+							value={Number(this.state.volume)}
+							onChange={ volume => this.setState({ volume }) } />
+					)}
 					
-					<i className="material-icons play-right-icon"
-						onClick={this.volumeFull}>volume_up</i>
+					{props.currentSong === 0 ? null : (
+						<i className="material-icons play-right-icon"
+							onClick={this.volumeFull}>volume_up</i>
+					)}
 						
 				</div>
 				
-				<Sound url={props.mainObj.info.webStorageLink + props.currentSong.artistId + '/' + props.currentSong.albumId + '/' + props.currentSong.songId + '.mp3'}
-          playStatus={this.state.isPlay ? Sound.status.PLAYING : Sound.status.PAUSE}
-          onFinishedPlaying={props.nextSong}
-					onLoading={this.handleSongLoading}
-					onPlaying={this.handleSongPlaying}
-					volume={this.state.volume} />
+				{props.currentSong === 0 ? null : (
+					<Sound url={props.mainObj.info.webStorageLink + props.currentSong.artistId + '/' + props.currentSong.albumId + '/' + props.currentSong.songId + '.mp3'}
+						playStatus={this.state.isPlay ? Sound.status.PLAYING : Sound.status.PAUSE}
+						onFinishedPlaying={props.nextSong}
+						onLoading={this.handleSongLoading}
+						onPlaying={this.handleSongPlaying}
+						volume={this.state.volume} />
+				)}
 				
 			</div>
 		)

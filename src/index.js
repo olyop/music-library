@@ -48,7 +48,7 @@ class Index extends React.Component {
 		this.state = {
       isNav: this.props.mainObj.info.isNav,
       inputVal: '',
-      currentSong: find(props.mainObj.songs, { songId: 'uSlkWsLCnH' }),
+      currentSong: 0,
 			repeat: false,
 			shuffle: false
     }
@@ -60,6 +60,7 @@ class Index extends React.Component {
 		this.clearInput = this.clearInput.bind(this)
     
     this.playSong = this.playSong.bind(this)
+		this.playFirstSong = this.playFirstSong.bind(this)
     this.playAlbum = this.playAlbum.bind(this)
     this.playArtist = this.playArtist.bind(this)
     this.prevSong = this.prevSong.bind(this)
@@ -90,6 +91,10 @@ class Index extends React.Component {
   playSong(song) {
 		this.setState({ currentSong: song })
 	}
+	
+	playFirstSong() {
+		this.setState({ currentSong: randomItemFromArray(this.props.mainObj.songs, this.props.mainObj.length.songs) })
+	}
   
   playAlbum(album) {
     
@@ -103,7 +108,7 @@ class Index extends React.Component {
       }
     }
     
-    this.setState({ currentSong: albumSongs[Math.floor(Math.random() * albumSongs.length)] })
+    this.setState({ currentSong: find(albumSongs, { trackNum: 1 }) })
   }
   
   playArtist(artist) {
@@ -202,6 +207,7 @@ class Index extends React.Component {
 					repeat={this.state.repeat}
 					shuffle={this.state.shuffle}
           playSong={this.playSong}
+					playFirstSong={this.playFirstSong}
           playAlbum={this.playAlbum}
           playArtist={this.playArtist}
           prevSong={this.prevSong}

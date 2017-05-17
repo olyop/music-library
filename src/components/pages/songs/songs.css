@@ -1,5 +1,5 @@
 .songs {
-	padding: 10px; }
+	padding: 5px; }
 	.songs table {
 		background-color: #fff;
 		width: 100%; }
@@ -47,14 +47,6 @@
 		border-color: #3F51B5; }
 
 @media (min-width: 900px) {
-	.songs {
-		padding: 20px; }
 	.songs table td, th {
-		font-size: 16px;
-	}
-}
-
-@media (min-width: 1200px) {
-	.songs {
-		padding: 40px; }
+		font-size: 16px; }
 }

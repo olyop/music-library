@@ -12,6 +12,7 @@
 			height: 100%;
 			border: 1px solid #E0E0E0; }
 			.albums .album .album-inner img {
+				min-height: calc(100% / 1 - 10px);
 				width: 100%;  }
 			.albums .album .album-inner .album-content {
 				position: relative;
@@ -84,7 +85,7 @@
 						.albums .album .album-inner .album-content p span:hover {
 							text-decoration: underline; }
 				.albums .album .album-inner .album-content h1 {
-					font-size: 18px;
+					font-size: 20px;
 					font-weight: 500; }
 				.albums .album .album-inner .album-content p {
 					font-size: 17px;

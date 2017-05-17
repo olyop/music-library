@@ -25,6 +25,7 @@ class Library extends React.Component {
 				<div>
 				  
 					<Play mainObj={props.mainObj}
+						playFirstSong={props.playFirstSong}
             prevSong={props.prevSong}
             nextSong={props.nextSong}
 						toggleRepeat={props.toggleRepeat}

@@ -7,6 +7,8 @@ import './albums-responsive.css'
 
 const Albums = props => {
 	
+	window.scrollTo(0,0)
+	
 	// Sort Albums
 	props.mainObj.albums.sort((a, b) => {
     if (a.title < b.title) return - 1
