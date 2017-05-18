@@ -3,11 +3,23 @@
 	align-content: flex-start;
 	flex-wrap: wrap;
 	align-items: stretch;
+  margin-bottom: 53px;
 	padding: 0; }
 	.artists .artist {
-		width: calc(100% / 3);
-		padding: 5px; }
-		.artists .artist .artist-inner {
-			background-color: #fff;
-			border: 1px solid #eeeeee;
-			padding: 10px; }
+		width: calc(100% / 2 - 10px);
+		background-color: #fff;
+    border: 1px solid #E0E0E0;
+		margin: 5px; }
+    .artists .artist .artist-cover {
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 300px; }
+    .artists .artist .artist-content {
+      padding: 10px; }
+      .artists .artist .artist-content h1 {
+        font-weight: bold;
+        font-size: 25px; }
+      .artists .artist .artist-content p {
+        font-size: 16px; }

@@ -25,14 +25,14 @@ class Library extends React.Component {
 				<div>
 				  
 					<Play mainObj={props.mainObj}
-						playFirstSong={props.playFirstSong}
+            playFirstSong={props.playFirstSong}
             prevSong={props.prevSong}
             nextSong={props.nextSong}
-						toggleRepeat={props.toggleRepeat}
-						toggleShuffle={props.toggleShuffle}
-						repeat={props.repeat}
+            toggleRepeat={props.toggleRepeat}
+            toggleShuffle={props.toggleShuffle}
+            repeat={props.repeat}
             shuffle={props.shuffle}
-						currentSong={props.currentSong} />
+            currentSong={props.currentSong} />
 
 					<div className="container-fluid library">
 						<div className="row"

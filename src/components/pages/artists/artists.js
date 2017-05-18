@@ -5,63 +5,31 @@ import React from 'react'
 import './artists.css'
 
 class Artist extends React.Component {
+  
+  constructor(props) {
+    super()
+    
+    this.state = {
+      artist: props.obj
+    }
+  }
+  
   render() {
     
     const props = this.props
-    
-    // Declare
-    let artistAlbums = [],
-        a= 0, b = 0, c = 0
-
-    // Find artist albums
-    for (a; a < props.mainObj.length.albums; a++) {
-      let item = props.mainObj.albums[a]
-      if (props.artist.artistId === item.artistId) {
-        artistAlbums.push(item)
-      }
-    }
-
-    // Find songs for each album
-    for (b; b < artistAlbums.length; b++) {
-      let album = artistAlbums[b]
-      let albumSongs = []
-      for (c; c < props.mainObj.length.songs; c++) {
-        let song = props.mainObj.songs[c]
-        if (album.albumId === song.albumId) {
-          albumSongs.push(song)
-        }
-      }
-      artistAlbums[b].albumSongs = albumSongs
-    }
-
-    let list = artistAlbums.map((album) => {
-
-      let mapSongs = album.albumSongs.map((song) => (
-        <p key={song.songId}><b>{song.title}</b> - {song.songId}</p>
-      ))
-
-      return (
-        <div key={album.albumId}>
-          <div style={{ marginBottom: '10px' }}>
-            <h4>{album.title}</h4>
-            <p>{album.albumId}</p>
-          </div>
-          {mapSongs}
-          <br />
-        </div>
-      )
-    })
 
     return (
       <div className="artist">
-        <div className="artist-inner">
-          <h3 style={{ fontWeight: '800', textAlign: 'center' }}>{props.artist.title}</h3>
-          <p>{props.artist.artistId}</p>
-          <hr />
-          <div>
-            {list}
-          </div>
-          <hr />
+        <div className="artist-cover"
+          style={{ backgroundImage: 'url(' + String(props.mainObj.info.webStorageLink + props.obj.artistId + '/group.jpg') + ')' }}>
+        </div>
+        <div className="artist-content">
+          <h1>{props.obj.title}</h1>
+          <p>
+            <span>{props.obj.numAlbums} {props.obj.numAlbums === 1 ? 'album' : 'albums'}</span>
+            <span> &#8211; </span>
+            <span>{props.obj.numSongs} songs</span>
+          </p>
         </div>
       </div>
     )
@@ -82,7 +50,7 @@ const Artists = props => {
 			{props.mainObj.artists.map( (artist, index) => (
         <Artist key={artist.artistId}
           mainObj={props.mainObj}
-          artist={artist} />
+          obj={artist} />
       ))}
 		</div>
 	)

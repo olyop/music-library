@@ -20,48 +20,6 @@
 				background-color: #fff;
 				border-radius: 0 0 5px 5px;
 				cursor: pointer; }
-				.albums .album .album-content .album-more {
-					display: none;
-					justify-content: center;
-					align-items: center;
-					height: 100%;
-					z-index: 2;
-					position: absolute;
-					top: -63px;
-					right: 0; }
-					.albums .album .album-inner:hover .album-more {
-						display: flex; }
-					.albums .album .album-content .album-more i {
-						box-shadow:
-							0 4px 5px 0 rgba(0, 0, 0, 0.14),
-							0 1px 10px 0 rgba(0, 0, 0, 0.12),
-							0 2px 4px -1px rgba(0, 0, 0, 0.2);
-						transition: .2s all;
-						border-radius: 100%;
-						background-color: #fff;;
-						padding: 10px;
-						margin-right: 10px;
-						font-size: 25px; }
-						.albums .album .album-content .album-more i:hover {
-							background-color: #EEEEEE; }
-				.albums .album .album-content .album-more-menu {
-					display: none;
-					position: absolute;
-					top: -54px;
-					right: -22px;
-					z-index: 3;
-					background-color: #fff;
-					border-radius: 10px;
-					box-shadow:
-						0 4px 5px 0 rgba(0, 0, 0, 0.14),
-						0 1px 10px 0 rgba(0, 0, 0, 0.12),
-						0 2px 4px -1px rgba(0, 0, 0, 0.2);
-					padding: 10px 0; }
-					.albums .album .album-content .album-more-menu p {
-						padding: 10px 20px;
-						font-size: 16px; }
-						.albums .album .album-content .album-more-menu p:hover {
-							background-color: #eeeeee; }
 				.albums .album .album-content h1,
 				.albums .album .album-content p {
 					overflow: hidden;
@@ -85,8 +43,8 @@
 						.albums .album .album-content p span:hover {
 							text-decoration: underline; }
 				.albums .album .album-content h1 {
-					font-size: 20px;
+					font-size: 16px;
 					font-weight: 500; }
 				.albums .album .album-content p {
-					font-size: 17px;
+					font-size: 15px;
 					font-weight: 400; }

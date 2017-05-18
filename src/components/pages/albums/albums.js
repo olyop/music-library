@@ -21,12 +21,6 @@ const Albums = props => {
           src={props.mainObj.info.webStorageLink + album.artistId + '/' + album.albumId + '/cover.jpg'} />
       </div>
       <div className="album-content">
-        <div className="album-more">
-          <i className="material-icons">more_vert</i>
-        </div>
-        <div className="album-more-menu">
-          <p>More</p>
-        </div>
         <h1><span>{album.title}</span></h1>
         <p><span>{album.artistName}</span></p>
       </div>
