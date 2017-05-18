@@ -5,8 +5,6 @@ import './songs.css'
 
 const Songs = props => {
 	
-	window.scrollTo(0,0)
-	
 	// Sort songs by album
 	props.mainObj.songs.sort(function(a, b){
     if (a.title < b.title) return - 1

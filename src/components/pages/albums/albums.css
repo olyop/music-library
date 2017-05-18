@@ -1,26 +1,26 @@
 .albums {
 	display: flex;
-	margin-bottom: 100px;
+	margin-bottom: 53px;
 	align-content: flex-start;
 	flex-wrap: wrap;
 	align-items: stretch; }
 	.albums .album {
-		width: calc(100% / 1);
-  	min-width: calc(100% / 1);
-		padding: 5px; }
-		.albums .album .album-inner {
-			height: 100%;
-			border: 1px solid #E0E0E0; }
-			.albums .album .album-inner img {
-				min-height: calc(100% / 1 - 10px);
-				width: 100%;  }
-			.albums .album .album-inner .album-content {
-				position: relative;
+		width: calc(100% / 1 - 10px);
+  	min-width: calc(100% / 1 - 10px);
+		border: 1px solid #E0E0E0;
+    margin: 5px; }
+      .albums .album .album-cover {
+        width: 100%;
+        background-color: #fff; }
+        .albums .album .album-cover .album-cover-img {
+          min-height: calc(100%);
+          width: 100%;  }
+			.albums .album .album-content {
 				padding: 10px;
 				background-color: #fff;
 				border-radius: 0 0 5px 5px;
 				cursor: pointer; }
-				.albums .album .album-inner .album-content .album-more {
+				.albums .album .album-content .album-more {
 					display: none;
 					justify-content: center;
 					align-items: center;
@@ -31,7 +31,7 @@
 					right: 0; }
 					.albums .album .album-inner:hover .album-more {
 						display: flex; }
-					.albums .album .album-inner .album-content .album-more i {
+					.albums .album .album-content .album-more i {
 						box-shadow:
 							0 4px 5px 0 rgba(0, 0, 0, 0.14),
 							0 1px 10px 0 rgba(0, 0, 0, 0.12),
@@ -42,9 +42,9 @@
 						padding: 10px;
 						margin-right: 10px;
 						font-size: 25px; }
-						.albums .album .album-inner .album-content .album-more i:hover {
+						.albums .album .album-content .album-more i:hover {
 							background-color: #EEEEEE; }
-				.albums .album .album-inner .album-content .album-more-menu {
+				.albums .album .album-content .album-more-menu {
 					display: none;
 					position: absolute;
 					top: -54px;
@@ -57,19 +57,19 @@
 						0 1px 10px 0 rgba(0, 0, 0, 0.12),
 						0 2px 4px -1px rgba(0, 0, 0, 0.2);
 					padding: 10px 0; }
-					.albums .album .album-inner .album-content .album-more-menu p {
+					.albums .album .album-content .album-more-menu p {
 						padding: 10px 20px;
 						font-size: 16px; }
-						.albums .album .album-inner .album-content .album-more-menu p:hover {
+						.albums .album .album-content .album-more-menu p:hover {
 							background-color: #eeeeee; }
-				.albums .album .album-inner .album-content h1,
-				.albums .album .album-inner .album-content p {
+				.albums .album .album-content h1,
+				.albums .album .album-content p {
 					overflow: hidden;
 					white-space: nowrap;
 					position: relative;
 					background-color: #fff; }
-					.albums .album .album-inner .album-content h1:after,
-					.albums .album .album-inner .album-content p:after {
+					.albums .album .album-content h1:after,
+					.albums .album .album-content p:after {
 						display: block;
 						position: absolute;
 						right: 0;
@@ -78,15 +78,15 @@
 						width: 30px;
 						content: "";
 						background: linear-gradient(to right, rgba(255, 255, 255, 0), white); }
-					.albums .album .album-inner .album-content h1 span,
-					.albums .album .album-inner .album-content p span {
+					.albums .album .album-content h1 span,
+					.albums .album .album-content p span {
 						cursor: pointer; }
-						.albums .album .album-inner .album-content h1 span:hover,
-						.albums .album .album-inner .album-content p span:hover {
+						.albums .album .album-content h1 span:hover,
+						.albums .album .album-content p span:hover {
 							text-decoration: underline; }
-				.albums .album .album-inner .album-content h1 {
+				.albums .album .album-content h1 {
 					font-size: 20px;
 					font-weight: 500; }
-				.albums .album .album-inner .album-content p {
+				.albums .album .album-content p {
 					font-size: 17px;
 					font-weight: 400; }

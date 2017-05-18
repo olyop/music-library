@@ -7,8 +7,6 @@ import './albums-responsive.css'
 
 const Albums = props => {
 	
-	window.scrollTo(0,0)
-	
 	// Sort Albums
 	props.mainObj.albums.sort((a, b) => {
     if (a.title < b.title) return - 1
@@ -17,20 +15,20 @@ const Albums = props => {
 	})
   
   const albumList = props.mainObj.albums.map((album, index) => (
-    <div key={album.albumId}
-      className="album">
-      <div className="album-inner">
-        <img src={props.mainObj.info.webStorageLink + album.artistId + '/' + album.albumId + '/cover.jpg'} alt={album.title} />
-        <div className="album-content">
-          <div className="album-more">
-            <i className="material-icons">more_vert</i>
-          </div>
-          <div className="album-more-menu">
-            <p>More</p>
-          </div>
-          <h1><span>{album.title}</span></h1>
-          <p><span>{album.artistName}</span></p>
+    <div key={album.albumId} className="album">
+      <div className="album-cover">
+        <img alt={album.title} className="album-cover-img"
+          src={props.mainObj.info.webStorageLink + album.artistId + '/' + album.albumId + '/cover.jpg'} />
+      </div>
+      <div className="album-content">
+        <div className="album-more">
+          <i className="material-icons">more_vert</i>
         </div>
+        <div className="album-more-menu">
+          <p>More</p>
+        </div>
+        <h1><span>{album.title}</span></h1>
+        <p><span>{album.artistName}</span></p>
       </div>
     </div>
   ))
