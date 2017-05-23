@@ -23,11 +23,11 @@
 		color: #fff; }
 
 .songs table .song-cover {
-	width: 59px;
-	max-width: 59px;
+	width: 42px;
+	max-width: 42px;
 	padding: 5px; }
 	.songs table .song-cover img {
-		width: 48px;
+		width: 31px;
 		height: auto; }
 
 .songs table .song-length {
@@ -48,5 +48,5 @@
 
 @media (min-width: 900px) {
 	.songs table td, th {
-		font-size: 16px; }
+		font-size: 15px; }
 }
