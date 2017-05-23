@@ -54,7 +54,7 @@ class Search extends React.Component {
               input={input}
               iconText={'person'}
               heading={artist.title}
-              img={artist.logo}
+              img={props.mainObj.info.webStorageLink + artist.artistId + '/logo.jpg'}
               span1={artist.numAlbums === 1 ? String(artist.numAlbums) + ' album' : String(artist.numAlbums) + ' albums'}
               span2={artist.numSongs === 1 ? String(artist.numSongs) + ' song' : String(artist.numSongs) + ' songs'} />
           ))}
