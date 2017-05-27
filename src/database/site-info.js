@@ -35,7 +35,7 @@ const siteInfo = {
 			j: '#263238'
 		},
 		h: {
-			a: '#FCE4EC	',
+			a: '#FCE4EC',
 			b: '#F8BBD0',
 			c: '#F48FB1',
 			d: '#F06292',

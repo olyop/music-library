@@ -16,11 +16,18 @@
 
 .songs table thead .song-icon {
 	align-content: center;
-	display: flex; 
+	display: flex;
 	justify-content: center; }
 	.songs table thead .song-icon i {
-		font-size: 22px;
-		color: #fff; }
+		font-size: 22px; }
+  .songs table thead th {
+    font-weight: 600;
+    background-color: rgb(245, 245, 245);
+    font-size: 15px;
+    border: none;
+    cursor: auto;
+    border-bottom: 1px solid #EEEEEE;
+    color: #333; }
 
 .songs table .song-cover {
 	width: 42px;
@@ -31,8 +38,8 @@
 		height: auto; }
 
 .songs table .song-length {
-	width: 61px;
-	max-width: 61px; }
+	width: 50px;
+	max-width: 50px; }
 	.songs table .song-length div {
 		color: #757575;
     justify-content: center;
