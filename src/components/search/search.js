@@ -39,7 +39,7 @@ class Search extends React.Component {
 		const numOfMatches = matchesSongs.length + matchesAlbums.length + matchesArtists.length
 
 		return (
-			<div className="search-drop-down">
+			<div className="window search-drop-down">
 
 				<h2>Showing <b style={style}>{numOfMatches}</b> search results for <b style={style}>{input}</b></h2>
 

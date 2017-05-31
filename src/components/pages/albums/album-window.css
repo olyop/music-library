@@ -1,0 +1,18 @@
+.album-window {
+	top: 73px;
+	padding: 40px;
+	z-index: 5; }
+	.album-window .album-window-side {
+		padding: 10px; }
+
+	.album-window .album-window-cover img {
+		box-shadow:
+			0 4px 5px 0 rgba(0, 0, 0, 0.14),
+			0 1px 10px 0 rgba(0, 0, 0, 0.12),
+			0 2px 4px -1px rgba(0, 0, 0, 0.2);
+		width: 100%;
+		height: auto; }
+
+	.album-window .album-window-info h2 {
+		font-weight: 400;
+		font-size: 20px; }

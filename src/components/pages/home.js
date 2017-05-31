@@ -8,7 +8,6 @@ class Pretty extends React.Component {
       display: 'block',
       padding: '10px 30px',
       margin: '0',
-      padding: '20px',
       overflow: 'scroll',
       backgroundColor: '#fff',
       border: 'none'

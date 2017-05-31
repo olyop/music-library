@@ -65,7 +65,8 @@ class Library extends React.Component {
                     
 										<Albums info={props.info}
 											mainObj={props.mainObj}
-											currentSong={props.currentSong} /> )} />
+											currentSong={props.currentSong}
+											openAlbumWindow={props.openAlbumWindow} /> )} />
 								
 								<Route exact
 									path="/songs"

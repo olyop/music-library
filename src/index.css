@@ -15,3 +15,17 @@ body {
 ::selection {
 	color: #fff; 
 	background: #3F51B5; }
+
+.window {
+	overflow-y: auto;
+  margin-bottom: 90px;
+	padding: 10px;
+	transition: .2s all;
+	overflow-x: hidden;
+	position: fixed;
+	top: 169px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: #fff; }

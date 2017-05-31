@@ -20,6 +20,7 @@ import artistsData from './database/library/artists-database'
 import Header from './components/header/header'
 import Library from './components/library'
 import Search from './components/search/search'
+import AlbumWindow from './components/pages/albums/album-window'
 
 // Import functions
 import { calcLibraryData, findSongsAlbum, randomItemFromArray } from './components/helpers/index-helper'
@@ -50,7 +51,8 @@ class Index extends React.Component {
       inputVal: '',
       currentSong: 0,
 			repeat: false,
-			shuffle: false
+			shuffle: false,
+			albumWindow: false
     }
     
 		this.toggleNav = this.toggleNav.bind(this)
@@ -67,6 +69,9 @@ class Index extends React.Component {
     this.nextSong = this.nextSong.bind(this)
     this.toggleRepeat = this.toggleRepeat.bind(this)
 		this.toggleShuffle = this.toggleShuffle.bind(this)
+		
+		this.openAlbumWindow = this.openAlbumWindow.bind(this)
+		this.closeAlbumWindow = this.closeAlbumWindow.bind(this)
 	}
   
 	toggleNav() {
@@ -184,6 +189,14 @@ class Index extends React.Component {
     }))
   }
 	
+	openAlbumWindow(obj) {
+		this.setState({ albumWindow: obj })
+	}
+	
+	closeAlbumWindow() {
+		this.setState({ albumWindow: false })
+	}
+	
 	render() {
     
 		let props = this.props,
@@ -213,7 +226,8 @@ class Index extends React.Component {
           prevSong={this.prevSong}
           nextSong={this.nextSong}
 					toggleRepeat={this.toggleRepeat}
-          toggleShuffle={this.toggleShuffle} />
+          toggleShuffle={this.toggleShuffle}
+					openAlbumWindow={this.openAlbumWindow} />
         
         {isInputEmpty ? null : (
           
@@ -225,6 +239,14 @@ class Index extends React.Component {
           playArtist={this.playArtist} />
           
         )}
+				
+				{this.state.albumWindow === false ? null : (
+				
+				<AlbumWindow mainObj={props.mainObj}
+					album={this.state.albumWindow}
+					closeAlbumWindow={this.closeAlbumWindow} />
+					
+				)}
 
 			</div>
 		)	
