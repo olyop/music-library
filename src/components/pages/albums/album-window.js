@@ -37,7 +37,12 @@ const AlbumWindow = props => {
 							<ul>
 								{albumSongs.map((song, index) => (
 									<li key={index}>
-										{song.trackNum + ' - ' + song.title}
+										<div>
+											<i className="material-icons">audiotrack</i>
+											<span className="album-window-song-list-text">{song.trackNum}</span>
+											<span className="album-window-song-list-text">{song.title}</span>
+											<span className="album-window-song-list-text">{song.length}</span>
+										</div>
 									</li>
 								))}
 							</ul>
