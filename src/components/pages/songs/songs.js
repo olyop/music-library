@@ -1,5 +1,6 @@
 import React from 'react'
 import { TableHeader, TableFooter } from '../../helpers/songs-helper'
+import checkSongLength from '../../helpers/songs-helper'
 import './songs.css'
 
 class Song extends React.Component {
@@ -15,11 +16,7 @@ class Song extends React.Component {
 		const props = this.props,
 					state = this.state
 		
-		if (state.song.length.length === 5) {
-      if (state.song.length.slice(0,1) === '0') {
-        state.song.length = state.song.length.slice(1,6)
-      }
-    }
+		const songLength = checkSongLength(state.song.length)
 		
 		return (
 			<tr className={props.currentSong.songId === state.song.songId ? 'song song-active' : 'song'}
@@ -30,7 +27,7 @@ class Song extends React.Component {
 				</td>
 				<td>{state.song.title}</td>
 				<td className="song-length">
-					<div>{state.song.length}</div>
+					<div>{songLength}</div>
 				</td>
 				<td>{state.song.artistName}</td>
 				<td>{state.song.albumName}</td>

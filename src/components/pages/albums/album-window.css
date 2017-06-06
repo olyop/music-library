@@ -3,7 +3,7 @@
 	padding: 40px;
 	z-index: 5; }
 	.album-window .album-window-side {
-		padding: 10px; }
+		padding: 0; }
 	.album-window .album-window-cover img {
 		box-shadow:
 			0 4px 5px 0 rgba(0, 0, 0, 0.14),
@@ -11,28 +11,51 @@
 			0 2px 4px -1px rgba(0, 0, 0, 0.2);
 		width: 100%;
 		height: auto; }
-		.album-window .album-window-info h2 {
-			font-weight: 400;
-			font-size: 24px; }
-		.album-window .album-window-song-list {
-			padding: 10px; }
-			.album-window .album-window-song-list ul {
-				border-bottom: 2x solid #eeeeee;
-				padding: 0;
-				margin: 0; }
-				.album-window .album-window-song-list li {
-					list-style-type: none; }
-					.album-window .album-window-song-list li div {
+		.album-window .album-window-info {
+			padding: 40px; }
+			.album-window .album-window-info h1 {
+				font-weight: 600;
+				display: flex;
+				justify-content: space-between;
+				padding-bottom: 10px;
+				border-bottom: 1px solid #333;
+				margin-bottom: 10px;
+				font-size: 38px; }
+				.album-window .album-window-info h1 i {
+					border-radius: 100%;
+					cursor: pointer;
+					font-size: 41px; }
+					.album-window .album-window-info h1 i:hover {
+						background-color: #E0E0E0; }
+			.album-window .album-window-info h2 {
+				font-weight: 400;
+				margin-bottom: 40px;
+				font-size: 24px; }
+				.album-window .album-window-info h2 span {
+					color: #3F51B5;
+					font-weight: 800; }
+			.album-window .album-window-song-list {
+				padding: 0; }
+				.album-window .album-window-song-list ul {
+					border-bottom: 2px solid #eeeeee;
+					padding: 0;
+					margin: 0; }
+					.album-window .album-window-song-list li {
 						border-top: 2px solid #eeeeee;
-						display: flex;
-						justify-content: flex-start; }
-						.album-window .album-window-song-list li div i,
-						.album-window-song-list-text {
-							min-width: 40px;
-							padding: 10px; }
-							.album-window .album-window-song-list li div
-							.material-icons {
-								font-size: 26px; }
-							.album-window .album-window-song-list li div
+						list-style-type: none; }
+						.album-window .album-window-song-list li div {
+							display: flex;
+							justify-content: space-between; }
+							.album-window .album-window-song-list li div album-window-song-title {
+								display: flex;
+								justify-content: flex-start; }
+							.album-window .album-window-song-list li div i,
 							.album-window-song-list-text {
-								font-size: 18px; }
+								min-width: 40px;
+								padding: 10px; }
+								.album-window .album-window-song-list li div
+								.material-icons {
+									font-size: 26px; }
+								.album-window .album-window-song-list li div
+								.album-window-song-list-text {
+									font-size: 18px; }

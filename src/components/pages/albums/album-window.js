@@ -18,29 +18,34 @@ const AlbumWindow = props => {
 	sortBy(albumSongs, 'trackNum')
 	
 	return (
-		<div onClick={props.closeAlbumWindow}
-			className="window album-window">
+		<div className="window album-window">
 			<div className="container-fluid">
 				<div className="row">
 					
-					<div className="col-md-4 album-window-side album-window-cover">
+					<div className="col-md-3 album-window-side album-window-cover">
 						<img alt={props.album.title}
 							src={props.mainObj.info.webStorageLink + props.album.artistId + '/' + props.album.albumId + '/cover.jpg'} />
 					</div>
 					
-					<div className="col-md-8 album-window-side album-window-info">
+					<div className="col-md-9 album-window-side album-window-info">
 						
-						<h1>{props.album.title}</h1>
-						<h2>{props.album.artistName}</h2>
+						<h1>
+							<span>{props.album.title}</span>
+							<i className="material-icons"
+								onClick={props.closeAlbumWindow}>close</i>
+						</h1>
+						<h2><span>{props.album.artistName}</span> &#8211; {props.album.year} &#8211; {props.album.numSongs} tracks</h2>
 						
 						<div className="album-window-song-list">
 							<ul>
 								{albumSongs.map((song, index) => (
 									<li key={index}>
 										<div>
-											<i className="material-icons">audiotrack</i>
-											<span className="album-window-song-list-text">{song.trackNum}</span>
-											<span className="album-window-song-list-text">{song.title}</span>
+											<div className="album-window-song-title">
+												<i className="material-icons">audiotrack</i>
+												<span className="album-window-song-list-text">{song.trackNum}</span>
+												<span className="album-window-song-list-text">{song.title}</span>
+											</div>
 											<span className="album-window-song-list-text">{song.length}</span>
 										</div>
 									</li>
