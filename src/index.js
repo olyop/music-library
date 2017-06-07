@@ -244,7 +244,10 @@ class Index extends React.Component {
 				
 				<AlbumWindow mainObj={props.mainObj}
 					album={this.state.albumWindow}
-					closeAlbumWindow={this.closeAlbumWindow} />
+					closeAlbumWindow={this.closeAlbumWindow}
+					currentSong={this.state.currentSong}
+					playSong={this.playSong}
+					playAlbum={this.playAlbum} />
 					
 				)}
 

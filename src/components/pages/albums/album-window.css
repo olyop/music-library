@@ -18,7 +18,7 @@
 				display: flex;
 				justify-content: space-between;
 				padding-bottom: 10px;
-				border-bottom: 1px solid #333;
+				border-bottom: 2px solid #333;
 				margin-bottom: 10px;
 				font-size: 38px; }
 				.album-window .album-window-info h1 i {
@@ -37,12 +37,16 @@
 			.album-window .album-window-song-list {
 				padding: 0; }
 				.album-window .album-window-song-list ul {
-					border-bottom: 2px solid #eeeeee;
 					padding: 0;
 					margin: 0; }
 					.album-window .album-window-song-list li {
-						border-top: 2px solid #eeeeee;
+						cursor: pointer;
 						list-style-type: none; }
+						.album-window .album-window-song-list li.active {
+							border-color: #e0e0e0;
+							background-color: #e0e0e0 !important; }
+						.album-window .album-window-song-list li:hover {
+							background-color: #eeeeee; }
 						.album-window .album-window-song-list li div {
 							display: flex;
 							justify-content: space-between; }

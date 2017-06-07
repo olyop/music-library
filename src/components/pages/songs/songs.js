@@ -1,6 +1,6 @@
 import React from 'react'
 import { TableHeader, TableFooter } from '../../helpers/songs-helper'
-import checkSongLength from '../../helpers/songs-helper'
+import checkSongLength from '../../helpers/song-helper'
 import './songs.css'
 
 class Song extends React.Component {
@@ -8,7 +8,7 @@ class Song extends React.Component {
 	constructor(props) {
 		super(props)
 		
-		this.state = { song: this.props.song }
+		this.state = { obj: this.props.obj }
 	}
 	
 	render() {
@@ -16,21 +16,19 @@ class Song extends React.Component {
 		const props = this.props,
 					state = this.state
 		
-		const songLength = checkSongLength(state.song.length)
-		
 		return (
-			<tr className={props.currentSong.songId === state.song.songId ? 'song song-active' : 'song'}
-				onClick={ song => props.playSong(state.song) }>
+			<tr className={props.currentSong.songId === state.obj.songId ? 'song song-active' : 'song'}
+				onClick={ song => props.playSong(state.obj) }>
 				<td className="song-cover">
-					<img src={props.mainObj.info.webStorageLink + state.song.artistId + '/' + state.song.albumId + '/cover.jpg'}
-							alt={state.song.albumName} />
+					<img src={props.mainObj.info.webStorageLink + state.obj.artistId + '/' + state.obj.albumId + '/cover.jpg'}
+							alt={state.obj.albumName} />
 				</td>
-				<td>{state.song.title}</td>
+				<td>{state.obj.title}</td>
 				<td className="song-length">
-					<div>{songLength}</div>
+					<div>{checkSongLength(state.obj.length)}</div>
 				</td>
-				<td>{state.song.artistName}</td>
-				<td>{state.song.albumName}</td>
+				<td>{state.obj.artistName}</td>
+				<td>{state.obj.albumName}</td>
 			</tr>
 		)
 	}
@@ -57,7 +55,7 @@ const Songs = props => {
               mainObj={props.mainObj}
 							playSong={props.playSong}
 							currentSong={props.currentSong}
-							song={song} />
+							obj={song} />
 					))}
 				</tbody>
 				

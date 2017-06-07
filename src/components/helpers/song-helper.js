@@ -11,4 +11,4 @@ const checkSongLength = str => {
 	return temp
 }
 
-export { checkSongLength }
+export default checkSongLength

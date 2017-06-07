@@ -1,6 +1,46 @@
 import React from 'react'
 import sortBy from 'lodash/sortBy'
+import checkSongLength from '../../helpers/song-helper'
 import './album-window.css'
+
+class AlbumWindowSong extends React.Component {
+	
+	constructor(props) {
+		super(props)
+		
+		this.state = {
+			obj: props.obj
+		}
+	}
+	
+	render() {
+		
+		const props = this.props,
+					state = this.state
+		
+		
+		let listClass = this.props.currentSong === this.state.obj ? 'active' : null
+		
+		return (
+			<li onClick={ obj => props.playSong(state.obj) } className={listClass}>
+				<div>
+					<div className="album-window-song-title">
+						<i className="material-icons">audiotrack</i>
+						<span className="album-window-song-list-text">
+							{state.obj.trackNum}
+						</span>
+						<span className="album-window-song-list-text">
+							{state.obj.title}
+						</span>
+					</div>
+					<span className="album-window-song-list-text">
+						{checkSongLength(state.obj.length)}
+					</span>
+				</div>
+			</li>
+		)
+	}
+}
 
 const AlbumWindow = props => {
 	
@@ -39,16 +79,11 @@ const AlbumWindow = props => {
 						<div className="album-window-song-list">
 							<ul>
 								{albumSongs.map((song, index) => (
-									<li key={index}>
-										<div>
-											<div className="album-window-song-title">
-												<i className="material-icons">audiotrack</i>
-												<span className="album-window-song-list-text">{song.trackNum}</span>
-												<span className="album-window-song-list-text">{song.title}</span>
-											</div>
-											<span className="album-window-song-list-text">{song.length}</span>
-										</div>
-									</li>
+									<AlbumWindowSong key={index}
+										playSong={props.playSong}
+										currentSong={props.currentSong}
+										playAlbum={props.playAlbum} 
+										obj={song} />
 								))}
 							</ul>
 						</div>
