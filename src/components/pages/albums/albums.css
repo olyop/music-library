@@ -7,8 +7,7 @@
 	.albums .album {
 		width: calc(100% / 1 - 10px);
   	min-width: calc(100% / 1 - 10px);
-		border: 1px solid #E0E0E0;
-    margin: 5px; }
+		border: 1px solid #E0E0E0; }
       .albums .album .album-cover {
         width: 100%;
         background-color: #fff; }

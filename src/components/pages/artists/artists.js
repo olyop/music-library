@@ -19,7 +19,7 @@ class Artist extends React.Component {
     const props = this.props
 
     return (
-      <div className="artist">
+      <div className="grid-item artist">
         <div className="artist-cover"
           style={{ backgroundImage: 'url(' + String(props.mainObj.info.webStorageLink + props.obj.artistId + '/group.jpg') + ')' }}>
         </div>

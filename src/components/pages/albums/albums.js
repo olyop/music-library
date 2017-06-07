@@ -20,7 +20,7 @@ class Album extends React.Component {
 		return (
 			<div key={props.obj.albumId}
 				onClick={ obj => props.openAlbumWindow(this.state.obj) }
-				className="album">
+				className="grid-item album">
 				<div className="album-cover">
 					<img alt={props.obj.title} className="album-cover-img"
 						src={props.mainObj.info.webStorageLink + props.obj.artistId + '/' + props.obj.albumId + '/cover.jpg'} />
