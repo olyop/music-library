@@ -80,6 +80,7 @@ class Play extends React.Component {
 							<p>{props.currentSong === 0 ? '' : props.currentSong.artistName}</p>
 						</div>
 					</div>
+					
 				</div>
 				
 				<div className="play-section play-middle">

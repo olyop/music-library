@@ -47,7 +47,7 @@ const siteInfo = {
 			j: '#880E4F'
 		}
 	},
-	isNav: true,
+	isNav: false,
 	hamburgerType: 'slider',
 	play: {
 		startingVolume: 50

@@ -10,25 +10,27 @@ class Artist extends React.Component {
     super()
     
     this.state = {
-      artist: props.obj
+      obj: props.obj
     }
   }
   
   render() {
     
-    const props = this.props
+    const props = this.props,
+					state = this.state
 
     return (
-      <div className="grid-item artist">
+      <div className="grid-item artist"
+				onClick={ obj => props.openArtistWindow(this.state.obj) }>
         <div className="artist-cover"
-          style={{ backgroundImage: 'url(' + String(props.mainObj.info.webStorageLink + props.obj.artistId + '/group.jpg') + ')' }}>
+          style={{ backgroundImage: 'url(' + String(props.mainObj.info.webStorageLink + state.obj.artistId + '/group.jpg') + ')' }}>
         </div>
         <div className="artist-content">
-          <h1>{props.obj.title}</h1>
+          <h1>{state.obj.title}</h1>
           <p>
-            <span>{props.obj.numAlbums} {props.obj.numAlbums === 1 ? 'album' : 'albums'}</span>
+            <span>{state.obj.numAlbums} {state.obj.numAlbums === 1 ? 'album' : 'albums'}</span>
             <span> &#8211; </span>
-            <span>{props.obj.numSongs} songs</span>
+            <span>{state.obj.numSongs} songs</span>
           </p>
         </div>
       </div>
@@ -50,6 +52,7 @@ const Artists = props => {
 			{props.mainObj.artists.map( (artist, index) => (
         <Artist key={artist.artistId}
           mainObj={props.mainObj}
+					openArtistWindow={props.openArtistWindow}
           obj={artist} />
       ))}
 		</div>

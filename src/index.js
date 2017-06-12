@@ -21,6 +21,7 @@ import Header from './components/header/header'
 import Library from './components/library'
 import Search from './components/search/search'
 import AlbumWindow from './components/pages/albums/album-window'
+import ArtistWindow from './components/pages/artists/artist-window'
 
 // Import functions
 import { calcLibraryData, findSongsAlbum, randomItemFromArray } from './components/helpers/index-helper'
@@ -52,7 +53,8 @@ class Index extends React.Component {
       currentSong: 0,
 			repeat: false,
 			shuffle: false,
-			albumWindow: false
+			albumWindow: false,
+			artistWindow: false
     }
     
 		this.toggleNav = this.toggleNav.bind(this)
@@ -72,6 +74,9 @@ class Index extends React.Component {
 		
 		this.openAlbumWindow = this.openAlbumWindow.bind(this)
 		this.closeAlbumWindow = this.closeAlbumWindow.bind(this)
+		
+		this.openArtistWindow = this.openArtistWindow.bind(this)
+		this.closeArtistWindow = this.closeArtistWindow.bind(this)
 	}
   
 	toggleNav() {
@@ -197,6 +202,14 @@ class Index extends React.Component {
 		this.setState({ albumWindow: false })
 	}
 	
+	openArtistWindow(obj) {
+		this.setState({ artistWindow: obj })
+	}
+	
+	closeArtistWindow() {
+		this.setState({ artistWindow: false })
+	}
+	
 	render() {
     
 		let props = this.props,
@@ -206,6 +219,7 @@ class Index extends React.Component {
 			<div className="index">
 
 				<Header mainObj={props.mainObj}
+					title={this.state.title}
           isInputEmpty={isInputEmpty}
           inputVal={this.state.inputVal}
           handleInputChange={this.handleInputChange}
@@ -227,7 +241,8 @@ class Index extends React.Component {
           nextSong={this.nextSong}
 					toggleRepeat={this.toggleRepeat}
           toggleShuffle={this.toggleShuffle}
-					openAlbumWindow={this.openAlbumWindow} />
+					openAlbumWindow={this.openAlbumWindow}
+					openArtistWindow={this.openArtistWindow} />
         
         {isInputEmpty ? null : (
           
@@ -244,10 +259,21 @@ class Index extends React.Component {
 				
 				<AlbumWindow mainObj={props.mainObj}
 					album={this.state.albumWindow}
-					closeAlbumWindow={this.closeAlbumWindow}
 					currentSong={this.state.currentSong}
 					playSong={this.playSong}
-					playAlbum={this.playAlbum} />
+					playAlbum={this.playAlbum}
+					closeAlbumWindow={this.closeAlbumWindow} />
+					
+				)}
+				
+				{this.state.artistWindow === false ? null : (
+				
+				<ArtistWindow mainObj={props.mainObj}
+					artist={this.state.artistWindow}
+					currentSong={this.state.currentSong}
+					playSong={this.playSong}
+					playAlbum={this.playAlbum}
+					closeArtistWindow={this.closeArtistWindow} />
 					
 				)}
 

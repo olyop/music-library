@@ -1,6 +1,5 @@
 import React from 'react'
 import { TableHeader, TableFooter } from '../../helpers/songs-helper'
-import checkSongLength from '../../helpers/song-helper'
 import './songs.css'
 
 class Song extends React.Component {
@@ -25,7 +24,7 @@ class Song extends React.Component {
 				</td>
 				<td>{state.obj.title}</td>
 				<td className="song-length">
-					<div>{checkSongLength(state.obj.length)}</div>
+					<div>{state.obj.length}</div>
 				</td>
 				<td>{state.obj.artistName}</td>
 				<td>{state.obj.albumName}</td>

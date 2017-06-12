@@ -1,0 +1,67 @@
+.artist-window {
+	top: 74px;
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	z-index: 5; }
+
+	.artist-window .artist-window-cover {
+		width: 100%;
+		min-height: 500px;
+		height: 500px;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat; }
+
+	.artist-window .artist-window-logo {
+		margin: 0;
+		position: absolute;
+		top: 450px;
+		border-radius: 100%;
+		box-shadow: 0 0 8px rgba(0,0,0,.4);
+		left: 50%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-color: #fff;
+		width: 175px;
+		height: 175px;
+		margin-right: -50%;
+		transform: translate(-50%, -50%); }
+
+	.artist-window .artist-window-content {
+		margin-top: 20px;
+		padding: 40px; }
+		.artist-window .artist-window-content h1 {
+			text-align: center;
+			padding-bottom: 10px;
+			border-bottom: 1px solid #333;
+			margin-bottom: 10px;
+			font-size: 35px; }
+		.artist-window .artist-window-content .artist-window-sub-heading {
+			display: flex;
+			margin-bottom: 40px;
+			align-items: center;
+			justify-content: space-between; }
+			.artist-window .artist-window-content .artist-window-sub-heading .artist-window-sub-heading-sides {
+				width: 107px; }
+			.artist-window .artist-window-content .artist-window-sub-heading h2, .artist-window .artist-window-content .artist-window-sub-heading a {
+				margin: 0;
+				padding: 0;
+				font-weight: 500;
+				font-size: 20px; }
+			.artist-window .artist-window-content .artist-window-sub-heading a {
+				display: flex;
+				align-items: center;
+				justify-content: center; }
+				.artist-window .artist-window-content .artist-window-sub-heading a:hover, i:hover {
+					text-decoration: none; }
+				.artist-window .artist-window-content .artist-window-sub-heading div i {
+					padding-right: 10px; }
+		.artist-window .artist-window-content p {
+			font-size: 16px;
+			margin-bottom: 20px; }
+			.artist-window .artist-window-content p a {
+				font-weight: 800;
+				color: #3F51B5;
+				font-size: 16px; }

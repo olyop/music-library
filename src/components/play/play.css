@@ -68,10 +68,6 @@
 	.play-right .input-range {
 		margin: 0 10px;
 		width: 60%; }
-      .play-right .input-range__slider {
-        width: 15px;
-        height: 15px;
-        margin-top: -8px; }
 		.play-right .input-range span {
 			font-size: 16px; }
 		.play-right .input-range__label--min, .input-range__label--max {

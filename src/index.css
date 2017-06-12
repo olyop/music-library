@@ -1,6 +1,5 @@
 @import url('../src/fonts/roboto/font.css');
 @import url('../src/fonts/material-icons/font.css');
-@import url('../src/fonts/open-sans/font.css');
 
 body {
 	margin: 0;
@@ -18,7 +17,7 @@ body {
 
 .window {
 	overflow-y: auto;
-  margin-bottom: 90px;
+  margin-bottom: 100px;
 	padding: 10px;
 	transition: .2s all;
 	overflow-x: hidden;

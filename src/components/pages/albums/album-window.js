@@ -1,5 +1,4 @@
 import React from 'react'
-import checkSongLength from '../../helpers/song-helper'
 import './album-window.css'
 
 class AlbumWindowSong extends React.Component {
@@ -32,9 +31,7 @@ class AlbumWindowSong extends React.Component {
 							{state.obj.title}
 						</span>
 					</div>
-					<span className="album-window-song-list-text">
-						{checkSongLength(state.obj.length)}
-					</span>
+					<span className="album-window-song-list-text">{state.obj.length}</span>
 				</div>
 			</li>
 		)

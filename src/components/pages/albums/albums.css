@@ -47,3 +47,39 @@
 				.albums .album .album-content p {
 					font-size: 15px;
 					font-weight: 400; }
+
+@media (min-width: 400px) {
+  .albums .album {
+    width: calc(100% / 2 - 10px);
+    min-width: calc(100% / 2 - 10px); }
+}
+@media (min-width: 700px) {
+  .albums .album {
+    width: calc(100% / 3 - 10px);
+    min-width: calc(100% / 3 - 10px); }
+}
+@media (min-width: 900px) {
+  .albums .album {
+    width: calc(100% / 4 - 10px);
+    min-width: calc(100% / 4 - 10px); }
+}
+@media (min-width: 1110px) {
+  .albums .album {
+    width: calc(100% / 5 - 10px);
+    min-width: calc(100% / 5 - 10px); }
+}
+@media (min-width: 1300px) {
+  .albums .album {
+    width: calc(100% / 6 - 10px);
+    min-width: calc(100% / 6 - 10px); }
+}
+@media (min-width: 1500px) {
+  .albums .album {
+    width: calc(100% / 7 - 10px);
+    min-width: calc(100% / 7 - 10px); }
+}
+@media (min-width: 1700px) {
+  .albums .album {
+    width: calc(100% / 8 - 10px);
+    min-width: calc(100% / 8 - 10px); }
+}

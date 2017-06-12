@@ -5,7 +5,7 @@ const artistsObj = [
 		yearFormed: '1998',
     briefDesc: 'The Strokes are an American rock band from New York City. Formed in 1998, the band is composed of vocalist Julian Casablancas, lead guitarist Nick Valensi, rhythm guitarist Albert Hammond Jr., bassist Nikolai Fraiture, and drummer Fabrizio Moretti. Following the conclusion of five-album deals with RCA and Rough Trade, the band has continued to release new music through Casablancas\' Cult Records.',
     website: 'http://thestrokes.com/',
-    origin: 'New York City, New York, United States',
+    origin: 'New York, United States',
     wikipedia: 'https://en.wikipedia.org/wiki/The_Strokes',
 		numSongs: 0,
 		numAlbums: 0
@@ -16,7 +16,7 @@ const artistsObj = [
 		yearFormed: '2005',
     briefDesc: 'Tame Impala are an Australian psychedelic rock band founded by Kevin Parker in 2007. The group began as a home recording project for Parker, who writes, records, performs, and produces the music. As a touring act, the project consists of Parker (guitar, vocals), Jay Watson (synthesiser, vocals, guitar), Dominic Simper (guitar, synthesiser), Cam Avery (bass guitar, vocals), and Julien Barbagallo (drums, vocals). Previously signed to Modular Recordings, Tame Impala is signed to Interscope Records in the US, and Fiction Records in the UK.',
     website: 'http://www.tameimpala.com/',
-    origin: '	Perth, Western Australia, Australia',
+    origin: '	Perth, Australia',
     wikipedia: 'https://en.wikipedia.org/wiki/Tame_Impala',
 		numSongs: 0,
 		numAlbums: 0
@@ -27,7 +27,7 @@ const artistsObj = [
 		yearFormed: '1994',
     briefDesc: 'Muse are an English rock band from Teignmouth, Devon, formed in 1994. The band consists of Matt Bellamy (lead vocals, guitar, piano, keyboards), Chris Wolstenholme (bass guitar, backing vocals, keyboards) and Dominic Howard (drums, percussion).',
     website: 'http://muse.mu/',
-    origin: '	Teignmouth, Devon, England',
+    origin: 'Devon, England',
     wikipedia: 'https://en.wikipedia.org/wiki/Muse_(band)',
 		numSongs: 0,
 		numAlbums: 0
@@ -38,7 +38,7 @@ const artistsObj = [
 		yearFormed: '2008',
     briefDesc: 'Sticky Fingers are a reggae fusion/indie rock band formed in Sydney, Australia in 2008. The band consists of Dylan Frost (vocals/guitar), Paddy Cornwall (bass/vocals), Seamus Coyle (lead guitar), Beaker Best (drums/percussion), Freddy Crabs (keys/synth). The band was formed by Frost, Best and Cornwall after Cornwall and Best saw Frost busking outside of the Coopers Hotel in Newtown.',
     website: 'http://www.stickyfingerstheband.com/',
-    origin: 'Sydney, New South Wales, Australia',
+    origin: 'Sydney, Australia',
     wikipedia: 'https://en.wikipedia.org/wiki/Sticky_Fingers_(band)',
 		numSongs: 0,
 		numAlbums: 0
@@ -60,7 +60,7 @@ const artistsObj = [
 		yearFormed: '1986',
     briefDesc: 'Green Day is an American punk rock band formed in 1986 by lead vocalist and guitarist Billie Joe Armstrong and bassist Mike Dirnt. For much of the group\'s career, the band has been a trio with drummer Tré Cool, who replaced former drummer John Kiffmeyer in 1990 prior to the recording of the band\'s second studio album, Kerplunk (1991). Guitarist Jason White, who has worked with the band as a touring member since 1999, was an official member from 2012 to 2016.',
     website: 'http://greenday.com/',
-    origin: 'East Bay, California, U.S.',
+    origin: 'California, U.S.',
     wikipedia: 'https://en.wikipedia.org/wiki/Green_Day',
 		numSongs: 0,
 		numAlbums: 0
@@ -71,7 +71,7 @@ const artistsObj = [
 		yearFormed: '2002',
     briefDesc: 'MGMT is an American psychedelic rock band formed in 2002 at Wesleyan University. It currently consists of Andrew VanWyngarden (lead vocals, guitar, keyboards, bass guitar, drums, percussion) and Ben Goldwasser (vocals, keyboards, guitar, percussion). In the live lineup it consists of VanWyngarden, Goldwasser, Will Berman (drums, percussion, harmonica, backing vocals), Matt Asti (bass guitar, backing vocals), James Richardson (lead guitar, keyboards, backing vocals) and Hank Sullivant (guitar, keyboards).',
     website: 'http://www.whoismgmt.com/',
-    origin: 'Middletown, Connecticut, United States',
+    origin: 'Connecticut, United States',
     wikipedia: 'https://en.wikipedia.org/wiki/MGMT',
 		numSongs: 0,
 		numAlbums: 0

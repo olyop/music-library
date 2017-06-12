@@ -3,7 +3,6 @@ import React from 'react'
 
 // Import CSS
 import './albums.css'
-import './albums-responsive.css'
 
 class Album extends React.Component {
 	

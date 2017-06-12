@@ -38,8 +38,8 @@
 		height: auto; }
 
 .songs table .song-length {
-	width: 50px;
-	max-width: 50px; }
+	width: 64px;
+	max-width: 64px; }
 	.songs table .song-length div {
 		color: #757575;
     justify-content: center;
