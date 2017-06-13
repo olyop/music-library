@@ -36,7 +36,11 @@ const Header = props => {
           toggleNav={props.toggleNav}
           isNav={props.isNav} />
 
-        <div className="header-title"><a href='/'>{props.mainObj.info.header.title}</a></div>
+        <div className="header-title">
+          <a href='/'>
+            <img src={props.mainObj.info.webStorageLink + 'site-logo.png'} alt="Logo" />
+          </a>
+        </div>
 
       </div>
       <div className="header-section header-middle">

@@ -1,26 +1,23 @@
 import React from 'react'
 
-class Pretty extends React.Component {
+const Pretty = props => {
   
-  render() {
-    
-    let preStyle = {
-      display: 'block',
-      padding: '10px 30px',
-      margin: '0',
-      overflow: 'scroll',
-      backgroundColor: '#fff',
-      border: 'none'
-    }
-    
-    return (
-      <div style={this.style}>
-        <pre style={preStyle}>
-          {JSON.stringify(this.props.data, null, 2) }
-        </pre>
-      </div>
-    )
+  let preStyle = {
+    display: 'block',
+    padding: '10px 30px',
+    margin: '0',
+    overflow: 'hidden',
+    backgroundColor: '#fff',
+    border: 'none'
   }
+
+  return (
+    <div>
+      <pre style={preStyle}>
+        {JSON.stringify(props.data, null, 2) }
+      </pre>
+    </div>
+  )
 }
 
 const Home = props => {

@@ -20,10 +20,11 @@
 			flex: 1; }
 			.header .header-left .header-hamburger {
 				padding-bottom: 10px; }
-			.header .header-left .header-title a {
-				padding: 0 10px;
-				color: #fff;
-				font-size: 20px; }
+        .header .header-left .header-title a {
+          display: block; }
+          .header .header-left .header-title img {
+            padding: 0 10px;
+            width: 192px; }
 
 		.header .header-middle {
 			position: relative;
