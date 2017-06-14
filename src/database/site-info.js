@@ -9,6 +9,9 @@ const siteInfo = {
 			playlists: 'Playlists'
 		}
 	},
+  home: {
+    splashImgLink: 'home-splash-media/splash-page-3.jpg'
+  },
 	colors: {
 		p: {
 			a: '#E8EAF6',
@@ -47,7 +50,7 @@ const siteInfo = {
 			j: '#880E4F'
 		}
 	},
-	isNav: false,
+	isNav: true,
 	hamburgerType: 'slider',
 	play: {
 		startingVolume: 50

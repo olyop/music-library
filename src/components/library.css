@@ -3,11 +3,11 @@
 	padding-top: 169px; }
 	.content {
 		padding: 5px;
-		min-height: 100vh; }
+    min-height: 100vh;}
 
 @media (min-width: 650px) {
 	.library {
-		padding-top: 73px; }
+		padding-top: 75px; }
 }
 
 @media (min-width: 992px) {
