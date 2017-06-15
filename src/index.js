@@ -153,7 +153,11 @@ class Index extends React.Component {
     
     // Find next track in album
     if (currentSong.trackNum === 1) {
-      this.setState({ currentSong: randomItemFromArray(this.props.mainObj.songs, this.props.mainObj.length.songs) })
+			if (this.state.shuffle) {
+				this.setState({ currentSong: randomItemFromArray(this.props.mainObj.songs, this.props.mainObj.length.songs) })
+			} else {
+				this.setState({ currentSong: 0 })
+			}
     } else {
       this.setState({ currentSong: currentSongAlbumSongs[currentSong.trackNum - 2] })
     }
@@ -175,10 +179,14 @@ class Index extends React.Component {
     let currentSongAlbumSongs = sortBy(findSongsAlbum(currentSong, this.props.mainObj), [ a => a.trackNum ])
     
     // Find next track in album
-    if (currentSongAlbumSongs[currentSong.trackNum + 1] === undefined) {
-      this.setState({ currentSong: randomItemFromArray(this.props.mainObj.songs, this.props.mainObj.length.songs) })
+    if (currentSongAlbumSongs[currentSong.trackNum] === undefined) {
+			if (this.state.shuffle) {
+				this.setState({ currentSong: randomItemFromArray(this.props.mainObj.songs, this.props.mainObj.length.songs) })
+			} else {
+				this.setState({ currentSong: 0 })
+			}
     } else {
-      this.setState({ currentSong: find(currentSongAlbumSongs, { trackNum: currentSong.trackNum + 1 }) })
+			this.setState({ currentSong: find(currentSongAlbumSongs, { trackNum: currentSong.trackNum + 1 }) })
     }
   }
 	

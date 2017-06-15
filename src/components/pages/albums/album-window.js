@@ -52,6 +52,9 @@ const AlbumWindow = props => {
 	
 	albumSongs.sort((a, b) => a.trackNum - b.trackNum)
 	
+	// Determine if track number is equal to 1
+	const albumTrackNum = props.album.numSongs === 1 ? '' : 's'
+	
 	return (
 		<div className="window album-window">
 			<div className="container-fluid">
@@ -73,7 +76,7 @@ const AlbumWindow = props => {
 						</h1>
             
 						<h2>
-              <span>{props.album.artistName}</span> &#8211; {props.album.year} &#8211; {props.album.numSongs} tracks
+              <span>{props.album.artistName}</span> &#8211; {props.album.year} &#8211; {props.album.numSongs} track{albumTrackNum}
             </h2>
 						
 						<div className="album-window-song-list">

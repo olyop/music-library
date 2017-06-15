@@ -50,12 +50,20 @@ const siteInfo = {
 			j: '#880E4F'
 		}
 	},
-	isNav: true,
+	isNav: false,
 	hamburgerType: 'slider',
 	play: {
 		startingVolume: 50
 	},
-  webStorageLink: 'https://s3-ap-southeast-2.amazonaws.com/music-library-dt/'
+  webStorageLink: 'https://s3-ap-southeast-2.amazonaws.com/music-library-dt/',
+	bandsInTownApiLinks: {
+		start: 'https://rest.bandsintown.com/artists/',
+		end: '/events?app_id=personal_api_test'
+	},
+	bandsInTown: {
+		website: 'https://news.bandsintown.com/home',
+		logoLink: 'http://corp.bandsintown.com/assets/media-library/bandsintown-logo-black-w-bounding-box.png'
+	}
 }
 
 export default siteInfo

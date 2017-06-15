@@ -26,12 +26,19 @@ class Artist extends React.Component {
           style={{ backgroundImage: 'url(' + String(props.mainObj.info.webStorageLink + state.obj.artistId + '/group.jpg') + ')' }}>
         </div>
         <div className="artist-content">
-          <h1>{state.obj.title}</h1>
-          <p>
-            <span>{state.obj.numAlbums} {state.obj.numAlbums === 1 ? 'album' : 'albums'}</span>
-            <span> &#8211; </span>
-            <span>{state.obj.numSongs} songs</span>
-          </p>
+					
+					<div className="artist-logo"
+						style={{ backgroundImage: 'url(' + props.mainObj.info.webStorageLink + state.obj.artistId + '/logo.jpg)' }}></div>
+					
+          <div className="artist-text">
+						<h1>{state.obj.title}</h1>
+						<p>
+							<span>{state.obj.numAlbums} {state.obj.numAlbums === 1 ? 'album' : 'albums'}</span>
+							<span> &#8211; </span>
+							<span>{state.obj.numSongs} songs</span>
+						</p>
+					</div>
+					
         </div>
       </div>
     )

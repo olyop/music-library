@@ -1,6 +1,9 @@
 // Import React
 import React from 'react'
 
+// Import components
+import ArtistEvent from './artist-event/artist-event'
+
 // Import CSS
 import './artist-window.css'
 
@@ -30,10 +33,14 @@ class ArtistWindow extends React.Component {
 		return (
 			<div className="window artist-window">
 				
-				<div className="artist-window-cover" style={groupstyle}></div>
+				<div className="artist-window-cover" style={groupstyle}>
+					
+					<i className="material-icons artist-window-close" title="Close Artist"
+						onClick={props.closeArtistWindow}>close</i>
+					
+				</div>
 				
-				<div className="artist-window-logo" style={logoStyle}
-					onClick={props.closeArtistWindow}></div>
+				<div className="artist-window-logo" style={logoStyle}></div>
 				
 				<div className="container artist-window-content">
 					<div className='row'>
@@ -43,8 +50,8 @@ class ArtistWindow extends React.Component {
 					
 							<div className="artist-window-sub-heading">
 
-								<h2 className="artist-window-sub-heading-sides">Year Formed: {state.obj.yearFormed}</h2>
-								<h2>Origin: 	{state.obj.origin}</h2>
+								<h2 className="artist-window-sub-heading-sides"><b>Year Formed:</b> {state.obj.yearFormed}</h2>
+								<h2><b>Origin:</b> 	{state.obj.origin}</h2>
 								<div className="artist-window-sub-heading-sides">
 									<a href={state.obj.website} title={state.obj.title + ', website.'} target="_blank">
 										<i className="material-icons">open_in_new</i>
@@ -58,6 +65,9 @@ class ArtistWindow extends React.Component {
 								{state.obj.briefDesc + ' '} 
 								<a href={state.obj.wikipedia} target="_blank">Wikipedia</a>
 							</p>
+							
+							<ArtistEvent mainObj={props.mainObj}
+								artist={state.obj} />
 							
 						</div>
 					</div>

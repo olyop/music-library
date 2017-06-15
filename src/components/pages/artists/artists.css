@@ -3,7 +3,6 @@
 	align-content: flex-start;
 	flex-wrap: wrap;
 	align-items: stretch;
-  margin-bottom: 53px;
 	padding: 0; }
 	.artists .artist {
 		width: calc(100% / 2 - 10px);
@@ -17,9 +16,23 @@
       background-size: cover;
       height: 300px; }
     .artists .artist .artist-content {
+			display: flex;
       padding: 10px; }
-      .artists .artist .artist-content h1 {
-        font-weight: bold;
-        font-size: 16px; }
-      .artists .artist .artist-content p {
-        font-size: 15px; }
+			.artists .artist .artist-content .artist-logo {
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+				margin-right: 10px;
+				border-radius: 100%;
+				box-shadow: 0 0 8px rgba(0,0,0,.4);
+				width: 61px;
+				height: 61px; }
+			.artists .artist .artist-content .artist-text {
+				padding: 10px; }
+				.artists .artist .artist-content .artist-text h1 {
+					font-weight: bold;
+					font-size: 18px; }
+					.artists .artist .artist-content .artist-text h1:hover{
+						text-decoration: underline; }
+				.artists .artist .artist-content .artist-text p {
+					font-size: 16px; }

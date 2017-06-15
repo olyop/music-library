@@ -18,10 +18,11 @@ class SearchItem extends React.Component {
           <i className="material-icons search-item-icon-type">{props.iconText}</i>
           <i className="material-icons search-item-play">play_circle_filled</i>
         </div>
-        <div className="search-img">
-          <img src={props.img}
-            title={props.heading}
-            alt={props.heading} />
+				
+        <div className="search-img"
+          title={props.heading}
+					style={{ backgroundImage: 'url(' + props.img + ')' }}>
+					
         </div>
         <div className="search-item-inner">
           <p>
