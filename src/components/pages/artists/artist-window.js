@@ -28,12 +28,12 @@ class ArtistWindow extends React.Component {
 		}
 		
 		return (
-			<div className="window artist-window"
-				onClick={props.closeArtistWindow}>
+			<div className="window artist-window">
 				
 				<div className="artist-window-cover" style={groupstyle}></div>
 				
-				<div className="artist-window-logo" style={logoStyle}></div>
+				<div className="artist-window-logo" style={logoStyle}
+					onClick={props.closeArtistWindow}></div>
 				
 				<div className="container artist-window-content">
 					<div className='row'>
@@ -43,8 +43,8 @@ class ArtistWindow extends React.Component {
 					
 							<div className="artist-window-sub-heading">
 
-								<h2 className="artist-window-sub-heading-sides">{state.obj.yearFormed}</h2>
-								<h2>{state.obj.origin}</h2>
+								<h2 className="artist-window-sub-heading-sides">Year Formed: {state.obj.yearFormed}</h2>
+								<h2>Origin: 	{state.obj.origin}</h2>
 								<div className="artist-window-sub-heading-sides">
 									<a href={state.obj.website} title={state.obj.title + ', website.'} target="_blank">
 										<i className="material-icons">open_in_new</i>

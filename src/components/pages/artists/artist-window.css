@@ -1,5 +1,5 @@
 .artist-window {
-	top: 74px;
+	top: 75px;
 	display: flex;
 	flex-direction: column;
 	padding: 0;
@@ -44,7 +44,7 @@
 			align-items: center;
 			justify-content: space-between; }
 			.artist-window .artist-window-content .artist-window-sub-heading .artist-window-sub-heading-sides {
-				width: 107px; }
+				width: 180px; }
 			.artist-window .artist-window-content .artist-window-sub-heading h2, .artist-window .artist-window-content .artist-window-sub-heading a {
 				margin: 0;
 				padding: 0;
@@ -52,6 +52,7 @@
 				font-size: 20px; }
 			.artist-window .artist-window-content .artist-window-sub-heading a {
 				display: flex;
+				float: right;
 				align-items: center;
 				justify-content: center; }
 				.artist-window .artist-window-content .artist-window-sub-heading a:hover, i:hover {
