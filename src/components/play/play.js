@@ -130,6 +130,7 @@ class Play extends React.Component {
 						onFinishedPlaying={props.nextSong}
 						onLoading={this.handleSongLoading}
 						onPlaying={this.handleSongPlaying}
+						onPlaying={ (position, duration) => console.log(position, duration)}
 						volume={this.state.volume} />
 				)}
 				
