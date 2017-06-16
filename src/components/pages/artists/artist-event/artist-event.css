@@ -1,7 +1,7 @@
 .artist-events {
 	margin-top: 40px;
 	border-top: 1px solid #333;
-	padding: 40px;
+	padding: 40px 0;
 	border-bottom: 1px solid #333;
 	margin-bottom: 40px; }
 
@@ -22,9 +22,13 @@
 				justify-content: space-between;
 				border-bottom: 1px solid #e0e0e0; }
 				.artist-events .artist-events-list .artist-events-event p {
+          padding-top: 5px;
+          display: flex;
 					margin: 0; }
+          .artist-events .artist-events-list .artist-events-event p i {
+            font-size: 20px; }
 .artist-events .artist-events-list .artist-events-event .artist-event-event-right {
-	font-size: 22px;
-	padding: 5px 0;
+	font-size: 18px;
+	padding: 10px 0;
 }
 

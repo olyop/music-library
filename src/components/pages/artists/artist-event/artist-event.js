@@ -32,7 +32,6 @@ const ArtistEvent = props => {
 
 						)
 					} else {
-						console.log(result.body)
 						return (
 							<div className="artist-events">
 
@@ -51,7 +50,10 @@ const ArtistEvent = props => {
 											
 											<div className="artist-event-event-left">
 												<h4>{event.venue.name}</h4>
-												<p>{event.venue.city + ', ' + event.venue.country}</p>
+												<p>
+                          <i className="material-icons">location_on</i>
+                          <span>{event.venue.city + ', ' + event.venue.country}</span>
+                        </p>
 											</div>
 											
 											<div className="artist-event-event-right">{event.datetime.slice(0,10)}</div>

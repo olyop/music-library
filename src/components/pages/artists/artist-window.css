@@ -9,6 +9,7 @@
 		width: 100%;
 		min-height: 500px;
 		height: 500px;
+    box-shadow: 0 0 8px rgba(0,0,0,.4);
 		position: relative;
 		background-position: top;
 		background-size: cover;
@@ -32,7 +33,7 @@
 	.artist-window .artist-window-logo {
 		margin: 0;
 		position: absolute;
-		top: 450px;
+		top: 495px;
 		border-radius: 100%;
 		box-shadow: 0 0 8px rgba(0,0,0,.4);
 		left: 50%;
@@ -46,17 +47,23 @@
 		transform: translate(-50%, -50%); }
 
 	.artist-window .artist-window-content {
-		margin-top: 20px;
-		padding: 40px; }
+		box-shadow: 0 0 8px rgba(0,0,0,.4);
+    padding: 40px;
+    background-color: #fff;
+		padding: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-top: 60px; }
 		.artist-window .artist-window-content h1 {
 			text-align: center;
-			padding-bottom: 10px;
+			padding-bottom: 15px;
 			border-bottom: 1px solid #333;
-			margin-bottom: 10px;
-			font-size: 35px; }
+			margin-bottom: 15px;
+      font-weight: 800;
+			font-size: 36px; }
 		.artist-window .artist-window-content .artist-window-sub-heading {
 			display: flex;
-			margin-bottom: 40px;
+			margin-bottom: 60px;
 			align-items: center;
 			justify-content: space-between; }
 			.artist-window .artist-window-content .artist-window-sub-heading .artist-window-sub-heading-sides {

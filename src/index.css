@@ -17,9 +17,8 @@ body {
 
 .window {
 	overflow-y: auto;
-  margin-bottom: 100px;
+  margin-bottom: 90px;
 	padding: 10px;
-	transition: .2s all;
 	overflow-x: hidden;
 	position: fixed;
 	top: 169px;
@@ -28,6 +27,11 @@ body {
 	left: 0;
 	width: 100%;
 	background-color: #F5F5F5; }
+
+@media (min-width: 992px) {
+  .window {
+    margin-bottom: 100px; }
+}
 
 .grid-item {
   transition: .2s all;

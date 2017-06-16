@@ -50,7 +50,7 @@ class ArtistWindow extends React.Component {
 					
 							<div className="artist-window-sub-heading">
 
-								<h2 className="artist-window-sub-heading-sides"><b>Year Formed:</b> {state.obj.yearFormed}</h2>
+								<h2 className="artist-window-sub-heading-sides"><b>Year Started:</b> {state.obj.yearFormed}</h2>
 								<h2><b>Origin:</b> 	{state.obj.origin}</h2>
 								<div className="artist-window-sub-heading-sides">
 									<a href={state.obj.website} title={state.obj.title + ', website.'} target="_blank">

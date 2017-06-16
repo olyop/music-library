@@ -1,6 +1,6 @@
 .album-window {
 	top: 75px;
-	padding: 40px;
+	padding: 20px;
 	z-index: 5; }
 	.album-window .album-window-side {
 		padding: 0; }
@@ -13,7 +13,7 @@
       width: 100%;
       height: auto; }
 		.album-window .album-window-info {
-			padding: 40px 40px 40px 60px; }
+			padding: 20px 20px 20px 30px; }
 			.album-window .album-window-info h1 {
 				font-weight: 600;
 				display: flex;
@@ -30,7 +30,7 @@
 						background-color: #E0E0E0; }
 			.album-window .album-window-info h2 {
 				font-weight: 400;
-				margin-bottom: 40px;
+				margin-bottom: 20px;
 				font-size: 22px; }
 				.album-window .album-window-info h2 span {
 					color: #3F51B5;
@@ -73,3 +73,12 @@
 								.album-window .album-window-song-list li div
 								.album-window-song-list-text {
 									font-size: 18px; }
+
+@media (min-width: 992px) {
+  .album-window {
+    padding: 40px; }
+    .album-window .album-window-info {
+      padding: 40px 40px 40px 60px; }
+      .album-window .album-window-info h2 {
+        margin-bottom: 40px; }
+}

@@ -60,14 +60,14 @@ const AlbumWindow = props => {
 			<div className="container-fluid">
 				<div className="row">
 					
-					<div className="col-md-3 album-window-side">
+					<div className="col-sm-3 album-window-side">
             <div className="album-window-cover">
                <img alt={props.album.title}
                 src={props.mainObj.info.webStorageLink + props.album.artistId + '/' + props.album.albumId + '/cover.jpg'} />
             </div>
 					</div>
 					
-					<div className="col-md-9 album-window-side album-window-info">
+					<div className="col-sm-9 album-window-side album-window-info">
 						
 						<h1>
 							<span>{props.album.title}</span>
