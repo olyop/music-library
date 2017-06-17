@@ -38,7 +38,8 @@ const ArtistEvent = props => {
 								<div className="artist-events-bandsintown-logo">
 									<a href={props.mainObj.info.bandsInTown.website}
 										target="_blank">
-										<img src={props.mainObj.info.bandsInTown.logoLink} alt="Bandsintown Logo"/>
+										<img src={props.mainObj.info.webStorageLink + 'bandsintown-logo-black-w-bounding-box.png'}
+                      alt="Bandsintown Logo"/>
 									</a>
 								</div>
 								

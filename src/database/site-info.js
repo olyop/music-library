@@ -61,8 +61,7 @@ const siteInfo = {
 		end: '/events?app_id=personal_api_test'
 	},
 	bandsInTown: {
-		website: 'https://news.bandsintown.com/home',
-		logoLink: 'http://corp.bandsintown.com/assets/media-library/bandsintown-logo-black-w-bounding-box.png'
+		website: 'https://news.bandsintown.com/home'
 	}
 }
 
