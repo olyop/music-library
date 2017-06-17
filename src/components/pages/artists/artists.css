@@ -5,7 +5,7 @@
 	align-items: stretch;
 	padding: 0; }
 	.artists .artist {
-		width: calc(100% / 2 - 10px);
+		width: 100%;
 		background-color: #fff;
     border: 1px solid #E0E0E0;
 		margin: 5px; }
@@ -36,3 +36,8 @@
 						text-decoration: underline; }
 				.artists .artist .artist-content .artist-text p {
 					font-size: 16px; }
+
+@media (min-width: 992px) {
+  .artists .artist {
+		width: calc(100% / 2 - 10px); }
+}

@@ -34,7 +34,6 @@ body {
 }
 
 .grid-item {
-  transition: .2s all;
   cursor: pointer;
   margin: 5px; }
   .grid-item:hover {

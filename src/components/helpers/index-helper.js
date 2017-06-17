@@ -22,11 +22,13 @@ const calcLibraryData = obj => {
 	
 	// Find num of songs in each album
 	for (let d = 0; d < obj.length.albums; d++) {
+    
 		for (let e = 0; e < obj.length.songs; e++) {
 			if (obj.songs[e].albumId === obj.albums[d].albumId) {
 				obj.albums[d].numSongs++
 			}
 		}
+    
 		for (let g = 0; g < obj.length.artists; g++) {
 			if (obj.artists[g].artistId === obj.albums[d].artistId) {
 				obj.albums[d].artistName = obj.artists[g].title

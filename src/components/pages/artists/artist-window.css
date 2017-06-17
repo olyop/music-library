@@ -41,8 +41,8 @@
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-color: #fff;
-		width: 175px;
-		height: 175px;
+		width: 150px;
+		height: 150px;
 		margin-right: -50%;
 		transform: translate(-50%, -50%); }
 
@@ -53,14 +53,14 @@
 		padding: 40px;
     margin-top: 40px;
     margin-bottom: 40px;
-    padding-top: 60px; }
+    padding-top: 40px; }
 		.artist-window .artist-window-content h1 {
 			text-align: center;
-			padding-bottom: 15px;
+			padding-bottom: 10px;
+			margin-bottom: 10px;
 			border-bottom: 1px solid #333;
-			margin-bottom: 15px;
       font-weight: 800;
-			font-size: 36px; }
+			font-size: 32px; }
 		.artist-window .artist-window-content .artist-window-sub-heading {
 			display: flex;
 			margin-bottom: 60px;
@@ -72,7 +72,7 @@
 				margin: 0;
 				padding: 0;
 				font-weight: 500;
-				font-size: 20px; }
+				font-size: 18px; }
 			.artist-window .artist-window-content .artist-window-sub-heading a {
 				display: flex;
 				float: right;
@@ -89,3 +89,20 @@
 				font-weight: 800;
 				color: #3F51B5;
 				font-size: 16px; }
+
+@media (min-width: 992px) {
+  
+  .artist-window .artist-window-logo {
+		width: 175px;
+		height: 175px; }
+  
+  .artist-window .artist-window-content {
+    padding-top: 60px; }
+    .artist-window .artist-window-content h1 {
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+      font-size: 36px; }
+  
+  .artist-window .artist-window-content .artist-window-sub-heading h2, .artist-window .artist-window-content .artist-window-sub-heading a {
+    font-size: 20px; }
+}

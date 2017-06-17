@@ -6,7 +6,7 @@ import InputRange from 'react-input-range'
 import Sound from 'react-sound'
 
 // Import loading SVG
-import LoadingSvg from '../../common/rolling.svg'
+import LoadingSvg from '../common/rolling.svg'
 
 // Import CSS
 import 'react-input-range/lib/css/index.css'

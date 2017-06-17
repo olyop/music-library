@@ -55,8 +55,34 @@
 				.header .header-middle input::-webkit-input-placeholder {
 					opacity: 0.5;
 					color: #fff; }
+
 		.header .header-right {
+      padding: 0;
+      display: flex;
+      flex-direction: row-reverse;
 			flex: 1; }
+      .header .header-right .header-profile-info {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column; }
+        .header .header-right .header-profile-info h1 {
+          font-size: 18px;
+          font-weight: 800;
+          text-align: right;
+          color: #fff; }
+        .header .header-right .header-profile-info a {
+          font-size: 15px;
+          font-weight: 300;
+          text-align: right;
+          color: #fff; }
+      .header .header-right img {
+        margin: 15px;
+        width: 45px;
+        cursor: pointer;
+        border-radius: 10px;
+        box-shadow: 0 0 8px rgba(0,0,0,.4);
+        height: 45px; }
 
 @media (min-width: 650px) {
 	.header .header-middle {

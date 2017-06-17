@@ -58,7 +58,14 @@ const Header = props => {
       </div>
 
       <div className="header-section header-right">
-        Right
+        
+        <img src={props.mainObj.info.webStorageLink + 'default-profile-photo.png'} alt="Profile" />
+        
+        <div className="header-profile-info">
+          <h1>Username</h1>
+          <a href="">Sign Out</a>
+        </div>
+        
       </div>
 
     </div>

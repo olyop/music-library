@@ -1,5 +1,9 @@
 import React from 'react'
+
+// Import functions
 import { TableHeader, TableFooter } from '../../helpers/songs-helper'
+
+// Import CSS
 import './songs.css'
 
 class Song extends React.Component {
@@ -14,15 +18,18 @@ class Song extends React.Component {
 		
 		const props = this.props,
 					state = this.state
+    
+    // Check if current song
+    const checkCurrentSong = props.currentSong.songId === state.obj.songId
 		
 		return (
-			<tr className={props.currentSong.songId === state.obj.songId ? 'song song-active' : 'song'}
+			<tr className={checkCurrentSong ? 'song song-active' : 'song'}
 				onClick={ song => props.playSong(state.obj) }>
 				<td className="song-cover">
 					<img src={props.mainObj.info.webStorageLink + state.obj.artistId + '/' + state.obj.albumId + '/cover.jpg'}
 							alt={state.obj.albumName} />
 				</td>
-				<td>{state.obj.title}</td>
+				<td className="song-title">{state.obj.title}</td>
 				<td className="song-length">
 					<div>{state.obj.length}</div>
 				</td>
@@ -50,7 +57,7 @@ const Songs = props => {
 				
 				<tbody>
 					{props.mainObj.songs.map((song, index) => (
-						<Song key={index}
+						<Song key={song.songId}
               mainObj={props.mainObj}
 							playSong={props.playSong}
 							currentSong={props.currentSong}

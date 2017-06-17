@@ -45,7 +45,7 @@ const Albums = props => {
 	return (
 		<div className="albums">
       {props.mainObj.albums.map((album, index) => (
-				<Album key={index}
+				<Album key={album.albumId}
 					mainObj={props.mainObj}
 					obj={album}
 					openAlbumWindow={props.openAlbumWindow} />

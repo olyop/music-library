@@ -2421,7 +2421,7 @@ const songsObj = [
 	},
 	{
 		songId: 'EHOOpDXEWU',
-		title: 'City of Delusyion',
+		title: 'City of Delusion',
 		artistId: 'dabbJRfVRz',
 		albumId: 'aMGXyQrulD',
 		trackNum: '9',
