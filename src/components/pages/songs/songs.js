@@ -33,8 +33,12 @@ class Song extends React.Component {
 				<td className="song-length">
 					<div>{state.obj.length}</div>
 				</td>
-				<td>{state.obj.artistName}</td>
-				<td>{state.obj.albumName}</td>
+				<td>
+					<span onClick={ obj => props.openArtistWindow(state.obj.artistId) }>{state.obj.artistName}</span>
+				</td>
+				<td>
+					<span onClick={ obj => props.openAlbumWindow(state.obj.albumId) }>{state.obj.albumName}</span>
+				</td>
 			</tr>
 		)
 	}
@@ -60,6 +64,8 @@ const Songs = props => {
 						<Song key={song.songId}
               mainObj={props.mainObj}
 							playSong={props.playSong}
+							openArtistWindow={props.openArtistWindow}
+							openAlbumWindow={props.openAlbumWindow}
 							currentSong={props.currentSong}
 							obj={song} />
 					))}

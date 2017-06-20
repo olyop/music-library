@@ -32,6 +32,8 @@ class Library extends React.Component {
             toggleShuffle={props.toggleShuffle}
             repeat={props.repeat}
             shuffle={props.shuffle}
+						openArtistWindow={props.openArtistWindow}
+						openAlbumWindow={props.openAlbumWindow}
             currentSong={props.currentSong} />
 
 					<div className="container-fluid library">
@@ -67,6 +69,7 @@ class Library extends React.Component {
 										<Albums info={props.info}
 											mainObj={props.mainObj}
 											currentSong={props.currentSong}
+											openArtistWindow={props.openArtistWindow}
 											openAlbumWindow={props.openAlbumWindow} /> )} />
 								
 								<Route exact
@@ -76,6 +79,8 @@ class Library extends React.Component {
 										<Songs info={props.info}
 											mainObj={props.mainObj}
 											playSong={props.playSong}
+											openArtistWindow={props.openArtistWindow}
+											openAlbumWindow={props.openAlbumWindow}
 											currentSong={props.currentSong} /> )} />
 
 							</div>

@@ -21,7 +21,7 @@ class Artist extends React.Component {
 
     return (
       <div className="grid-item artist"
-				onClick={ obj => props.openArtistWindow(this.state.obj) }>
+				onClick={ obj => props.openArtistWindow(this.state.obj.artistId) }>
         <div className="artist-cover"
           style={{ backgroundImage: 'url(' + String(props.mainObj.info.webStorageLink + state.obj.artistId + '/group.jpg') + ')' }}>
         </div>

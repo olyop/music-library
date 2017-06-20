@@ -21,6 +21,7 @@
 	min-width: 300px;
 	flex: 1; }
 	.play-left img {
+		cursor: pointer;
 		width: 90px;
 		height: 90px; }
 		.play-left .play-content {
@@ -28,9 +29,15 @@
 			align-items: center;
 			padding: 10px; }
 				.play-left .play-content h1 {
+					cursor: pointer;
 					font-size: 20px; }
+					.play-left .play-content h1:hover {
+						text-decoration: underline; }
 				.play-left .play-content p {
+					cursor: pointer;
 					font-size: 14px; }
+					.play-left .play-content p:hover {
+						text-decoration: underline; }
 
 .play-middle {
 	display: flex;
@@ -50,6 +57,8 @@
   .play-middle .play-middle-play .play-play-button {
     color: #3F51B5;
     font-size: 60px; }
+		.play-middle .play-middle-play .play-play-button:hover {
+			color: #E91E63; }
 	.play-middle .play-middle-play img {
 		width: 70px;
     height: 70px;

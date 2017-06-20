@@ -10,23 +10,28 @@ class Album extends React.Component {
 		super(props)
 		
 		this.state = {
-			obj: this.props.obj
+			obj: props.obj
 		}
 	}
 	
 	render(){
-		const props = this.props
+		
+		const props = this.props,
+					state = this.state
+		
 		return (
-			<div key={props.obj.albumId}
-				onClick={ obj => props.openAlbumWindow(this.state.obj) }
+			<div key={state.obj.albumId}
 				className="grid-item album">
-				<div className="album-cover">
-					<img alt={props.obj.title} className="album-cover-img"
-						src={props.mainObj.info.webStorageLink + props.obj.artistId + '/' + props.obj.albumId + '/cover.jpg'} />
+				<div className="album-cover"
+					onClick={ obj => props.openAlbumWindow(state.obj.albumId) }>
+					<img alt={state.obj.title} className="album-cover-img"
+						src={props.mainObj.info.webStorageLink + state.obj.artistId + '/' + props.obj.albumId + '/cover.jpg'} />
 				</div>
 				<div className="album-content">
-					<h1><span>{props.obj.title}</span></h1>
-					<p><span>{props.obj.artistName}</span></p>
+					<h1 onClick={ obj => props.openAlbumWindow(state.obj.albumId) }><span>{props.obj.title}</span></h1>
+					<p onClick={ obj => props.openArtistWindow(state.obj.artistId) }>
+						<span>{state.obj.artistName}</span>
+					</p>
 				</div>
 			</div>
 		)
@@ -48,6 +53,7 @@ const Albums = props => {
 				<Album key={album.albumId}
 					mainObj={props.mainObj}
 					obj={album}
+					openArtistWindow={props.openArtistWindow}
 					openAlbumWindow={props.openAlbumWindow} />
 			))}
 		</div>

@@ -202,16 +202,36 @@ class Index extends React.Component {
     }))
   }
 	
-	openAlbumWindow(obj) {
-		this.setState({ albumWindow: obj })
+	openAlbumWindow(id) {
+		
+		let album
+		
+		for (var i = 0; i < this.props.mainObj.length.albums; i++) {
+			const item = this.props.mainObj.albums[i]
+			if (id === item.albumId) {
+				album = item
+			}
+		}
+		
+		this.setState({ albumWindow: album })
 	}
 	
 	closeAlbumWindow() {
 		this.setState({ albumWindow: false })
 	}
 	
-	openArtistWindow(obj) {
-		this.setState({ artistWindow: obj })
+	openArtistWindow(id) {
+		
+		let artist
+		
+		for (var i = 0; i < this.props.mainObj.length.artists; i++) {
+			const item = this.props.mainObj.artists[i]
+			if (id === item.artistId) {
+				artist = item
+			}
+		}
+		
+		this.setState({ artistWindow: artist })
 	}
 	
 	closeArtistWindow() {

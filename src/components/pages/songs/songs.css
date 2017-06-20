@@ -3,12 +3,15 @@
 	.songs table {
 		background-color: #fff;
 		width: 100%; }
-		.songs table td, th {
+		.songs table td, .songs table th {
 			transition: .2s background;
 			cursor: pointer;
 			font-size: 14px;
 			border: 1px solid #eeeeee;
 			padding: 10px; }
+			.songs table td span:hover,
+			.songs table th span:hover {
+				text-decoration: underline; }
 		.songs table tr:hover {
 			background-color: #eeeeee; }
 		.songs table th {
@@ -49,7 +52,10 @@
 	background-color: #3F51B5; }
 	.songs table .song-active:hover {
 		background-color: #3F51B5; }
-	.songs .song-active td, .songs .song-active td div {
+	.songs .song-active td,
+	.songs .song-active td span,
+	.songs .song-active td,
+	.songs .song-active td div{
 		color: #fff;
 		border-color: #3F51B5; }
 

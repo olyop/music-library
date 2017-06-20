@@ -71,13 +71,16 @@ class Play extends React.Component {
 				<div className="play-section play-left">
 					
 					{props.currentSong === 0 ? null : (
-						<img src={props.mainObj.info.webStorageLink + props.currentSong.artistId + '/' + props.currentSong.albumId + '/cover.jpg'} alt="Album" />
+						<img src={props.mainObj.info.webStorageLink + props.currentSong.artistId + '/' + props.currentSong.albumId + '/cover.jpg'}
+							onClick={ obj => props.openAlbumWindow(props.currentSong.albumId) }
+							alt="Album" />
 					)}
 					
 					<div className="play-content">
 						<div>
 							<h1>{props.currentSong === 0 ? '' : props.currentSong.title}</h1>
-							<p>{props.currentSong === 0 ? '' : props.currentSong.artistName}</p>
+							<p onClick={ obj => props.openArtistWindow(props.currentSong.artistId) }>
+								{props.currentSong === 0 ? '' : props.currentSong.artistName}</p>
 						</div>
 					</div>
 					

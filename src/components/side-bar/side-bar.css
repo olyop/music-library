@@ -31,7 +31,9 @@
 					background-color: #E0E0E0; }
 			.nav-side-bar .nav-side-bar-active {
 				color: #fff !important;
-			 	background-color: #3F51B5 !important; }
+			 	background-color: #3F51B5; }
+				.nav-side-bar .nav-side-bar-active:hover {
+					background-color: #E91E63; }
 			.nav-side-bar .nav-side-bar-active i {
 				color: #fff; }
 
