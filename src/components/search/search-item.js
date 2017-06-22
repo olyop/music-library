@@ -10,11 +10,13 @@ class SearchItem extends React.Component {
   }
   
   render() {
-    let props = this.props
+    
+    const props = this.props
+    
     return (
-      <div className="search-item"
-        onClick={ obj => props.event(this.state.obj) }>
-        <div className="search-item-icon">
+      <div className="search-item">
+        <div className="search-item-icon"
+          onClick={ () => props.playEvent(props.playEventParam) }>
           <i className="material-icons search-item-icon-type">{props.iconText}</i>
           <i className="material-icons search-item-play">play_circle_filled</i>
         </div>
@@ -26,7 +28,8 @@ class SearchItem extends React.Component {
         </div>
         <div className="search-item-inner">
           <p>
-            <span title={props.heading}>
+            <span title={props.heading}
+              onClick={ () => props.headingEvent(props.headingEventParam) }>
             
               <Highlighter
                 highlightClassName='search-item-highlighted'
@@ -37,10 +40,12 @@ class SearchItem extends React.Component {
           </p>
           <div>
             <span title={props.span1}
-              className="search-item-span-main">
+              className="search-item-span-main"
+              onClick={ props.span1Event === undefined ? false : () => props.span1Event(props.span1EventParam) }>
               {props.span1} </span>
             &#8211;
-            <span title={props.span2}> {props.span2}</span>
+            <span title={props.span2}
+              onClick={ props.span1Event === undefined ? false : () => props.span2Event(props.span2EventParam) }> {props.span2}</span>
           </div>
         </div>
       </div>

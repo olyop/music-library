@@ -212,6 +212,8 @@ class Index extends React.Component {
 				album = item
 			}
 		}
+    
+    this.clearInput()
 		
 		this.setState({ albumWindow: album })
 	}
@@ -230,6 +232,8 @@ class Index extends React.Component {
 				artist = item
 			}
 		}
+    
+    this.clearInput()
 		
 		this.setState({ artistWindow: artist })
 	}
@@ -270,7 +274,8 @@ class Index extends React.Component {
 					toggleRepeat={this.toggleRepeat}
           toggleShuffle={this.toggleShuffle}
 					openAlbumWindow={this.openAlbumWindow}
-					openArtistWindow={this.openArtistWindow} />
+          openArtistWindow={this.openArtistWindow}
+					closeAlbumWindow={this.closeAlbumWindow} />
         
         {isInputEmpty ? null : (
           
@@ -279,7 +284,9 @@ class Index extends React.Component {
           currentSong={this.state.currentSong}
           playSong={this.playSong}
           playAlbum={this.playAlbum}
-          playArtist={this.playArtist} />
+          playArtist={this.playArtist}
+					openAlbumWindow={this.openAlbumWindow}
+          openArtistWindow={this.openArtistWindow} />
           
         )}
 				
@@ -290,6 +297,7 @@ class Index extends React.Component {
 					currentSong={this.state.currentSong}
 					playSong={this.playSong}
 					playAlbum={this.playAlbum}
+					openArtistWindow={this.openArtistWindow}
 					closeAlbumWindow={this.closeAlbumWindow} />
 					
 				)}

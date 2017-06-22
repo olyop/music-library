@@ -80,7 +80,7 @@ class Library extends React.Component {
 											mainObj={props.mainObj}
 											playSong={props.playSong}
 											openArtistWindow={props.openArtistWindow}
-											openAlbumWindow={props.openAlbumWindow}
+											openAlbumWindow={props.openAlbumWindow} 
 											currentSong={props.currentSong} /> )} />
 
 							</div>

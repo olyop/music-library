@@ -49,7 +49,10 @@ class Search extends React.Component {
           {matchesArtists.length === 0 ? <h4>No matches</h4> : null}
 					{matchesArtists.map((artist, index) => (
             <SearchItem key={artist.artistId}
-              event={this.props.playArtist}
+              playEvent={props.playArtist}
+              playEventParam={artist}
+              headingEvent={props.openArtistWindow}
+              headingEventParam={artist.artistId}
               obj={artist}
               input={input}
               iconText={'person'}
@@ -63,7 +66,12 @@ class Search extends React.Component {
           {matchesAlbums.length === 0 ? <h4>No matches</h4> : null}
 					{matchesAlbums.map((album, index) => (
             <SearchItem key={album.albumId}
-              event={this.props.playAlbum}
+              playEvent={props.playAlbum}
+              playEventParam={album}
+              headingEvent={props.openAlbumWindow}
+              headingEventParam={album.albumId}
+              span1Event={props.openArtistWindow}
+              span1EventParam={album.artistId}
               obj={album}
               input={input}
               iconText={'album'}
@@ -77,7 +85,14 @@ class Search extends React.Component {
           {matchesSongs.length === 0 ? <h4>No matches</h4> : null}
 					{matchesSongs.map((song, index) => (
             <SearchItem key={song.songId}
-              event={this.props.playSong}
+              playEvent={props.playSong}
+              playEventParam={song}
+              headingEvent={props.playSong}
+              headingEventParam={song}
+              span1Event={props.openArtistWindow}
+              span1EventParam={song.artistId}
+              span2Event={props.openAlbumWindow}
+              span2EventParam={song.albumId}
               obj={song}
               input={input}
               iconText={'audiotrack'}
