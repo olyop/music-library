@@ -29,7 +29,16 @@ class Song extends React.Component {
 					<img src={props.mainObj.info.webStorageLink + state.obj.artistId + '/' + state.obj.albumId + '/cover.jpg'}
 							alt={state.obj.albumName} />
 				</td>
-				<td className="song-title">{state.obj.title}</td>
+				<td>
+					<div className="song-title">
+						<span>{state.obj.title}</span>
+						<a download={String(state.obj.title + ' - ' + state.obj.artistName)}
+							href={props.mainObj.info.webStorageLink + state.obj.artistId + '/' + state.obj.albumId + '/' + state.obj.songId + '.mp3'}
+							target="_href">
+							<i className="material-icons">file_download</i>
+						</a>
+					</div>
+				</td>
 				<td className="song-length">
 					<div>{state.obj.length}</div>
 				</td>

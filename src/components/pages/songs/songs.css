@@ -3,7 +3,7 @@
 	.songs table {
 		background-color: #fff;
 		width: 100%; }
-		.songs table td, .songs table th {
+		.songs table td, th {
 			transition: .2s background;
 			cursor: pointer;
 			font-size: 14px;
@@ -48,14 +48,24 @@
     justify-content: center;
 		display: flex; }
 
+.songs table .song-title {
+	display: flex; 
+	justify-content: space-between; }
+	.songs table .song-title i {
+		font-size: 21px;
+		display: none; }
+
+.songs table tr:hover .song-title i { 
+	display: block; }
+
 .songs .song-active {
 	background-color: #3F51B5; }
 	.songs table .song-active:hover {
 		background-color: #3F51B5; }
 	.songs .song-active td,
+	.songs .song-active td div,
 	.songs .song-active td span,
-	.songs .song-active td,
-	.songs .song-active td div{
+	.songs .song-active td i {
 		color: #fff;
 		border-color: #3F51B5; }
 
