@@ -16,7 +16,7 @@ const findMatches = (array, arrayLength, input) => {
 
 // Check if the user input is dangerous
 const isInputDangerous = dangerousInput => {
-	String(dangerousInput.toLowerCase())
+	String(dangerousInput.toLowerCase().toUpperCase().toLowerCase())
 	if (includes(dangerousInput, '{')) { return true }
 	else if (includes(dangerousInput, '}')) { return true }
 	else if (includes(dangerousInput, '<')) { return true }

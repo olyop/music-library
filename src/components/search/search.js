@@ -21,7 +21,7 @@ class Search extends React.Component {
 		// Verify search input
 		if (isInputDangerous(props.inputVal)) {
 			return (
-				<div className="header-search-drop-down">
+				<div className="window search-drop-down">
 					<h3 style={{ color: 'red' }}>Bad input</h3>
 				</div>
 			)

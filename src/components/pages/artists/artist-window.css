@@ -81,7 +81,7 @@
 				.artist-window .artist-window-content .artist-window-sub-heading a:hover, i:hover {
 					text-decoration: none; }
 				.artist-window .artist-window-content .artist-window-sub-heading div i {
-					padding-right: 10px; }
+					padding-left: 10px; }
 		.artist-window .artist-window-content p {
 			font-size: 16px;
 			margin-bottom: 20px; }

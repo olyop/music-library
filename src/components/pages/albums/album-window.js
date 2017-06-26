@@ -24,7 +24,7 @@ class AlbumWindowSong extends React.Component {
 				<div>
 					<div className="album-window-song-title">
 						<i className="material-icons">audiotrack</i>
-						<span className="album-window-song-list-text">
+						<span className="album-window-song-list-text album-window-length">
 							{state.obj.trackNum}
 						</span>
 						<span className="album-window-song-list-text">

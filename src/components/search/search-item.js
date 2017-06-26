@@ -42,10 +42,10 @@ class SearchItem extends React.Component {
             <span title={props.span1}
               className="search-item-span-main"
               onClick={ props.span1Event === undefined ? false : () => props.span1Event(props.span1EventParam) }>
-              {props.span1} </span>
-            &#8211;
+              {props.span1}</span>
+            {' '}&#8211;{' '}
             <span title={props.span2}
-              onClick={ props.span1Event === undefined ? false : () => props.span2Event(props.span2EventParam) }> {props.span2}</span>
+              onClick={ props.span1Event === undefined ? false : () => props.span2Event(props.span2EventParam) }>{props.span2}</span>
           </div>
         </div>
       </div>

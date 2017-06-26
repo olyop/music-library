@@ -309,7 +309,7 @@ const songsObj = [
 	},
 	{
 		songId: 'CNCQIMWbsI',
-		title: 'Is Thit It',
+		title: 'Is This It',
 		artistId: 'pNTLYUjNZF',
 		albumId: 'etJPmFmiKA',
 		trackNum: '1',

@@ -29,7 +29,7 @@ class Song extends React.Component {
 					<img src={props.mainObj.info.webStorageLink + state.obj.artistId + '/' + state.obj.albumId + '/cover.jpg'}
 							alt={state.obj.albumName} />
 				</td>
-				<td>
+				<td className="no-padding">
 					<div className="song-title">
 						<span>{state.obj.title}</span>
 						<a download={String(state.obj.title + ' - ' + state.obj.artistName)}

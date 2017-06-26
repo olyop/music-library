@@ -29,6 +29,10 @@ class ArtistWindow extends React.Component {
 		let logoStyle = {
 			backgroundImage: 'url(' + props.mainObj.info.webStorageLink + state.obj.artistId + '/logo.jpg)'
 		}
+    
+    let artistInfoStyle = {
+      color: '#3F51B5'
+    }
 		
 		return (
 			<div className="window artist-window">
@@ -50,12 +54,12 @@ class ArtistWindow extends React.Component {
 					
 							<div className="artist-window-sub-heading">
 
-								<h2 className="artist-window-sub-heading-sides"><b>Year Started:</b> {state.obj.yearFormed}</h2>
-								<h2><b>Origin:</b> 	{state.obj.origin}</h2>
+								<h2 className="artist-window-sub-heading-sides"><b style={artistInfoStyle}>Year Started:</b> {state.obj.yearFormed}</h2>
+								<h2><b style={artistInfoStyle}>Origin:</b> 	{state.obj.origin}</h2>
 								<div className="artist-window-sub-heading-sides">
 									<a href={state.obj.website} title={state.obj.title + ', website.'} target="_blank">
+                    <b style={artistInfoStyle}>Website:</b>
 										<i className="material-icons">open_in_new</i>
-										Website
 									</a>
 								</div>
 

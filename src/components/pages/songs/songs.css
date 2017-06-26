@@ -49,14 +49,22 @@
 		display: flex; }
 
 .songs table .song-title {
-	display: flex; 
+	display: flex;
 	justify-content: space-between; }
+  .songs table .song-title span {
+    padding: 10px; }
+  .songs table .song-title a {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 100%;
+    text-decoration: none; }
+    .songs table .song-title a:active {
+      background-color: #303F9F; }
 	.songs table .song-title i {
 		font-size: 21px;
 		display: none; }
-
-.songs table tr:hover .song-title i { 
-	display: block; }
+  .songs table tr:hover .song-title i { 
+    display: block; }
 
 .songs .song-active {
 	background-color: #3F51B5; }
