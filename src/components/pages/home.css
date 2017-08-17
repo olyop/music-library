@@ -3,13 +3,26 @@
   position: relative;
   height: 100vh;
   margin: 0; }
-.home .home-background {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
+  .home .home-background {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; }
+    .home .home-background .home-title {
+      display: block;
+      height: 100%;
+      display: flex;
+      padding-top: 30vh;
+      align-items: center;
+      flex-direction: column; }
+      .home .home-background .home-title img {
+        width: 40vw; }
+      .home .home-background .home-title p {
+        text-align: center;
+        color: #fff;
+        font-weight: 800;
+        font-size: 2vw; }

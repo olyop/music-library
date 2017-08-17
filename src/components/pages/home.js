@@ -12,7 +12,12 @@ const Home = props => {
   
 	return (
 		<div className="home">
-      <div className="home-background" style={homeStyle}></div>
+      <div className="home-background" style={homeStyle}>
+        <div className="home-title">
+          <img src={props.mainObj.info.webStorageLink + 'site-logo.png'} alt="Logo" />
+          <p>Musicloud - An Online Music Player <br />(platform/system showcase)</p>
+        </div>
+      </div>
 		</div>
 	)
 }

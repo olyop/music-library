@@ -10,8 +10,16 @@
 		margin-bottom: 20px;
 		width: 100%; }
 	.nav-side-bar ul {
+    box-shadow:
+      rgba(0, 0, 0, 0.12) 0px 1px 6px,
+      rgba(0, 0, 0, 0.12) 0px 1px 4px;
+    transition: .2s all;
 		padding: 0;
 		margin: 0; }
+    .nav-side-bar ul:hover {
+      box-shadow:
+        rgba(0, 0, 0, 0.16) 0px 3px 10px,
+        rgba(0, 0, 0, 0.23) 0px 3px 10px; }
 		.nav-side-bar ul li {
 			width: 100%;
 			list-style: none; }
@@ -30,9 +38,15 @@
 					text-decoration: none;
 					background-color: #E0E0E0; }
 			.nav-side-bar .nav-side-bar-active {
+				box-shadow:
+					rgba(0, 0, 0, 0.12) 0px 1px 6px,
+					rgba(0, 0, 0, 0.12) 0px 1px 4px;
 				color: #fff !important;
 			 	background-color: #3F51B5; }
 				.nav-side-bar .nav-side-bar-active:hover {
+					box-shadow:
+						rgba(0, 0, 0, 0.16) 0px 3px 10px,
+						rgba(0, 0, 0, 0.23) 0px 3px 10px; 
 					background-color: #E91E63; }
 			.nav-side-bar .nav-side-bar-active i {
 				color: #fff; }
